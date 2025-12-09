@@ -1,4 +1,4 @@
-# Pak Plastic Industry Website
+# Pak Plastic Industry LLC
 
 A modern, responsive website for a UAE-based plastic manufacturing company, built with HTML, CSS, and JavaScript.
 
