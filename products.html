@@ -36,167 +36,338 @@
     <section class="page-header">
         <div class="container">
             <h1>Our Products</h1>
-            <p>Comprehensive Range of High-Quality Plastic Solutions</p>
         </div>
     </section>
 
-    <!-- Product Detail Section - Plastic Pallets -->
-    <section class="product-detail" id="pallets">
-        <div class="container">
-            <div class="product-detail-content">
-                <div class="product-detail-image">
-                    <img src="images/plastic_pallets.png" alt="Plastic Pallets">
-                </div>
-                <div class="product-detail-text">
-                    <h2>Plastic Pallets</h2>
-                    <p>Our plastic pallets are engineered for durability and efficiency in material handling and storage applications. Manufactured using high-grade polymers, these pallets offer superior strength-to-weight ratio and long-lasting performance.</p>
-                    <h3>Key Features:</h3>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Lightweight yet robust construction</li>
-                        <li><i class="fas fa-check"></i> Resistant to moisture, chemicals, and corrosion</li>
-                        <li><i class="fas fa-check"></i> Easy to clean and maintain</li>
-                        <li><i class="fas fa-check"></i> Stackable design for space efficiency</li>
-                        <li><i class="fas fa-check"></i> Available in various sizes and load capacities</li>
-                        <li><i class="fas fa-check"></i> 100% recyclable and eco-friendly</li>
-                    </ul>
-                    <h3>Applications:</h3>
-                    <p>Warehousing, logistics, manufacturing, food industry, pharmaceutical storage, export/import operations</p>
-                    <a href="contact.html" class="btn btn-primary">Request Quote</a>
+    <!-- Products Grid Section -->
+    <section class="products-page">
+        <div class="container-fluid">
+            <div class="products-layout">
+                <!-- Sidebar Filter -->
+                <aside class="products-sidebar">
+                    <div class="filter-section">
+                        <h3>Refine your search</h3>
+                        
+                        <div class="filter-group">
+                            <button class="filter-reset">Reset Selection</button>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Buy/rent</h4>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" checked>
+                                <span>Buy <small>67</small></span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox">
+                                <span>Rent <small>4</small></span>
+                            </label>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Product Category</h4>
+                            <label class="filter-checkbox">
+                                <input type="checkbox">
+                                <span>Plastic Pallets <small>2</small></span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox">
+                                <span>Waste Bins <small>3</small></span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox">
+                                <span>Bottle Caps <small>5</small></span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox">
+                                <span>Household Items <small>8</small></span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox">
+                                <span>Storage Containers <small>6</small></span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox">
+                                <span>Safety Barriers <small>4</small></span>
+                            </label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <div class="products-grid-catalog">
+                        <!-- Plastic Pallet 1 -->
+                        <div class="product-catalog-card">
+                            <div class="product-catalog-badge">Heavy-Duty Plastic Pallet - Type 1</div>
+                            <div class="product-catalog-image">
+                                <img src="images/1.png" alt="Plastic Pallet 115mm x 136mm">
+                            </div>
+                            <div class="product-catalog-info">
+                                <div class="product-spec">
+                                    <span class="spec-label">Reference</span>
+                                    <span class="spec-value">PP-115-136</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Dimensions</span>
+                                    <span class="spec-value">115 mm x 136 mm</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Load capacity</span>
+                                    <span class="spec-value">1200 kg</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Material</span>
+                                    <span class="spec-value">HDPE</span>
+                                </div>
+                                <a href="product-detail.html?id=pallet-1" class="btn-view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Plastic Pallet 2 -->
+                        <div class="product-catalog-card">
+                            <div class="product-catalog-badge">Standard Plastic Pallet - Type 2</div>
+                            <div class="product-catalog-image">
+                                <img src="images/Add a heading.png" alt="Plastic Pallet 1105mm x 1306mm">
+                            </div>
+                            <div class="product-catalog-info">
+                                <div class="product-spec">
+                                    <span class="spec-label">Reference</span>
+                                    <span class="spec-value">PP-1105-1306</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Dimensions</span>
+                                    <span class="spec-value">1105 mm x 1306 mm</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Load capacity</span>
+                                    <span class="spec-value">1500 kg</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Material</span>
+                                    <span class="spec-value">HDPE</span>
+                                </div>
+                                <a href="product-detail.html?id=pallet-2" class="btn-view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Waste Bin 1 -->
+                        <div class="product-catalog-card">
+                            <div class="product-catalog-badge">Heavy-Duty Waste Bin - 240L</div>
+                            <div class="product-catalog-image">
+                                <img src="images/bigbins.png" alt="Waste Bin 240L">
+                            </div>
+                            <div class="product-catalog-info">
+                                <div class="product-spec">
+                                    <span class="spec-label">Reference</span>
+                                    <span class="spec-value">WB-240</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">240 Liters</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Dimensions</span>
+                                    <span class="spec-value">730 x 580 x 1070 mm</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Features</span>
+                                    <span class="spec-value">UV Stabilized, Wheels</span>
+                                </div>
+                                <a href="product-detail.html?id=waste-bin-240" class="btn-view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Bottle Caps -->
+                        <div class="product-catalog-card">
+                            <div class="product-catalog-badge">Precision Bottle Caps - 28mm</div>
+                            <div class="product-catalog-image">
+                                <img src="images/bottlecaps.png" alt="Bottle Caps">
+                            </div>
+                            <div class="product-catalog-info">
+                                <div class="product-spec">
+                                    <span class="spec-label">Reference</span>
+                                    <span class="spec-value">BC-28</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Size</span>
+                                    <span class="spec-value">28mm PCO</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Material</span>
+                                    <span class="spec-value">Food-grade PP</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Colors</span>
+                                    <span class="spec-value">Multiple options</span>
+                                </div>
+                                <a href="product-detail.html?id=bottle-caps" class="btn-view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Household Items -->
+                        <div class="product-catalog-card">
+                            <div class="product-catalog-badge">Plastic Chair - Outdoor Series</div>
+                            <div class="product-catalog-image">
+                                <img src="images/houshold.png" alt="Household Items">
+                            </div>
+                            <div class="product-catalog-info">
+                                <div class="product-spec">
+                                    <span class="spec-label">Reference</span>
+                                    <span class="spec-value">HH-CHAIR-01</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Material</span>
+                                    <span class="spec-value">High-impact PP</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Weight capacity</span>
+                                    <span class="spec-value">150 kg</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Features</span>
+                                    <span class="spec-value">Stackable, UV resistant</span>
+                                </div>
+                                <a href="product-detail.html?id=household-chair" class="btn-view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Storage Container -->
+                        <div class="product-catalog-card">
+                            <div class="product-catalog-badge">Industrial Storage Container - 60L</div>
+                            <div class="product-catalog-image">
+                                <img src="images/cantainerbox.png" alt="Storage Container">
+                            </div>
+                            <div class="product-catalog-info">
+                                <div class="product-spec">
+                                    <span class="spec-label">Reference</span>
+                                    <span class="spec-value">SC-60</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">60 Liters</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Dimensions</span>
+                                    <span class="spec-value">600 x 400 x 300 mm</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Features</span>
+                                    <span class="spec-value">Airtight, Stackable</span>
+                                </div>
+                                <a href="product-detail.html?id=storage-container" class="btn-view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Safety Barrier -->
+                        <div class="product-catalog-card">
+                            <div class="product-catalog-badge">Traffic Safety Barrier - 2m</div>
+                            <div class="product-catalog-image">
+                                <img src="images/barrier.png" alt="Safety Barrier">
+                            </div>
+                            <div class="product-catalog-info">
+                                <div class="product-spec">
+                                    <span class="spec-label">Reference</span>
+                                    <span class="spec-value">SB-2000</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Length</span>
+                                    <span class="spec-value">2000 mm</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Height</span>
+                                    <span class="spec-value">1000 mm</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Features</span>
+                                    <span class="spec-value">Interlocking, Reflective</span>
+                                </div>
+                                <a href="product-detail.html?id=safety-barrier" class="btn-view-details">View Details</a>
+                            </div>
+                        </div>
+
+                        <!-- Waste Bin 2 -->
+                        <div class="product-catalog-card">
+                            <div class="product-catalog-badge">Wheeled Waste Bin - 1100L</div>
+                            <div class="product-catalog-image">
+                                <img src="images/bigbins.png" alt="Waste Bin 1100L">
+                            </div>
+                            <div class="product-catalog-info">
+                                <div class="product-spec">
+                                    <span class="spec-label">Reference</span>
+                                    <span class="spec-value">WB-1100</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">1100 Liters</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Dimensions</span>
+                                    <span class="spec-value">1370 x 1070 x 1450 mm</span>
+                                </div>
+                                <div class="product-spec">
+                                    <span class="spec-label">Features</span>
+                                    <span class="spec-value">Heavy-duty wheels, Lid</span>
+                                </div>
+                                <a href="product-detail.html?id=waste-bin-1100" class="btn-view-details">View Details</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Detail Section - Waste Bins -->
-    <section class="product-detail alternate" id="bins">
+    <!-- CTA Section -->
+    <section class="products-cta">
         <div class="container">
-            <div class="product-detail-content">
-                <div class="product-detail-text">
-                    <h2>Waste Bins</h2>
-                    <p>Heavy-duty waste management bins designed for municipal, commercial, and industrial use. Our bins feature ergonomic design with smooth-rolling wheels and secure lids for efficient waste collection and disposal.</p>
-                    <h3>Key Features:</h3>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> High-impact resistant plastic construction</li>
-                        <li><i class="fas fa-check"></i> UV stabilized for outdoor durability</li>
-                        <li><i class="fas fa-check"></i> Easy-to-maneuver with robust wheels</li>
-                        <li><i class="fas fa-check"></i> Secure lid design to prevent spillage</li>
-                        <li><i class="fas fa-check"></i> Available in multiple sizes (60L to 1100L)</li>
-                        <li><i class="fas fa-check"></i> Color-coded options for waste segregation</li>
-                    </ul>
-                    <h3>Applications:</h3>
-                    <p>Municipal waste collection, commercial buildings, hospitals, schools, industrial facilities, residential complexes</p>
-                    <a href="contact.html" class="btn btn-primary">Request Quote</a>
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Need a Custom Solution?</h2>
+                    <p>Our team of experts is ready to help you find the perfect plastic products for your business needs. Get in touch with us for custom quotes, bulk orders, or technical specifications.</p>
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Custom manufacturing available</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Competitive bulk pricing</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fast delivery across UAE</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="product-detail-image">
-                    <img src="images/bigbins.png" alt="Waste Bins">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Detail Section - Bottle Caps -->
-    <section class="product-detail" id="caps">
-        <div class="container">
-            <div class="product-detail-content">
-                <div class="product-detail-image">
-                    <img src="images/bottlecaps.png" alt="Bottle Caps">
-                </div>
-                <div class="product-detail-text">
-                    <h2>Bottle Caps & Closures</h2>
-                    <p>Precision-molded bottle caps and closures for the beverage and packaging industries. Our caps ensure perfect sealing and product freshness while maintaining ease of use for consumers.</p>
-                    <h3>Key Features:</h3>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Precision injection molding for perfect fit</li>
-                        <li><i class="fas fa-check"></i> Food-grade certified materials</li>
-                        <li><i class="fas fa-check"></i> Tamper-evident designs available</li>
-                        <li><i class="fas fa-check"></i> Various sizes and thread patterns</li>
-                        <li><i class="fas fa-check"></i> Custom colors and branding options</li>
-                        <li><i class="fas fa-check"></i> High-speed production capabilities</li>
-                    </ul>
-                    <h3>Applications:</h3>
-                    <p>Beverage industry, water bottles, juice containers, dairy products, pharmaceutical bottles, chemical containers</p>
-                    <a href="contact.html" class="btn btn-primary">Request Quote</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Detail Section - Household Items -->
-    <section class="product-detail alternate" id="household">
-        <div class="container">
-            <div class="product-detail-content">
-                <div class="product-detail-text">
-                    <h2>Household Items</h2>
-                    <p>Quality plastic furniture and household products designed for comfort, durability, and style. Our range includes chairs, tables, and various home essentials manufactured to the highest standards.</p>
-                    <h3>Key Features:</h3>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Ergonomic and comfortable designs</li>
-                        <li><i class="fas fa-check"></i> Weather-resistant for indoor/outdoor use</li>
-                        <li><i class="fas fa-check"></i> Easy to clean and maintain</li>
-                        <li><i class="fas fa-check"></i> Lightweight and portable</li>
-                        <li><i class="fas fa-check"></i> Available in various colors</li>
-                        <li><i class="fas fa-check"></i> Affordable and long-lasting</li>
-                    </ul>
-                    <h3>Applications:</h3>
-                    <p>Homes, gardens, restaurants, cafes, events, outdoor gatherings, commercial spaces</p>
-                    <a href="contact.html" class="btn btn-primary">Request Quote</a>
-                </div>
-                <div class="product-detail-image">
-                    <img src="images/houshold.png" alt="Household Items">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Detail Section - Storage Containers -->
-    <section class="product-detail" id="containers">
-        <div class="container">
-            <div class="product-detail-content">
-                <div class="product-detail-image">
-                    <img src="images/cantainerbox.png" alt="Storage Containers">
-                </div>
-                <div class="product-detail-text">
-                    <h2>Storage Containers</h2>
-                    <p>Versatile storage solutions for food, industrial, and commercial applications. Our containers feature airtight seals, transparent designs, and stackable construction for optimal organization.</p>
-                    <h3>Key Features:</h3>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Airtight and leak-proof seals</li>
-                        <li><i class="fas fa-check"></i> BPA-free food-grade plastic</li>
-                        <li><i class="fas fa-check"></i> Transparent for easy content visibility</li>
-                        <li><i class="fas fa-check"></i> Microwave and freezer safe options</li>
-                        <li><i class="fas fa-check"></i> Stackable design saves space</li>
-                        <li><i class="fas fa-check"></i> Multiple sizes available</li>
-                    </ul>
-                    <h3>Applications:</h3>
-                    <p>Food storage, kitchen organization, industrial parts storage, office supplies, retail packaging, catering services</p>
-                    <a href="contact.html" class="btn btn-primary">Request Quote</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Detail Section - Safety Barriers -->
-    <section class="product-detail alternate" id="barriers">
-        <div class="container">
-            <div class="product-detail-content">
-                <div class="product-detail-text">
-                    <h2>Safety Barriers</h2>
-                    <p>Robust plastic barriers designed for traffic management, construction sites, and crowd control. Our barriers provide reliable safety solutions with high visibility and durability.</p>
-                    <h3>Key Features:</h3>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> High-impact resistant construction</li>
-                        <li><i class="fas fa-check"></i> Bright colors for maximum visibility</li>
-                        <li><i class="fas fa-check"></i> Interlocking design for stability</li>
-                        <li><i class="fas fa-check"></i> Weather and UV resistant</li>
-                        <li><i class="fas fa-check"></i> Lightweight and easy to deploy</li>
-                        <li><i class="fas fa-check"></i> Reflective strip options available</li>
-                    </ul>
-                    <h3>Applications:</h3>
-                    <p>Construction sites, road works, traffic management, events, parking areas, crowd control, safety perimeters</p>
-                    <a href="contact.html" class="btn btn-primary">Request Quote</a>
-                </div>
-                <div class="product-detail-image">
-                    <img src="images/barrier.png" alt="Safety Barriers">
+                <div class="cta-form">
+                    <h3>Request a Quote</h3>
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number *" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Product Category *</option>
+                                <option value="pallets">Plastic Pallets</option>
+                                <option value="bins">Waste Bins</option>
+                                <option value="caps">Bottle Caps</option>
+                                <option value="household">Household Items</option>
+                                <option value="containers">Storage Containers</option>
+                                <option value="barriers">Safety Barriers</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message / Requirements" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                    </form>
                 </div>
             </div>
         </div>
