@@ -6,254 +6,383 @@
     <title>Pak Plastic Industry - Leading Plastic Manufacturing in UAE</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <h2>PAK PLASTIC INDUSTRY</h2>
-                </div>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="sustainability.html">Sustainability</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+    <nav class="navbar-ipl">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>PAK PLASTIC INDUSTRY</h2>
             </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu-ipl" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+                <li><a href="sustainability.html">Sustainability</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="hero-tagline">SUSTAINABLE BY DESIGN ∞ INNOVATIVE BY NATURE</p>
-            <h1 class="hero-title">When plastic innovation meets environmental responsibility</h1>
-            <p class="hero-description">Need sustainable plastic solutions for your business? Let's collaborate to harness cutting-edge technology and achieve your objectives. Embracing eco-friendly manufacturing enhances efficiency and quality throughout your operations and brand. Together, we can create a brighter future.</p>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-hero">Contact us</a>
-            </div>
+    <!-- Hero Section - IPL Style -->
+    <section class="hero-ipl">
+        <div class="hero-ipl-overlay"></div>
+        <div class="hero-ipl-content">
+            <p class="hero-ipl-tagline">SUSTAINABLE BY DESIGN ∞ INNOVATIVE BY NATURE</p>
+            <h1 class="hero-ipl-title">A global leader of plastic solutions customers enjoy for more efficient supply chains</h1>
+        </div>
+        <div class="hero-ipl-scroll">
+            <span>Scroll</span>
+            <i class="fas fa-arrow-down"></i>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Us</h2>
-                <p>Your Trusted Partner in Plastic Manufacturing</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Advanced Manufacturing</h3>
-                    <p>State-of-the-art injection molding technology ensuring precision and quality in every product.</p>
+    <!-- Technology & Innovation Section -->
+    <section class="tech-innovation-section">
+        <div class="container-ipl">
+            <div class="tech-grid">
+                <div class="tech-content">
+                    <h2>We use technology and innovation to provide reusable products</h2>
+                    <p>We partner with our customers for smarter more efficient supply chains.</p>
+                    <a href="about.html" class="btn-ipl-link">Explore who we are <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Quality Assurance</h3>
-                    <p>ISO certified processes with rigorous quality control at every stage of production.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Sustainable Solutions</h3>
-                    <p>Committed to environmental responsibility with recyclable materials and eco-friendly practices.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Expert Team</h3>
-                    <p>Experienced professionals dedicated to delivering innovative plastic solutions.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Timely Delivery</h3>
-                    <p>Efficient production processes ensuring on-time delivery for all orders.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Customer Focus</h3>
-                    <p>Personalized service and support to meet your specific requirements.</p>
+                <div class="tech-image">
+                    <img src="images/designer-using-3d-printer.jpg" alt="Technology and Innovation">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Categories Section -->
-    <section class="product-categories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Product Categories</h2>
-                <p>Comprehensive Range of High-Quality Plastic Products</p>
-            </div>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/plastic_pallets.png" alt="Plastic Pallets">
-                    </div>
-                    <div class="product-info">
-                        <h3>Plastic Pallets</h3>
-                        <p>Durable and lightweight pallets for efficient material handling and storage solutions.</p>
-                        <a href="products.html#pallets" class="product-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/bigbins.png" alt="Waste Bins">
-                    </div>
-                    <div class="product-info">
-                        <h3>Waste Bins</h3>
-                        <p>Heavy-duty waste management bins designed for durability and ease of use.</p>
-                        <a href="products.html#bins" class="product-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/bottlecaps.png" alt="Bottle Caps">
-                    </div>
-                    <div class="product-info">
-                        <h3>Bottle Caps</h3>
-                        <p>Precision-molded caps for beverage and packaging industries in various sizes.</p>
-                        <a href="products.html#caps" class="product-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/houshold.png" alt="Household Items">
-                    </div>
-                    <div class="product-info">
-                        <h3>Household Items</h3>
-                        <p>Quality plastic furniture and household products for everyday use.</p>
-                        <a href="products.html#household" class="product-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/cantainerbox.png" alt="Storage Containers">
-                    </div>
-                    <div class="product-info">
-                        <h3>Storage Containers</h3>
-                        <p>Versatile storage solutions for food, industrial, and commercial applications.</p>
-                        <a href="products.html#containers" class="product-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/barrier.png" alt="Safety Barriers">
-                    </div>
-                    <div class="product-info">
-                        <h3>Safety Barriers</h3>
-                        <p>Robust barriers for traffic management and construction site safety.</p>
-                        <a href="products.html#barriers" class="product-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Pak Plastic Industry</h2>
-                    <p>Pak Plastic Industry is a leading manufacturer of high-quality plastic products based in the UAE. With years of experience and expertise in injection molding technology, we serve diverse industries including logistics, waste management, packaging, and consumer goods.</p>
-                    <p>Our commitment to excellence, innovation, and sustainability drives us to deliver superior products that meet international standards. We combine advanced manufacturing capabilities with a customer-centric approach to provide tailored solutions for your business needs.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>15+</h3>
-                            <p>Years Experience</p>
+    <!-- Industries Section -->
+    <section class="industries-section">
+        <div class="container-ipl">
+            <h2 class="section-title-ipl">Clever solutions for complex industries</h2>
+            <div class="industries-carousel">
+                <div class="swiper industriesSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-warehouse"></i>
+                                </div>
+                                <h3>Logistics & Warehousing</h3>
+                                <p>Pallets, containers, and bins for efficient material handling</p>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <h3>500+</h3>
-                            <p>Happy Clients</p>
+                        <div class="swiper-slide">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <h3>Food & Beverage</h3>
+                                <p>Food-grade containers, bottle caps, and hygienic storage solutions</p>
+                            </div>
                         </div>
-                        <div class="stat">
-                            <h3>100%</h3>
-                            <p>Quality Products</p>
+                        <div class="swiper-slide">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h3>Waste Management</h3>
+                                <p>Durable waste bins, recycling containers, and municipal solutions</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <h3>Automotive</h3>
+                                <p>Parts storage, transport containers, and industrial components</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <h3>Agriculture</h3>
+                                <p>Harvest crates, irrigation components, and farm storage solutions</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <h3>Retail & Supermarkets</h3>
+                                <p>Shopping baskets, display crates, and merchandising solutions</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-pills"></i>
+                                </div>
+                                <h3>Healthcare & Pharma</h3>
+                                <p>Medical-grade containers, sterile packaging, and pharmaceutical storage</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="industry-card">
+                                <div class="industry-icon">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <h3>Industrial & Chemicals</h3>
+                                <p>Chemical-resistant containers, safety barriers, and heavy-duty pallets</p>
+                            </div>
                         </div>
                     </div>
-                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
-                </div>
-                <div class="about-image">
-                    <img src="images/9c057f30-2e4d-4521-863e-1542862bf1f6.jpeg" alt="Manufacturing Facility">
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Partner with Us?</h2>
-                <p>Get in touch today to discuss your plastic manufacturing needs</p>
-                <a href="contact.html" class="btn btn-light">Contact Us Now</a>
+    <!-- Products Carousel Section -->
+    <section class="products-carousel-section">
+        <div class="container-ipl">
+            <div class="section-header-ipl">
+                <h2 class="section-title-ipl">Innovative packaging for every industry</h2>
+                <a href="products.html" class="btn-ipl-secondary">See all products</a>
+            </div>
+            <div class="products-carousel">
+                <div class="swiper productsSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-card-ipl">
+                                <div class="product-badge">Heavy-Duty</div>
+                                <div class="product-image-ipl">
+                                    <img src="images/1.png" alt="Plastic Pallet">
+                                </div>
+                                <div class="product-info-ipl">
+                                    <span class="product-category">Plastic Pallets</span>
+                                    <h3>Heavy-Duty Pallet 115x136</h3>
+                                    <a href="product-detail.html?id=pallet-1" class="btn-ipl-link">View Product <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card-ipl">
+                                <div class="product-badge">Wheeled</div>
+                                <div class="product-image-ipl">
+                                    <img src="images/bigbins.png" alt="Waste Bin">
+                                </div>
+                                <div class="product-info-ipl">
+                                    <span class="product-category">Waste Bins</span>
+                                    <h3>Waste Bin 240L</h3>
+                                    <a href="product-detail.html?id=waste-bin-240" class="btn-ipl-link">View Product <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card-ipl">
+                                <div class="product-badge">Food-Grade</div>
+                                <div class="product-image-ipl">
+                                    <img src="images/bottlecaps.png" alt="Bottle Caps">
+                                </div>
+                                <div class="product-info-ipl">
+                                    <span class="product-category">Bottle Caps</span>
+                                    <h3>Precision Caps 28mm</h3>
+                                    <a href="product-detail.html?id=bottle-caps" class="btn-ipl-link">View Product <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card-ipl">
+                                <div class="product-badge">Stackable</div>
+                                <div class="product-image-ipl">
+                                    <img src="images/cantainerbox.png" alt="Storage Container">
+                                </div>
+                                <div class="product-info-ipl">
+                                    <span class="product-category">Storage Containers</span>
+                                    <h3>Container 60L</h3>
+                                    <a href="product-detail.html?id=storage-container" class="btn-ipl-link">View Product <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Pak Plastic Industry</h3>
-                    <p>Leading manufacturer of high-quality plastic products in the UAE, committed to excellence and innovation.</p>
+    <!-- Sustainability Section with Background -->
+    <section class="sustainability-ipl">
+        <div class="sustainability-overlay"></div>
+        <div class="container-ipl">
+            <div class="sustainability-content">
+                <span class="section-label-ipl">SUSTAINABILITY</span>
+                <h2>Our responsibility to the Circular Economy</h2>
+                <p>Packaging solutions play a crucial role in the future of sustainability and the Circular Economy. At Pak Plastic Industry, we are driving this transition by making solutions that never become waste.</p>
+                <a href="sustainability.html" class="btn-ipl-white">About Sustainability <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trade Moulding Section -->
+    <section class="trade-moulding-section">
+        <div class="container-ipl">
+            <div class="trade-grid">
+                <div class="trade-image">
+                    <img src="images/9c057f30-2e4d-4521-863e-1542862bf1f6.jpeg" alt="Manufacturing">
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
+                <div class="trade-content">
+                    <h2>Where ideas become high-performance products</h2>
+                    <p>From design to delivery, our manufacturing expertise transforms concepts into durable high-quality solutions. Discover how our precision and know-how bring your products to life.</p>
+                    <a href="technology.html" class="btn-ipl-link">Explore Our Technology <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Section -->
+    <section class="innovation-ipl-section">
+        <div class="container-ipl">
+            <div class="innovation-grid">
+                <div class="innovation-content">
+                    <span class="section-label-ipl">INNOVATION</span>
+                    <h2>Advanced material innovation and precision engineering</h2>
+                    <p>We co-create and use bespoke design to build reusable packaging solutions that perform and last.</p>
+                    <a href="innovation.html" class="btn-ipl-link">Discover our Innovations <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="innovation-image">
+                    <img src="images/cantainerbox.png" alt="Innovation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RTP Section with Background -->
+    <section class="rtp-section">
+        <div class="rtp-overlay"></div>
+        <div class="container-ipl">
+            <div class="rtp-content">
+                <span class="section-label-ipl">RTP</span>
+                <h2>Unlock your products' potential with Returnable Transport Packaging</h2>
+                <p>Our smart sustainable packaging solutions helps you to move, protect, and present your products with confidence.</p>
+                <a href="products.html" class="btn-ipl-white">Discover more benefits <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-ipl-section">
+        <div class="container-ipl">
+            <div class="contact-ipl-grid">
+                <div class="contact-ipl-info">
+                    <span class="section-label-ipl">GET IN TOUCH</span>
+                    <h2>Contact us today to explore how our solutions can work for your business</h2>
+                    <p>We help you navigate the complexities of your industry as your trusted partner.</p>
+                    
+                    <div class="contact-details">
+                        <h3>Contact information</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <strong>Head office</strong>
+                                <p>Pak Plastic Industry<br>UAE</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <a href="mailto:info@pakplastic.ae">info@pakplastic.ae</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-ipl-form">
+                    <form class="ipl-form" id="contactForm">
+                        <div class="form-row-ipl">
+                            <div class="form-group-ipl">
+                                <label>First name*</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group-ipl">
+                                <label>Last name*</label>
+                                <input type="text" required>
+                            </div>
+                        </div>
+                        <div class="form-group-ipl">
+                            <label>Country*</label>
+                            <select required>
+                                <option value="">--None--</option>
+                                <option value="UAE">United Arab Emirates</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group-ipl">
+                            <label>E-mail address*</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group-ipl">
+                            <label>Company*</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group-ipl">
+                            <label>Phone number*</label>
+                            <input type="tel" required>
+                        </div>
+                        <div class="form-group-ipl">
+                            <label>Message*</label>
+                            <textarea rows="4" required></textarea>
+                        </div>
+                        <div class="form-checkbox-ipl">
+                            <input type="checkbox" id="privacy" required>
+                            <label for="privacy">I agree with privacy terms and conditions</label>
+                        </div>
+                        <button type="submit" class="btn-ipl-submit">Send <i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer IPL Style -->
+    <footer class="footer-ipl">
+        <div class="container-ipl">
+            <div class="footer-ipl-grid">
+                <div class="footer-ipl-section">
+                    <h3>Contact information</h3>
+                    <p><a href="mailto:info@pakplastic.ae">info@pakplastic.ae</a></p>
+                </div>
+                <div class="footer-ipl-section">
+                    <h3>Quick links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html">About us</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="technology.html">Technology</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Products</h3>
-                    <ul>
-                        <li><a href="products.html#pallets">Plastic Pallets</a></li>
-                        <li><a href="products.html#bins">Waste Bins</a></li>
-                        <li><a href="products.html#caps">Bottle Caps</a></li>
-                        <li><a href="products.html#household">Household Items</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> UAE</li>
-                        <li><i class="fas fa-phone"></i> +971 XX XXX XXXX</li>
-                        <li><i class="fas fa-envelope"></i> info@pakplastic.ae</li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="innovation.html">Innovation</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Pak Plastic Industry. All rights reserved.</p>
+            <div class="footer-ipl-bottom">
+                <p>©2025 All Rights Reserved by Pak Plastic Industry</p>
+                <div class="footer-ipl-links">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Disclaimer</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
