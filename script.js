@@ -15,41 +15,73 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
+// Navbar scroll effect - hide on scroll down, show on scroll up
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+function updateNavbar() {
     const navbar = document.querySelector('.navbar-ipl');
-    if (window.scrollY > 100) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > 100) {
+        if (currentScrollY > lastScrollY) {
+            // Scrolling down - hide navbar
+            navbar.classList.add('nav-hidden');
+            navbar.classList.remove('nav-visible');
+        } else {
+            // Scrolling up - show navbar
+            navbar.classList.remove('nav-hidden');
+            navbar.classList.add('nav-visible');
+        }
     } else {
-        navbar.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+        // At top of page - always show
+        navbar.classList.remove('nav-hidden');
+        navbar.classList.remove('nav-visible');
+    }
+    
+    lastScrollY = currentScrollY;
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            updateNavbar();
+        });
+        ticking = true;
     }
 });
 
 // Industries Swiper
 const industriesSwiper = new Swiper('.industriesSwiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+    slidesPerView: 4,
+    spaceBetween: 24,
+    loop: false,
+    centeredSlides: false,
+    navigation: {
+        nextEl: '.industriesSwiper .swiper-button-next',
+        prevEl: '.industriesSwiper .swiper-button-prev',
     },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
     breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
         640: {
             slidesPerView: 2,
             spaceBetween: 20,
         },
         768: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 24,
         },
         1024: {
             slidesPerView: 4,
-            spaceBetween: 30,
+            spaceBetween: 24,
         },
     },
 });
