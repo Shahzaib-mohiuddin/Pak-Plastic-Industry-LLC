@@ -52,38 +52,35 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Industries Swiper
+// Industries Swiper - Simple Configuration
 const industriesSwiper = new Swiper('.industriesSwiper', {
     slidesPerView: 4,
-    spaceBetween: 24,
-    loop: false,
+    spaceBetween: 20,
+    loop: true,
+    slidesPerGroup: 1,
     centeredSlides: false,
     navigation: {
-        nextEl: '.industriesSwiper .swiper-button-next',
-        prevEl: '.industriesSwiper .swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     breakpoints: {
         320: {
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 15
         },
         640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 15
         },
         768: {
             slidesPerView: 3,
-            spaceBetween: 24,
+            spaceBetween: 20
         },
         1024: {
             slidesPerView: 4,
-            spaceBetween: 24,
-        },
-    },
+            spaceBetween: 20
+        }
+    }
 });
 
 // Products Swiper
