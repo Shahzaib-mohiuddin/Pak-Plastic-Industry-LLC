@@ -4557,3 +4557,946 @@ body {
         height: 150px;
     }
 }
+
+/* ========================================
+   PALLETCO STYLE - PRODUCT DETAIL PAGE
+   ======================================== */
+
+/* Breadcrumb */
+.breadcrumb {
+    background: #f5f5f5;
+    padding: 15px 0;
+    margin-top: 80px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #2563eb;
+}
+
+.breadcrumb span {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Product Detail Section - Palletco Style */
+.product-detail-palletco {
+    padding: 40px 0 60px;
+    background: #fff;
+}
+
+.product-detail-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Product Gallery */
+.product-gallery {
+    position: sticky;
+    top: 100px;
+}
+
+.main-image-container {
+    position: relative;
+    background: #f8f9fa;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.main-image-container img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.main-image-container:hover img {
+    transform: scale(1.02);
+}
+
+.zoom-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: #333;
+}
+
+.zoom-btn:hover {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #e5e5e5;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #f8f9fa;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    border-color: #2563eb;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+}
+
+/* Product Info - Palletco Style */
+.product-info-palletco {
+    padding: 0;
+}
+
+.product-title-palletco {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0099cc;
+    margin-bottom: 15px;
+    line-height: 1.35;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.product-sku {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-sku span {
+    color: #0099cc;
+}
+
+.product-name-sub {
+    font-size: 0.95rem;
+    color: #0099cc;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.product-size-label {
+    font-size: 0.95rem;
+    color: #0099cc;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.product-size-label span {
+    color: #0099cc;
+    font-weight: 400;
+}
+
+/* Product Specs List */
+.product-specs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product-specs-list li {
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.spec-dash {
+    color: #333;
+    font-weight: 400;
+}
+
+/* Buy Section - Quantity and Buy Now */
+.buy-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.qty-btn {
+    width: 40px;
+    height: 45px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: #f5f5f5;
+}
+
+.qty-btn.minus {
+    border-right: 1px solid #ddd;
+}
+
+.qty-btn.plus {
+    border-left: 1px solid #ddd;
+}
+
+.quantity-selector input {
+    width: 50px;
+    height: 45px;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    background: #fff;
+}
+
+.quantity-selector input:focus {
+    outline: none;
+}
+
+.btn-buy-now {
+    flex: 1;
+    height: 45px;
+    background: #0099cc;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0 40px;
+}
+
+.btn-buy-now:hover {
+    background: #007aa3;
+}
+
+/* Wishlist Button - Palletco Style */
+.wishlist-btn-palletco {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #333;
+    padding: 10px 0;
+    margin-bottom: 25px;
+    transition: all 0.3s;
+}
+
+.wishlist-btn-palletco:hover {
+    color: #e74c3c;
+}
+
+.wishlist-btn-palletco i {
+    font-size: 1rem;
+}
+
+/* Accordion */
+.product-accordion {
+    margin-bottom: 30px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #eee;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: left;
+    transition: color 0.3s;
+}
+
+.accordion-header:hover {
+    color: #2563eb;
+}
+
+.accordion-header i {
+    transition: transform 0.3s;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.accordion-header.active i {
+    transform: rotate(180deg);
+    color: #2563eb;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    padding-bottom: 20px;
+}
+
+/* Specs Table */
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table tr {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.specs-table tr:last-child {
+    border-bottom: none;
+}
+
+.specs-table td {
+    padding: 12px 0;
+    font-size: 0.95rem;
+}
+
+.specs-table td:first-child {
+    color: #666;
+    width: 40%;
+}
+
+.specs-table td:last-child {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.no-reviews {
+    color: #888;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.review-prompt {
+    color: #2563eb;
+    font-size: 0.9rem;
+}
+
+/* Request Quote Button - Palletco Style */
+.btn-request-quote-palletco {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn-request-quote-palletco:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Related Products - Palletco Style */
+.related-products-palletco {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.related-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.related-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #2563eb;
+}
+
+.related-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.related-product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s;
+}
+
+.related-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.related-product-image {
+    position: relative;
+    background: #f5f5f5;
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.related-product-image img {
+    max-width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.related-product-card:hover .related-product-image img {
+    transform: scale(1.05);
+}
+
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    color: #888;
+}
+
+.wishlist-icon:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.related-product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.related-product-info h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.related-product-info h3 a {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.related-product-info h3 a:hover {
+    color: #2563eb;
+}
+
+.related-product-size {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.related-product-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* Quote Form Section */
+.product-quote-form {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #1a365d 0%, #0f2744 100%);
+}
+
+.quote-form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quote-form-wrapper h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.quote-form-wrapper > p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.quote-form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit-quote {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit-quote:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Responsive - Product Detail Palletco */
+@media (max-width: 1024px) {
+    .related-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrumb {
+        margin-top: 70px;
+    }
+    
+    .product-detail-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .product-gallery {
+        position: static;
+    }
+    
+    .main-image-container img {
+        height: 350px;
+    }
+    
+    .product-title-palletco {
+        font-size: 1.4rem;
+    }
+    
+    .product-price-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .related-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .related-product-image {
+        height: 160px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .quote-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-detail-palletco {
+        padding: 25px 0 40px;
+    }
+    
+    .main-image-container img {
+        height: 280px;
+    }
+    
+    .product-specs-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .related-products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* ========================================
+   PRODUCT DETAILS SECTION - PALLETCO STYLE
+   ======================================== */
+
+/* Product Details Box - Inside Same Section */
+.product-details-box {
+    background: #e8f4f8;
+    padding: 40px 0 60px;
+    margin-top: 40px;
+}
+
+.product-details-section {
+    padding: 40px 0 60px;
+    background: #e8f4f8;
+}
+
+.product-details-title {
+    color: #cc0000;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+/* Product Details Content Box - One Big Container */
+.product-details-content-box {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 40px;
+}
+
+/* Product Images Grid */
+.product-images-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
+}
+
+/* Product Images Box - Legacy */
+.product-images-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.product-image-item {
+    text-align: center;
+}
+
+.product-image-item .image-wrapper {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.product-image-item .image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #333;
+    font-style: italic;
+}
+
+/* Technical Specification */
+.tech-spec-title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tech-spec-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 0 auto 40px;
+}
+
+.tech-spec-image {
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.tech-spec-image img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+/* Technical Data Table */
+.technical-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #333;
+    margin-top: 40px;
+}
+
+.technical-data-table thead th {
+    background: #f5f5f5;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.technical-data-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.technical-data-table .label-cell {
+    background: #f9f9f9;
+    font-weight: 600;
+    color: #333;
+    width: 30%;
+}
+
+.technical-data-table .value-cell {
+    color: #333;
+}
+
+.technical-data-table .value-cell.center {
+    text-align: center;
+}
+
+.technical-data-table .sub-header {
+    background: #f5f5f5;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.technical-data-table .sku-label {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Color Dots */
+.color-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.color-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.color-dot.blue {
+    background: #0066cc;
+}
+
+.color-dot.green {
+    background: #009933;
+}
+
+.color-dot.red {
+    background: #cc0000;
+}
+
+.color-dot.yellow {
+    background: #ffcc00;
+}
+
+.color-dot.black {
+    background: #333333;
+}
+
+.color-dot.gray {
+    background: #999999;
+}
+
+/* Responsive - Product Details Section */
+@media (max-width: 768px) {
+    .product-details-content-box {
+        padding: 20px;
+    }
+    
+    .product-images-grid,
+    .product-images-box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .tech-spec-images {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .technical-data-table {
+        font-size: 0.85rem;
+    }
+    
+    .technical-data-table td {
+        padding: 10px;
+    }
+    
+    .technical-data-table .label-cell {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-details-section,
+    .product-details-box {
+        padding: 30px 0 40px;
+    }
+    
+    .product-image-item .image-wrapper {
+        height: 140px;
+    }
+    
+    .color-dots {
+        flex-wrap: wrap;
+    }
+}
