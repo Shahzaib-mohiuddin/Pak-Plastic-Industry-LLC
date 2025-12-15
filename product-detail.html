@@ -37,147 +37,256 @@
         </div>
     </section>
 
-    <!-- Product Detail Section -->
-    <section class="product-detail-page">
+    <!-- Product Detail Section - Palletco Style -->
+    <section class="product-detail-palletco">
         <div class="container">
-            <div class="product-detail-grid">
-                <!-- Product Image -->
-                <div class="product-detail-image-section">
-                    <div class="main-product-image">
+            <div class="product-detail-wrapper">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image-container">
                         <img id="mainProductImage" src="images/plastic_pallets.png" alt="Product">
+                        <button class="zoom-btn" onclick="openLightbox()">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnail-gallery" id="thumbnailGallery">
+                        <div class="thumbnail active" onclick="changeMainImage(this)">
+                            <img src="images/plastic_pallets.png" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail" onclick="changeMainImage(this)">
+                            <img src="images/1.png" alt="Thumbnail 2">
+                        </div>
+                        <div class="thumbnail" onclick="changeMainImage(this)">
+                            <img src="images/Add a heading.png" alt="Thumbnail 3">
+                        </div>
                     </div>
                 </div>
 
                 <!-- Product Info -->
-                <div class="product-detail-info-section">
-                    <h1 id="productTitle">Heavy-Duty Plastic Pallet - Type 1</h1>
-                    <p class="product-reference">Reference: <strong id="productRef">PP-115-136</strong></p>
+                <div class="product-info-palletco">
+                    <h1 id="productTitle" class="product-title-palletco">PLASTIC PALLET ST-15 6 RUNNERS L: 1100 x W: 1100 x H: 150MM</h1>
+                    <p class="product-sku">SKU: <span id="productRef">ST-15 6R</span></p>
+                    <p class="product-name-sub" id="productNameSub">PLASTIC PALLET ST-15 6 RUNNERS</p>
+                    <p class="product-size-label">SIZE: <span id="productDimensions">L:1100 x W:1100 x H:150MM</span></p>
                     
-                    <div class="product-description">
-                        <p id="productDesc">Our plastic pallets are engineered for durability and efficiency in material handling and storage applications. Manufactured using high-grade polymers, these pallets offer superior strength-to-weight ratio and long-lasting performance.</p>
+                    <ul class="product-specs-list" id="productSpecsList">
+                        <li><span class="spec-dash">–</span> Suitable for Jumbo Bag</li>
+                        <li><span class="spec-dash">–</span> 6 Skid runners for stability</li>
+                        <li><span class="spec-dash">–</span> Fully Ventilated for Air circulation</li>
+                        <li><span class="spec-dash">–</span> 4-way Forklift</li>
+                        <li><span class="spec-dash">–</span> Hygienic computerized design</li>
+                        <li><span class="spec-dash">–</span> Antislip Plugs</li>
+                    </ul>
+
+                    <!-- Quantity and Buy Now Section -->
+                    <div class="buy-section">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus" onclick="decreaseQty()">-</button>
+                            <input type="number" id="productQty" value="1" min="1" readonly>
+                            <button class="qty-btn plus" onclick="increaseQty()">+</button>
+                        </div>
+                        <button class="btn-buy-now" onclick="buyNow()">Buy now</button>
                     </div>
 
-                    <!-- Dimensions Section -->
-                    <div class="product-section">
-                        <h3>Dimensions & Specifications</h3>
-                        <div class="specs-grid">
-                            <div class="spec-item">
-                                <span class="spec-label">Dimensions</span>
-                                <span class="spec-value" id="productDimensions">115 mm x 136 mm</span>
+                    <!-- Add to Wishlist -->
+                    <button class="wishlist-btn-palletco" onclick="addToWishlist()">
+                        <i class="far fa-heart"></i> Add to wishlist
+                    </button>
+
+                    <!-- Product Accordion -->
+                    <div class="product-accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Shipping and returns</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Free shipping on orders over AED 500. Returns accepted within 14 days of delivery. Products must be in original condition.</p>
                             </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Load Capacity</span>
-                                <span class="spec-value" id="productCapacity">1200 kg</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Material</span>
-                                <span class="spec-value" id="productMaterial">HDPE</span>
-                            </div>
-                            <div class="spec-item">
-                                <span class="spec-label">Weight</span>
-                                <span class="spec-value" id="productWeight">8.5 kg</span>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Product care</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Clean with water and mild detergent. Avoid exposure to extreme temperatures. Store in a dry place when not in use.</p>
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Hidden fields for JS -->
+                <span id="productDesc" style="display:none;"></span>
+                <span id="productDimensionsTable" style="display:none;"></span>
+                <span id="productCapacity" style="display:none;"></span>
+                <span id="productMaterial" style="display:none;"></span>
+                <span id="productWeight" style="display:none;"></span>
+                <span id="productApplications" style="display:none;"></span>
+            </div>
+        </div>
 
-                    <!-- Key Features -->
-                    <div class="product-section">
-                        <h3>Key Features:</h3>
-                        <ul class="product-features-list" id="productFeatures">
-                            <li><i class="fas fa-check-circle"></i> Lightweight yet robust construction</li>
-                            <li><i class="fas fa-check-circle"></i> Resistant to moisture, chemicals, and corrosion</li>
-                            <li><i class="fas fa-check-circle"></i> Easy to clean and maintain</li>
-                            <li><i class="fas fa-check-circle"></i> Stackable design for space efficiency</li>
-                            <li><i class="fas fa-check-circle"></i> Available in various sizes and load capacities</li>
-                            <li><i class="fas fa-check-circle"></i> 100% recyclable and eco-friendly</li>
-                        </ul>
+        <!-- Product Details Box - Inside Same Section -->
+        <div class="product-details-box">
+            <div class="container">
+                <h2 class="product-details-title">Product details</h2>
+                
+                <!-- All Content in One Bordered Box -->
+                <div class="product-details-content-box">
+                    <!-- Product Images Grid -->
+                    <div class="product-images-grid">
+                        <div class="product-image-item">
+                            <div class="image-wrapper">
+                                <img src="images/1.png" alt="Bottom view">
+                            </div>
+                            <p class="image-caption">Bottom view</p>
+                        </div>
+                        <div class="product-image-item">
+                            <div class="image-wrapper">
+                                <img src="images/Add a heading.png" alt="Rubber bush for antislip">
+                            </div>
+                            <p class="image-caption">Rubber bush for antislip</p>
+                        </div>
+                        <div class="product-image-item">
+                            <div class="image-wrapper">
+                                <img src="images/plastic_pallets.png" alt="Suitable for jumbo bags">
+                            </div>
+                            <p class="image-caption">Suitable for jumbo bags</p>
+                        </div>
                     </div>
 
-                    <!-- Applications -->
-                    <div class="product-section">
-                        <h3>Applications:</h3>
-                        <p id="productApplications">Warehousing, logistics, manufacturing, food industry, pharmaceutical storage, export/import operations</p>
+                    <!-- Technical Specification -->
+                    <h3 class="tech-spec-title">TECHNICAL SPECIFICATION</h3>
+                    <div class="tech-spec-images">
+                        <div class="tech-spec-image">
+                            <img src="images/1.png" alt="Side view 1">
+                        </div>
+                        <div class="tech-spec-image">
+                            <img src="images/Add a heading.png" alt="Side view 2">
+                        </div>
                     </div>
 
-                    <button class="btn btn-primary btn-request-quote" onclick="scrollToQuoteForm()">
-                        <i class="fas fa-envelope"></i> Request Quote
-                    </button>
+                    <!-- Technical Data Table -->
+                    <table class="technical-data-table">
+                        <thead>
+                            <tr>
+                                <th colspan="4">TECHNICAL DATA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="label-cell">Dimension(mm)</td>
+                                <td colspan="3" class="value-cell">L:1100 x W:1100 x H:150</td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Material</td>
+                                <td colspan="3" class="value-cell">HDPE / PP</td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Color</td>
+                                <td colspan="3" class="value-cell">
+                                    <div class="color-dots">
+                                        <span class="color-dot blue"></span>
+                                        <span class="color-dot green"></span>
+                                        <span class="color-dot red"></span>
+                                        <span class="color-dot yellow"></span>
+                                        <span class="color-dot black"></span>
+                                        <span class="color-dot gray"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell" rowspan="2">Loading Capacity (Kgs) :<br><span class="sku-label">ST-15 6R</span></td>
+                                <td class="sub-header">STATIC</td>
+                                <td class="sub-header">DYNAMIC</td>
+                                <td class="sub-header">RACKING</td>
+                            </tr>
+                            <tr>
+                                <td class="value-cell center">3000 Kg</td>
+                                <td class="value-cell center">1500 Kg</td>
+                                <td class="value-cell center">N/A</td>
+                            </tr>
+                            <tr>
+                                <td class="label-cell">Item Code / Barcode</td>
+                                <td colspan="3" class="value-cell">11068</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Related Products -->
-    <section class="related-products">
+    <!-- Related Products - Palletco Style -->
+    <section class="related-products-palletco">
         <div class="container">
-            <h2>Related Products</h2>
-            <div class="products-grid-catalog">
+            <h2 class="related-title">Related Products</h2>
+            <div class="related-products-grid">
                 <!-- Related Product 1 -->
-                <div class="product-catalog-card">
-                    <div class="product-catalog-badge">Standard Plastic Pallet - Type 2</div>
-                    <div class="product-catalog-image">
-                        <img src="images/Add a heading.png" alt="Plastic Pallet Type 2">
+                <div class="related-product-card">
+                    <div class="related-product-image">
+                        <a href="product-detail.html?id=pallet-2">
+                            <img src="images/Add a heading.png" alt="Plastic Pallet Type 2">
+                        </a>
+                        <button class="wishlist-icon" onclick="addToWishlist()">
+                            <i class="far fa-heart"></i>
+                        </button>
                     </div>
-                    <div class="product-catalog-info">
-                        <div class="product-spec">
-                            <span class="spec-label">Reference</span>
-                            <span class="spec-value">PP-1105-1306</span>
-                        </div>
-                        <div class="product-spec">
-                            <span class="spec-label">Dimensions</span>
-                            <span class="spec-value">1105 mm x 1306 mm</span>
-                        </div>
-                        <div class="product-spec">
-                            <span class="spec-label">Load capacity</span>
-                            <span class="spec-value">1500 kg</span>
-                        </div>
-                        <a href="#" class="btn-view-details">View Details</a>
+                    <div class="related-product-info">
+                        <h3><a href="product-detail.html?id=pallet-2">PLASTIC PALLET ST-11 3R</a></h3>
+                        <p class="related-product-size">L: 1200 x W: 1000 x H: 170MM</p>
+                        <span class="related-product-price">Price on Request</span>
                     </div>
                 </div>
 
                 <!-- Related Product 2 -->
-                <div class="product-catalog-card">
-                    <div class="product-catalog-badge">Heavy-Duty Waste Bin - 240L</div>
-                    <div class="product-catalog-image">
-                        <img src="images/bigbins.png" alt="Waste Bin 240L">
+                <div class="related-product-card">
+                    <div class="related-product-image">
+                        <a href="product-detail.html?id=pallet-1">
+                            <img src="images/1.png" alt="Plastic Pallet">
+                        </a>
+                        <button class="wishlist-icon" onclick="addToWishlist()">
+                            <i class="far fa-heart"></i>
+                        </button>
                     </div>
-                    <div class="product-catalog-info">
-                        <div class="product-spec">
-                            <span class="spec-label">Reference</span>
-                            <span class="spec-value">WB-240</span>
-                        </div>
-                        <div class="product-spec">
-                            <span class="spec-label">Capacity</span>
-                            <span class="spec-value">240 Liters</span>
-                        </div>
-                        <div class="product-spec">
-                            <span class="spec-label">Dimensions</span>
-                            <span class="spec-value">730 x 580 x 1070 mm</span>
-                        </div>
-                        <a href="#" class="btn-view-details">View Details</a>
+                    <div class="related-product-info">
+                        <h3><a href="product-detail.html?id=pallet-1">PLASTIC PALLET ST-13 3 RUNNER</a></h3>
+                        <p class="related-product-size">L: 1200 x W: 1000 x H: 150MM</p>
+                        <span class="related-product-price">Price on Request</span>
                     </div>
                 </div>
 
                 <!-- Related Product 3 -->
-                <div class="product-catalog-card">
-                    <div class="product-catalog-badge">Industrial Storage Container - 60L</div>
-                    <div class="product-catalog-image">
-                        <img src="images/cantainerbox.png" alt="Storage Container">
+                <div class="related-product-card">
+                    <div class="related-product-image">
+                        <a href="product-detail.html?id=storage-container">
+                            <img src="images/cantainerbox.png" alt="Storage Container">
+                        </a>
+                        <button class="wishlist-icon" onclick="addToWishlist()">
+                            <i class="far fa-heart"></i>
+                        </button>
                     </div>
-                    <div class="product-catalog-info">
-                        <div class="product-spec">
-                            <span class="spec-label">Reference</span>
-                            <span class="spec-value">SC-60</span>
-                        </div>
-                        <div class="product-spec">
-                            <span class="spec-label">Capacity</span>
-                            <span class="spec-value">60 Liters</span>
-                        </div>
-                        <div class="product-spec">
-                            <span class="spec-label">Dimensions</span>
-                            <span class="spec-value">600 x 400 x 300 mm</span>
-                        </div>
-                        <a href="#" class="btn-view-details">View Details</a>
+                    <div class="related-product-info">
+                        <h3><a href="product-detail.html?id=storage-container">PLASTIC PALLET ST-14</a></h3>
+                        <p class="related-product-size">L: 1200 x W: 1000 x H: 125MM</p>
+                        <span class="related-product-price">Price on Request</span>
+                    </div>
+                </div>
+
+                <!-- Related Product 4 -->
+                <div class="related-product-card">
+                    <div class="related-product-image">
+                        <a href="product-detail.html?id=waste-bin-240">
+                            <img src="images/bigbins.png" alt="Waste Bin">
+                        </a>
+                        <button class="wishlist-icon" onclick="addToWishlist()">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="related-product-info">
+                        <h3><a href="product-detail.html?id=waste-bin-240">PLASTIC PALLET ST-16 6 RUNNERS</a></h3>
+                        <p class="related-product-size">L: 1400 x W: 1100 x H: 150MM</p>
+                        <span class="related-product-price">Price on Request</span>
                     </div>
                 </div>
             </div>
@@ -442,6 +551,68 @@
             document.getElementById('quoteFormSection').scrollIntoView({ behavior: 'smooth' });
         }
 
+        // Toggle accordion
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
+            
+            // Close all accordions
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.classList.remove('active');
+                header.nextElementSibling.classList.remove('active');
+            });
+            
+            // Open clicked one if it was closed
+            if (!isActive) {
+                button.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+
+        // Change main image from thumbnail
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainProductImage');
+            const thumbnailImg = thumbnail.querySelector('img');
+            mainImage.src = thumbnailImg.src;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+        // Add to wishlist
+        function addToWishlist() {
+            alert('Product added to wishlist!');
+        }
+
+        // Open lightbox (placeholder)
+        function openLightbox() {
+            const mainImage = document.getElementById('mainProductImage');
+            window.open(mainImage.src, '_blank');
+        }
+
+        // Quantity functions
+        function decreaseQty() {
+            const qtyInput = document.getElementById('productQty');
+            let qty = parseInt(qtyInput.value);
+            if (qty > 1) {
+                qtyInput.value = qty - 1;
+            }
+        }
+
+        function increaseQty() {
+            const qtyInput = document.getElementById('productQty');
+            let qty = parseInt(qtyInput.value);
+            qtyInput.value = qty + 1;
+        }
+
+        // Buy now function
+        function buyNow() {
+            const qty = document.getElementById('productQty').value;
+            const productTitle = document.getElementById('productTitle').textContent;
+            alert(`Added ${qty} x ${productTitle} to cart!`);
+        }
+
         // Load product data
         window.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -450,26 +621,35 @@
             
             // Update page content
             document.getElementById('productName').textContent = product.title;
-            document.getElementById('productTitle').textContent = product.title;
+            document.getElementById('productTitle').textContent = product.title.toUpperCase();
             document.getElementById('productRef').textContent = product.ref;
             document.getElementById('mainProductImage').src = product.image;
             document.getElementById('mainProductImage').alt = product.title;
             document.getElementById('productDesc').textContent = product.description;
             document.getElementById('productDimensions').textContent = product.dimensions;
+            document.getElementById('productDimensionsTable').textContent = product.dimensions;
             document.getElementById('productCapacity').textContent = product.capacity;
             document.getElementById('productMaterial').textContent = product.material;
             document.getElementById('productWeight').textContent = product.weight;
             document.getElementById('productApplications').textContent = product.applications;
             document.getElementById('selectedProduct').value = product.title;
             
-            // Update features list
-            const featuresList = document.getElementById('productFeatures');
-            featuresList.innerHTML = '';
+            // Update specs list with features
+            const specsList = document.getElementById('productSpecsList');
+            specsList.innerHTML = '';
             product.features.forEach(feature => {
                 const li = document.createElement('li');
-                li.innerHTML = `<i class="fas fa-check-circle"></i> ${feature}`;
-                featuresList.appendChild(li);
+                li.innerHTML = `<span class="spec-dash">–</span> ${feature}`;
+                specsList.appendChild(li);
             });
+            
+            // Update thumbnail gallery with product image
+            const thumbnailGallery = document.getElementById('thumbnailGallery');
+            thumbnailGallery.innerHTML = `
+                <div class="thumbnail active" onclick="changeMainImage(this)">
+                    <img src="${product.image}" alt="Thumbnail 1">
+                </div>
+            `;
             
             // Update page title
             document.title = `${product.title} - Pak Plastic Industry`;
