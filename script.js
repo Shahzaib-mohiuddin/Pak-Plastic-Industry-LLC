@@ -2,9 +2,21 @@
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
+// Close dropdowns when clicking outside
+const closeAllDropdowns = (except = null) => {
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+        if (dropdown !== except) {
+            dropdown.classList.remove('active');
+        }
+    });
+};
+
+// Toggle mobile menu
 if (navToggle) {
-    navToggle.addEventListener('click', () => {
+    navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         navMenu.classList.toggle('active');
+        closeAllDropdowns();
     });
 }
 
@@ -12,7 +24,35 @@ if (navToggle) {
 document.addEventListener('click', (e) => {
     if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove('active');
+        closeAllDropdowns();
     }
+});
+
+// Handle dropdown toggle on mobile
+const dropdownToggles = document.querySelectorAll('.dropdown > a');
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) { // Mobile view
+            e.preventDefault();
+            const parent = this.parentElement;
+            const isActive = parent.classList.contains('active');
+            
+            closeAllDropdowns();
+            
+            if (!isActive) {
+                parent.classList.add('active');
+            }
+        }
+    });
+});
+
+// Close dropdowns when clicking on a nav link
+const navLinks = document.querySelectorAll('.nav-menu-ipl a:not(.dropdown > a)');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        closeAllDropdowns();
+    });
 });
 
 // Navbar scroll effect - hide on scroll down, show on scroll up

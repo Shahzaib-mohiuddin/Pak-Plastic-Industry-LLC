@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries We Serve - Pak Plastic Industry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        .industries-hero {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .industries-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.2;
+        }
+
+        .industries-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .industry-categories {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .industry-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .industry-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .industry-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .industry-card:hover .industry-image img {
+            transform: scale(1.05);
+        }
+
+        .industry-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .industry-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a365d;
+        }
+
+        .industry-content p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .industry-link {
+            display: inline-flex;
+            align-items: center;
+            color: #2b6cb0;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: auto;
+        }
+
+        .industry-link i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .industry-link:hover i {
+            transform: translateX(5px);
+        }
+
+        .industry-benefits {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background: #f8fafc;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .benefit-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .benefit-card p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .industries-hero {
+                padding: 100px 0 60px;
+            }
+            
+            .industries-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .industry-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar-ipl">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>PAK PLASTIC<span>INDUSTRY L.L.C</span></h2>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu-ipl" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Industries <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="industries/agriculture.html">Agriculture</a>
+                        <a href="industries/retail.html">Retail</a>
+                        <a href="industries/logistics-warehousing.html">Logistics & Warehousing</a>
+                        <a href="industries/groceries.html">Groceries</a>
+                        <a href="industries/automotive.html">Automotive</a>
+                        <a href="industries/healthcare-pharma.html">Healthcare & Pharma</a>
+                        <div class="dropdown-footer">
+                            <a href="industries.html" class="industry-overview">Industry Overview <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="sustainability.html">Sustainability</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="industries-hero">
+        <div class="container-ipl">
+            <h1>Industries We Serve</h1>
+            <p>At Pak Plastic Industry, we provide innovative plastic packaging solutions tailored to meet the unique needs of various industries. Our products are designed to enhance efficiency, safety, and sustainability across different sectors.</p>
+        </div>
+    </section>
+
+    <!-- Industry Categories -->
+    <section class="industry-categories">
+        <div class="container-ipl">
+            <div class="section-header-ipl">
+                <h2 class="section-title-ipl">Our Industry Expertise</h2>
+                <p>Explore how our solutions are transforming industries</p>
+            </div>
+            
+            <div class="industry-grid">
+                <!-- Agriculture -->
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="images/AGRI (2).png" alt="Agriculture">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Agriculture</h3>
+                        <p>Durable and sustainable packaging solutions designed to protect and preserve agricultural products throughout the supply chain.</p>
+                        <a href="industries/agriculture.html" class="industry-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Retail -->
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="images/Sup 4.png" alt="Retail">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Retail</h3>
+                        <p>Innovative packaging solutions that enhance product presentation, protection, and brand recognition on retail shelves.</p>
+                        <a href="industries/retail.html" class="industry-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Logistics & Warehousing -->
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="images/warehouse.png" alt="Logistics & Warehousing">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Logistics & Warehousing</h3>
+                        <p>Robust and space-efficient packaging solutions optimized for safe transportation and storage of goods.</p>
+                        <a href="industries/logistics-warehousing.html" class="industry-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Groceries -->
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="images/groceries.jpg" alt="Groceries">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Groceries</h3>
+                        <p>Food-grade packaging solutions that maintain freshness, extend shelf life, and ensure food safety from farm to table.</p>
+                        <a href="industries/groceries.html" class="industry-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Automotive -->
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="images/automotive.jpg" alt="Automotive">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Automotive</h3>
+                        <p>Specialized packaging solutions designed to protect automotive parts and components during transit and storage.</p>
+                        <a href="industries/automotive.html" class="industry-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Healthcare & Pharma -->
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="images/healthcare.jpg" alt="Healthcare & Pharma">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Healthcare & Pharma</h3>
+                        <p>Sterile and secure packaging solutions that meet the stringent requirements of the healthcare and pharmaceutical industries.</p>
+                        <a href="industries/healthcare-pharma.html" class="industry-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="industry-benefits">
+        <div class="container-ipl">
+            <div class="section-header-ipl">
+                <h2 class="section-title-ipl">Why Choose Our Solutions</h2>
+                <p>Industry-leading packaging solutions that deliver real value</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Superior Protection</h4>
+                    <p>Our packaging solutions are designed to provide maximum protection for your products throughout the supply chain.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Sustainable</h4>
+                    <p>We prioritize eco-friendly materials and processes to minimize environmental impact while maintaining quality.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Custom Solutions</h4>
+                    <p>Tailored packaging designs to meet the specific needs and requirements of your industry and products.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Efficient Logistics</h4>
+                    <p>Optimized packaging designs that reduce shipping costs and improve handling efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%); padding: 5rem 0; text-align: center; color: white;">
+        <div class="container-ipl">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 300;">Ready to Transform Your Packaging?</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2.5rem; line-height: 1.7; opacity: 0.9;">Contact our experts today to discuss your specific packaging needs and discover how our solutions can benefit your business.</p>
+            <a href="contact.html" class="btn-ipl-primary" style="background: white; color: #2b6cb0; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s ease;">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-ipl">
+        <div class="container-ipl">
+            <div class="footer-ipl-grid">
+                <div class="footer-ipl-brand">
+                    <div class="footer-logo">
+                        <h3>PAK PLASTIC<span>INDUSTRY L.L.C</span></h3>
+                    </div>
+                    <p class="footer-about">Leading manufacturer of high-quality plastic packaging solutions for various industries. Committed to innovation, quality, and sustainability.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Industrial Area, Dubai, UAE</li>
+                        <li><i class="fas fa-phone"></i> +971 4 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@pakplasticindustry.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pak Plastic Industry L.L.C. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
