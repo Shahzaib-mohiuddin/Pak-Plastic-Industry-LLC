@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture - Smart Reusable Packaging | Pak Plastic Industry</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Hero Section */
+        .industry-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/agriculture/hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 200px 0 150px;
+            text-align: center;
+            position: relative;
+        }
+
+        .industry-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .industry-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            opacity: 0.9;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Challenge Section */
+        .challenge-section {
+            padding: 6rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .challenge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .challenge-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .challenge-card h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .challenge-card p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* Product Showcase */
+        .product-showcase {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .product-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .product-card:nth-child(even) .product-image {
+            order: 2;
+        }
+
+        .product-card:nth-child(even) .product-details {
+            order: 1;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details h2 {
+            font-size: 2.2rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .product-details p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #2b6cb0;
+            color: #2b6cb0;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        .btn-outline:hover {
+            background: #2b6cb0;
+            color: white;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #2b6cb0;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #2c5282;
+        }
+
+        /* Innovation Section */
+        .innovation-section {
+            padding: 6rem 0;
+            background: #f8f9fa;
+        }
+
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .innovation-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .innovation-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .innovation-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .innovation-content {
+            padding: 1.5rem;
+        }
+
+        .innovation-content h3 {
+            font-size: 1.5rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .innovation-content p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .solutions-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .section-header p {
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .solution-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .solution-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .solution-card:hover .solution-image img {
+            transform: scale(1.05);
+        }
+
+        .solution-content {
+            padding: 1.5rem;
+        }
+
+        .solution-content h3 {
+            font-size: 1.4rem;
+            color: #2d3748;
+            margin-bottom: 0.75rem;
+        }
+
+        .solution-content p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .solution-link {
+            display: inline-flex;
+            align-items: center;
+            color: #2b6cb0;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .solution-link i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .solution-link:hover {
+            color: #2c5282;
+        }
+
+        .solution-link:hover i {
+            transform: translateX(5px);
+        }
+
+        .benefits-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: white;
+            color: #2b6cb0;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .btn-cta:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .btn-cta.outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            margin-left: 1rem;
+        }
+
+        .btn-cta.outline:hover {
+            background: white;
+            color: #2b6cb0;
+        }
+
+        @media (max-width: 992px) {
+            .industry-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .industry-image {
+                order: -1;
+            }
+
+            .industry-text {
+                text-align: center;
+            }
+
+            .feature-item {
+                justify-content: center;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .industry-hero {
+                padding: 150px 0 80px;
+            }
+
+            .industry-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn-cta.outline {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar-ipl">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>PAK PLASTIC<span>INDUSTRY L.L.C</span></h2>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu-ipl" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Industries <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="agriculture.html" class="active">Agriculture</a>
+                        <a href="retail.html">Retail</a>
+                        <a href="logistics-warehousing.html">Logistics & Warehousing</a>
+                        <a href="groceries.html">Groceries</a>
+                        <a href="automotive.html">Automotive</a>
+                        <a href="healthcare-pharma.html">Healthcare & Pharma</a>
+                        <div class="dropdown-footer">
+                            <a href="../industries.html" class="industry-overview">Industry Overview <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../products.html">Products</a></li>
+                <li><a href="../technology.html">Technology</a></li>
+                <li><a href="../sustainability.html">Sustainability</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="industry-hero">
+        <div class="container">
+            <h1>Smart Reusable Packaging for a Productive Harvest</h1>
+            <p>Discover how our innovative packaging solutions are transforming the agricultural industry with durable, sustainable, and efficient container systems designed to maximize your harvest's potential.</p>
+        </div>
+    </section>
+
+    <!-- Industry Overview -->
+    <section class="industry-overview">
+        <div class="container-ipl">
+            <div class="industry-content">
+                <div class="industry-text">
+                    <h2>Enhancing Agricultural Efficiency with Smart Packaging</h2>
+                    <p>At Pak Plastic Industry, we understand the unique challenges faced by the agriculture sector. Our specialized packaging solutions are designed to protect crops, seeds, and agricultural products from environmental factors, ensuring they reach their destination in optimal condition.</p>
+                    <p>From storage to transportation, our packaging solutions are engineered to maintain product quality, extend shelf life, and reduce waste throughout the agricultural supply chain.</p>
+                    
+                    <div class="industry-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Superior Protection</h4>
+                                <p>Shield agricultural products from moisture, pests, and contamination during storage and transit.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Eco-Friendly Options</h4>
+                                <p>Sustainable packaging solutions that reduce environmental impact while maintaining performance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-boxes"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Custom Solutions</h4>
+                                <p>Tailored packaging designs to meet the specific needs of different agricultural products.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="industry-image">
+                    <img src="../images/agriculture-detail.jpg" alt="Agriculture Packaging Solutions">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meeting Modern Farming Challenges -->
+    <section class="challenge-section">
+        <div class="container">
+    <section class="solutions-section">
+        <div class="container-ipl">
+            <div class="section-header">
+                <h2>Our Agricultural Packaging Solutions</h2>
+                <p>Explore our comprehensive range of packaging solutions designed specifically for the agricultural industry.</p>
+            </div>
+            
+            <div class="solutions-grid">
+                <!-- Solution 1 -->
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="../images/seed-packaging.jpg" alt="Seed Packaging">
+                    </div>
+                    <div class="solution-content">
+                        <h3>Seed Packaging</h3>
+                        <p>Specialized packaging solutions that maintain seed viability and protect against moisture, UV light, and pests during storage and transportation.</p>
+                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Solution 2 -->
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="../images/produce-packaging.jpg" alt="Produce Packaging">
+                    </div>
+                    <div class="solution-content">
+                        <h3>Produce Packaging</h3>
+                        <p>Breathable and protective packaging that extends the shelf life of fresh fruits and vegetables while maintaining quality and freshness.</p>
+                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Solution 3 -->
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="../images/fertilizer-packaging.jpg" alt="Fertilizer Packaging">
+                    </div>
+                    <div class="solution-content">
+                        <h3>Fertilizer Packaging</h3>
+                        <p>Durable and moisture-resistant packaging solutions for various types of fertilizers, ensuring product integrity and ease of use.</p>
+                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Solution 4 -->
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="../images/grain-storage.jpg" alt="Grain Storage Solutions">
+                    </div>
+                    <div class="solution-content">
+                        <h3>Grain Storage Solutions</h3>
+                        <p>Advanced packaging systems designed for bulk grain storage, protecting against moisture, pests, and contamination.</p>
+                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Solution 5 -->
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="../images/agricultural-film.jpg" alt="Agricultural Films">
+                    </div>
+                    <div class="solution-content">
+                        <h3>Agricultural Films</h3>
+                        <p>High-quality plastic films for mulching, greenhouse covering, and silage, enhancing crop protection and yield.</p>
+                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Solution 6 -->
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="../images/irrigation-solutions.jpg" alt="Irrigation Solutions">
+                    </div>
+                    <div class="solution-content">
+                        <h3>Irrigation Solutions</h3>
+                        <p>Durable and efficient irrigation piping and components for optimal water distribution in agricultural applications.</p>
+                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container-ipl">
+            <div class="section-header">
+                <h2>Benefits of Our Agricultural Packaging</h2>
+                <p>Discover how our packaging solutions can transform your agricultural operations</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Increased Yields</h3>
+                    <p>Our packaging solutions help maintain optimal conditions for agricultural products, leading to higher yields and better quality.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Reduced Waste</h3>
+                    <p>Minimize product loss and waste with packaging that extends shelf life and protects against spoilage and damage.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Efficient Logistics</h3>
+                    <p>Optimized packaging designs that reduce shipping costs and improve handling efficiency throughout the supply chain.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Eco-friendly packaging options that reduce environmental impact while maintaining performance and durability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Enhance Your Agricultural Packaging?</h2>
+            <p>Our team of experts is ready to help you find the perfect packaging solution for your agricultural needs. Contact us today to discuss your requirements and discover how we can support your business.</p>
+            <div class="cta-buttons">
+                <a href="../contact.html" class="btn-cta">Get a Free Consultation</a>
+                <a href="../products.html" class="btn-cta outline">View Our Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-ipl">
+        <div class="container-ipl">
+            <div class="footer-ipl-grid">
+                <div class="footer-ipl-brand">
+                    <div class="footer-logo">
+                        <h3>PAK PLASTIC<span>INDUSTRY L.L.C</span></h3>
+                    </div>
+                    <p class="footer-about">Leading manufacturer of high-quality plastic packaging solutions for various industries. Committed to innovation, quality, and sustainability.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../products.html">Products</a></li>
+                        <li><a href="../technology.html">Technology</a></li>
+                        <li><a href="../sustainability.html">Sustainability</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Industrial Area, Dubai, UAE</li>
+                        <li><i class="fas fa-phone"></i> +971 4 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@pakplasticindustry.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pak Plastic Industry L.L.C. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="../privacy-policy.html">Privacy Policy</a>
+                    <a href="../terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
