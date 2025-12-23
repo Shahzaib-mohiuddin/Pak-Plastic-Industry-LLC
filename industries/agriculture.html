@@ -9,32 +9,76 @@
     <style>
         /* Hero Section */
         .industry-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/agriculture/hero-bg.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/final Pictures 3/Agri final Blur.png') no-repeat center bottom/cover;
             color: white;
-            padding: 200px 0 150px;
-            text-align: center;
+            padding: 160px 0 100px;
+            text-align: left;
             position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .industry-hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+            opacity: 0.9;
         }
 
         .industry-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 1.25rem;
             font-weight: 300;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.2;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            max-width: 700px;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
         }
 
         .industry-hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto 3rem;
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 0 2rem 0;
             opacity: 0.9;
-            line-height: 1.8;
+            line-height: 1.6;
             font-weight: 300;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #3b82f6;
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .hero-btn:hover {
+            background: #2563eb;
+            transform: translateX(5px);
+        }
+
+        .hero-btn i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-btn:hover i {
+            transform: translateX(3px);
         }
 
         /* Challenge Section */
@@ -420,11 +464,21 @@
 
         @media (max-width: 768px) {
             .industry-hero {
-                padding: 150px 0 80px;
+                padding: 120px 0 60px;
+                min-height: 350px;
             }
 
             .industry-hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .industry-hero p {
+                font-size: 0.95rem;
+            }
+
+            .hero-label {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
             }
 
             .section-header h2 {
@@ -483,8 +537,10 @@
     <!-- Hero Section -->
     <section class="industry-hero">
         <div class="container">
-            <h1>Smart Reusable Packaging for a Productive Harvest</h1>
-            <p>Discover how our innovative packaging solutions are transforming the agricultural industry with durable, sustainable, and efficient container systems designed to maximize your harvest's potential.</p>
+            <p class="hero-label">Agriculture Industry</p>
+            <h1>Smart reusable packaging for a productive harvest</h1>
+            <p>Durable and easy to clean, our packaging protects and transports produce efficiently from field to processing.</p>
+            <a href="../contact.html" class="hero-btn">Contact us <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 

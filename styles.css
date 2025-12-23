@@ -776,6 +776,8 @@ body {
 }
 
 .industry-card-new {
+    display: block;
+    text-decoration: none;
     position: relative;
     height: 320px;
     border-radius: 6px;

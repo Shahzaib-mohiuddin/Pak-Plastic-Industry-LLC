@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail - Smart Reusable Packaging | Pak Plastic Industry</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Hero Section */
+        .industry-hero {
+            color: white;
+            padding: 160px 0 100px;
+            text-align: left;
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .industry-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .industry-hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .industry-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.25rem;
+            font-weight: 300;
+            max-width: 700px;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+        }
+
+        .industry-hero p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 0 2rem 0;
+            opacity: 0.9;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #3b82f6;
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .hero-btn:hover {
+            background: #2563eb;
+            transform: translateX(5px);
+        }
+
+        .hero-btn i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-btn:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb-list a {
+            color: #2b6cb0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb-list a:hover {
+            color: #1a365d;
+        }
+
+        .breadcrumb-list .separator {
+            color: #a0aec0;
+        }
+
+        .breadcrumb-list .current {
+            color: #4a5568;
+        }
+
+        /* Meeting Needs Section */
+        .needs-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .needs-section .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .needs-section .section-header h2 {
+            font-size: 2.5rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .needs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .needs-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .needs-card h3 {
+            font-size: 1.4rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .needs-card p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Product Sections */
+        .product-section {
+            padding: 5rem 0;
+        }
+
+        .product-section:nth-child(odd) {
+            background: #f8f9fa;
+        }
+
+        .product-section:nth-child(even) {
+            background: white;
+        }
+
+        .product-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .product-row.reverse .product-image {
+            order: 2;
+        }
+
+        .product-row.reverse .product-content {
+            order: 1;
+        }
+
+        .product-label {
+            display: inline-block;
+            background: #2b6cb0;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-content h2 {
+            font-size: 2.2rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .product-content p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-read-more {
+            display: inline-block;
+            padding: 0.85rem 2rem;
+            background: #2b6cb0;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-read-more:hover {
+            background: #1a365d;
+        }
+
+        /* Innovation Section */
+        .innovation-section {
+            padding: 5rem 0;
+            background: #1a365d;
+            color: white;
+        }
+
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .innovation-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 2.5rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .innovation-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .innovation-label {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .innovation-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .innovation-card p {
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-innovation {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid white;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-innovation:hover {
+            background: white;
+            color: #1a365d;
+        }
+
+        /* Sustainability Section */
+        .sustainability-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+            color: white;
+        }
+
+        .sustainability-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .sustainability-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .sustainability-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+
+        .sustainability-text .note {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .btn-sustainability {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #2b6cb0;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-sustainability:hover {
+            background: #1a365d;
+            color: white;
+        }
+
+        /* SmartLink Section */
+        .smartlink-section {
+            padding: 5rem 0;
+            background: #f8f9fa;
+        }
+
+        .smartlink-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .smartlink-text h2 {
+            font-size: 2.2rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .smartlink-text p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .smartlink-label {
+            display: inline-block;
+            background: #2b6cb0;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .contact-section .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .contact-section .section-header h2 {
+            font-size: 2.2rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .contact-section .section-header p {
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-header h3 {
+            font-size: 1.8rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .faq-header p {
+            color: #4a5568;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-question h4 {
+            font-size: 1rem;
+            color: #2d3748;
+            font-weight: 500;
+            margin: 0;
+            padding-right: 1rem;
+        }
+
+        .faq-question i {
+            color: #2b6cb0;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.25rem;
+            color: #4a5568;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            line-height: 1.3;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: white;
+            color: #2b6cb0;
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .btn-cta:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .needs-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-row.reverse .product-image,
+            .product-row.reverse .product-content {
+                order: unset;
+            }
+
+            .innovation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sustainability-content,
+            .smartlink-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .industry-hero {
+                padding: 120px 0 60px;
+                min-height: 350px;
+            }
+
+            .industry-hero h1 {
+                font-size: 2rem;
+            }
+
+            .industry-hero p {
+                font-size: 0.95rem;
+            }
+
+            .hero-label {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+
+            .product-content h2,
+            .smartlink-text h2 {
+                font-size: 1.8rem;
+            }
+
+            .sustainability-text h2,
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .needs-section .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar-ipl">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>PAK PLASTIC<span>INDUSTRY L.L.C</span></h2>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu-ipl" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Industries <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="agriculture.html">Agriculture</a>
+                        <a href="retail.html" class="active">Retail</a>
+                        <a href="logistics-warehousing.html">Logistics & Warehousing</a>
+                        <a href="groceries.html">Groceries</a>
+                        <a href="automotive.html">Automotive</a>
+                        <a href="healthcare-pharma.html">Healthcare & Pharma</a>
+                        <a href="food.html">Food</a>
+                        <a href="beverages.html">Beverages</a>
+                        <a href="environmental.html">Environmental</a>
+                        <a href="industrial-chemical.html">Industrial & Chemical</a>
+                        <div class="dropdown-footer">
+                            <a href="../industries.html" class="industry-overview">Industry Overview <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../products.html">Products</a></li>
+                <li><a href="../technology.html">Technology</a></li>
+                <li><a href="../sustainability.html">Sustainability</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="industry-hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="../Videos/grocery video.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <p class="hero-label">Retail Industry</p>
+            <h1>Smart Reusable Packaging for Efficient Retail Logistics</h1>
+            <p>Durable and practical solutions that keep goods moving from warehouse to shop floor.</p>
+            <a href="../contact.html" class="hero-btn">Contact us <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><span class="separator">/</span></li>
+                <li><a href="../industries.html">Industry Overview</a></li>
+                <li><span class="separator">/</span></li>
+                <li><span class="current">Retail</span></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Meeting Diverse Needs Section -->
+    <section class="needs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meeting the Diverse Needs of Retail and Distribution</h2>
+            </div>
+            <div class="needs-grid">
+                <div class="needs-card">
+                    <h3>Protecting Goods from Start to Shelf</h3>
+                    <p>Strong and stable, our reusable containers keep products safe in transit and on the shop floor. They help reduce waste from damaged goods and maintain presentation quality for customers.</p>
+                </div>
+                <div class="needs-card">
+                    <h3>Optimising Supply Chain Efficiency</h3>
+                    <p>Our packaging solutions are designed to integrate seamlessly into automated warehouses, store replenishment systems and handling operations. They help save time, reduce manual effort and keep goods moving smoothly.</p>
+                </div>
+                <div class="needs-card">
+                    <h3>Building a Sustainable Future</h3>
+                    <p>Reusable packaging is a smarter alternative to single-use options. It cuts down on waste, reduces costs over time and supports retailers and distributors in meeting their environmental goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section: Pails -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-row">
+                <div class="product-image">
+                    <img src="../images/bigbins.png" alt="Multi-Purpose Pails">
+                </div>
+                <div class="product-content">
+                    <span class="product-label">Pails</span>
+                    <h2>Multi-Purpose Pails and Multi-Mix Containers for Retail and Household Use</h2>
+                    <p>Our multi-purpose pails and containers are designed for everyday mixing, measuring, and storage. With printed measurements for accuracy and convenience, they are available in a range of sizes to suit different needs. Many models include reinforced rims for added strength and are solvent resistant, reusable, and recyclable where permitted.</p>
+                    <a href="../products.html" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section: Jerricans -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-row reverse">
+                <div class="product-image">
+                    <img src="../images/bottlecaps.png" alt="Jerricans">
+                </div>
+                <div class="product-content">
+                    <span class="product-label">Jerricans</span>
+                    <h2>Durable Jerricans for Every Shelf</h2>
+                    <p>Our bottles and jerricans for liquids and food ensure safe storage and easy handling. Available in multiple sizes and shapes, they combine strength, practicality, and sustainability with recycled options available.</p>
+                    <a href="../products.html" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section: Food Pails -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-row">
+                <div class="product-image">
+                    <img src="../images/houshold.png" alt="Food Pails">
+                </div>
+                <div class="product-content">
+                    <span class="product-label">Food Pails</span>
+                    <h2>Food Pails: Protection for Food Products</h2>
+                    <p>Our food safe pails provide tamper-evident security and durable, leak-proof construction throughout your supply chain. From hot-fill to frozen goods, all maintain freshness, support easy handling. Our broad selection of food safe pails set the highest standards of hygiene, safety and performance.</p>
+                    <a href="../products.html" class="btn-read-more">Explore All Pails</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section: Maxinest -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-row reverse">
+                <div class="product-image">
+                    <img src="../images/cantainerbox.png" alt="Stackable Containers">
+                </div>
+                <div class="product-content">
+                    <span class="product-label">Stackable Containers</span>
+                    <h2>Award-Winning Solution for Sustainable Distribution</h2>
+                    <p>Our stackable and nestable solution is designed for efficient, cost-effective transport. With up to 81% nesting capability, it replaces one-way packaging and adapts to multiple applications. Compatible with IoT tracking for real-time visibility throughout your supply chain.</p>
+                    <a href="../products.html" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section: Maxipac -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-row">
+                <div class="product-image">
+                    <img src="../images/plastic_pallets.png" alt="Retail Ready Logistics">
+                </div>
+                <div class="product-content">
+                    <span class="product-label">Retail Ready</span>
+                    <h2>Retail Ready Logistics from Truck to Aisle</h2>
+                    <p>A flexible retail solution that reduces handling, accelerates processes and enhances product visibility. Easy to assemble, fold and stack, our retail-ready packaging is strong and lightweight, supports automated logistics and removes disposable packaging.</p>
+                    <a href="../products.html" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Section -->
+    <section class="innovation-section">
+        <div class="container">
+            <div class="innovation-grid">
+                <div class="innovation-card">
+                    <span class="innovation-label">Trade Moulding</span>
+                    <h3>Turning Ideas into High-Performance Plastic Products</h3>
+                    <p>From design to delivery, our trade moulding expertise transforms concepts into durable, high-quality plastic solutions. Discover how our precision and know-how bring your products to life.</p>
+                    <a href="../technology.html" class="btn-innovation">Explore Trade Moulding</a>
+                </div>
+                <div class="innovation-card">
+                    <span class="innovation-label">Materials Innovation</span>
+                    <h3>Materials Innovation for Sustainable Packaging</h3>
+                    <p>We create materials that combine strength, reliability and sustainability. Using recycled plastics, bio-based and compostable options, we turn hard-to-recycle waste streams into long-lasting packaging.</p>
+                    <a href="../sustainability.html" class="btn-innovation">More About Materials</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="sustainability-section">
+        <div class="container">
+            <div class="sustainability-content">
+                <div class="sustainability-text">
+                    <h2>Make Your Impact Measurable</h2>
+                    <p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear sustainability benefits, from using recycled materials to cutting emissions and ensuring easy recyclability. With our expertise, you can measure impact and make informed choices for a more sustainable packaging and logistics chain.</p>
+                    <p class="note">*Contact us to learn more about our sustainability assessment tools.</p>
+                    <a href="../contact.html" class="btn-sustainability">Contact Us</a>
+                </div>
+                <div class="sustainability-image">
+                    <img src="../images/final Pictures 3/Retail 2 final.png" alt="Sustainable Packaging" style="width: 100%; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SmartLink Section -->
+    <section class="smartlink-section">
+        <div class="container">
+            <div class="smartlink-content">
+                <div class="smartlink-image">
+                    <img src="../images/Warehouse 3.png" alt="SmartLink IoT Tracking" style="width: 100%; border-radius: 8px;">
+                </div>
+                <div class="smartlink-text">
+                    <span class="smartlink-label">SmartLink</span>
+                    <h2>Keep Track of Your Assets Anytime, Anywhere</h2>
+                    <p>With our smart tracking solutions, you always know where your assets are and how they're performing. Track each container, see if it's full or folded, and monitor conditions like temperature in real time. Insights that keep your supply chain on track.</p>
+                    <a href="../technology.html" class="btn-read-more">Want to Know More?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us Today to Explore How Our Solutions Can Work for Your Business</h2>
+                <p>We help you navigate the complexities of your industry as your trusted partner.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h3>FAQ</h3>
+                <p>We understand that choosing the right packaging can raise questions. Our packaging solutions are built to improve efficiency, reduce costs, and support sustainability.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What types of packaging do you offer?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a complete portfolio of primary and returnable transport packaging for industries including retail, automotive, food, industrial and chemicals and many more. Our packaging enables efficiency, protection and sustainability throughout the supply chain.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How does reusable packaging benefit my business?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our returnable packaging reduces costs, simplifies operations, and keeps materials in circulation. It supports efficiency and sustainability, helping your business work smarter while lowering environmental impact.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Are your packaging solutions suitable for all industries?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our packaging solutions are designed for a wide range of sectors, including agriculture, beverage, pharmaceuticals, industrial & chemicals, retail, logistics & warehousing, food, environmental, and automotive.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How do your packaging solutions improve supply chain efficiency?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Stackable, nestable, and foldable designs reduce transport and storage space. Ergonomically designed containers simplify handling and cleaning. Both primary and returnable packaging help reduce damage, lower replacement costs, and streamline operations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How durable are your returnable packaging solutions?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our returnable packaging is built for long-term use, providing reliable performance for up to 15 years. Designed for repeated handling and transport, it delivers consistent protection, reduces replacement costs, and supports efficiency across your supply chain.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Are your packaging products recyclable at the end of their life?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. All our new packaging is designed to be 100% recyclable.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can your packaging solutions be customised?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our packaging solutions can be tailored in size, shape, colour, branding, and labels to meet your business needs. Sustainable material options are available to support environmental goals while ensuring product protection and operational efficiency.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What packaging solutions support efficient retail logistics?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our retail-ready packaging, stackable containers, and nestable solutions are specifically designed for efficient retail logistics, reducing handling time and improving store replenishment processes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Retail Packaging?</h2>
+            <p>Fill in our contact form, and our team will get in touch to discuss your requirements and find the best solution for you.</p>
+            <a href="../contact.html" class="btn-cta">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-ipl">
+        <div class="container-ipl">
+            <div class="footer-ipl-grid">
+                <div class="footer-ipl-brand">
+                    <div class="footer-logo">
+                        <h3>PAK PLASTIC<span>INDUSTRY L.L.C</span></h3>
+                    </div>
+                    <p class="footer-about">Leading manufacturer of high-quality plastic packaging solutions for various industries. Committed to innovation, quality, and sustainability.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../products.html">Products</a></li>
+                        <li><a href="../technology.html">Technology</a></li>
+                        <li><a href="../sustainability.html">Sustainability</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Industrial Area, Dubai, UAE</li>
+                        <li><i class="fas fa-phone"></i> +971 4 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@pakplasticindustry.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pak Plastic Industry L.L.C. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="../privacy-policy.html">Privacy Policy</a>
+                    <a href="../terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
