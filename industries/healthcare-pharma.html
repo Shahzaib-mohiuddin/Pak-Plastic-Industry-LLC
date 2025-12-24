@@ -7,686 +7,127 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Hero Section */
-        .industry-hero {
-            color: white;
-            padding: 160px 0 100px;
-            text-align: left;
-            position: relative;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-        }
-
-        .industry-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: -1;
-        }
-
-        .industry-hero .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .hero-label {
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 1.25rem;
-            opacity: 0.9;
-        }
-
-        .industry-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.25rem;
-            font-weight: 300;
-            max-width: 700px;
-            line-height: 1.15;
-            letter-spacing: -0.5px;
-        }
-
-        .industry-hero p {
-            font-size: 1rem;
-            max-width: 600px;
-            margin: 0 0 2rem 0;
-            opacity: 0.9;
-            line-height: 1.6;
-            font-weight: 300;
-        }
-
-        .hero-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #3b82f6;
-            color: white;
-            padding: 0.875rem 1.75rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-        }
-
-        .hero-btn:hover {
-            background: #2563eb;
-            transform: translateX(5px);
-        }
-
-        .hero-btn i {
-            font-size: 0.8rem;
-            transition: transform 0.3s ease;
-        }
-
-        .hero-btn:hover i {
-            transform: translateX(3px);
-        }
-
-        /* Breadcrumb */
-        .breadcrumb {
-            background: #f8f9fa;
-            padding: 1rem 0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .breadcrumb-list {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            font-size: 0.9rem;
-        }
-
-        .breadcrumb-list li {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .breadcrumb-list a {
-            color: #2b6cb0;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .breadcrumb-list a:hover {
-            color: #1a365d;
-        }
-
-        .breadcrumb-list .separator {
-            color: #a0aec0;
-        }
-
-        .breadcrumb-list .current {
-            color: #4a5568;
-        }
-
-        /* Meeting Needs Section */
-        .needs-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .needs-section .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 4rem;
-        }
-
-        .needs-section .section-header h2 {
-            font-size: 2.5rem;
-            color: #1a365d;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
-
-        .needs-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-        }
-
-        .needs-card {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .needs-card h3 {
-            font-size: 1.4rem;
-            color: #1a365d;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-
-        .needs-card p {
-            color: #4a5568;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        /* Product Sections */
-        .product-section {
-            padding: 5rem 0;
-        }
-
-        .product-section:nth-child(odd) {
-            background: #f8f9fa;
-        }
-
-        .product-section:nth-child(even) {
-            background: white;
-        }
-
-        .product-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .product-row.reverse .product-image {
-            order: 2;
-        }
-
-        .product-row.reverse .product-content {
-            order: 1;
-        }
-
-        .product-label {
-            display: inline-block;
-            background: #2b6cb0;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .product-content h2 {
-            font-size: 2.2rem;
-            color: #1a365d;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            line-height: 1.3;
-        }
-
-        .product-content p {
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            font-size: 1.05rem;
-        }
-
-        .product-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-read-more {
-            display: inline-block;
-            padding: 0.85rem 2rem;
-            background: #2b6cb0;
-            color: white;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .btn-read-more:hover {
-            background: #1a365d;
-        }
-
-        /* Innovation Section */
-        .innovation-section {
-            padding: 5rem 0;
-            background: #1a365d;
-            color: white;
-        }
-
-        .innovation-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-        }
-
-        .innovation-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 2.5rem;
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-
-        .innovation-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .innovation-label {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .innovation-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-
-        .innovation-card p {
-            opacity: 0.9;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn-innovation {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border: 2px solid white;
-            color: white;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .btn-innovation:hover {
-            background: white;
-            color: #1a365d;
-        }
-
-        /* Sustainability Section */
-        .sustainability-section {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
-            color: white;
-        }
-
-        .sustainability-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .sustainability-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
-
-        .sustainability-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            opacity: 0.95;
-            margin-bottom: 2rem;
-        }
-
-        .sustainability-text .note {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            font-style: italic;
-        }
-
-        .btn-sustainability {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: white;
-            color: #2b6cb0;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .btn-sustainability:hover {
-            background: #1a365d;
-            color: white;
-        }
-
-        /* SmartLink Section */
-        .smartlink-section {
-            padding: 5rem 0;
-            background: #f8f9fa;
-        }
-
-        .smartlink-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .smartlink-text h2 {
-            font-size: 2.2rem;
-            color: #1a365d;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
-
-        .smartlink-text p {
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            font-size: 1.05rem;
-        }
-
-        .smartlink-label {
-            display: inline-block;
-            background: #2b6cb0;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .contact-section .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-
-        .contact-section .section-header h2 {
-            font-size: 2.2rem;
-            color: #1a365d;
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-
-        .contact-section .section-header p {
-            color: #4a5568;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-
-        .faq-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .faq-header h3 {
-            font-size: 1.8rem;
-            color: #1a365d;
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-
-        .faq-header p {
-            color: #4a5568;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .faq-question {
-            padding: 1.25rem 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: #f8f9fa;
-        }
-
-        .faq-question h4 {
-            font-size: 1rem;
-            color: #2d3748;
-            font-weight: 500;
-            margin: 0;
-            padding-right: 1rem;
-        }
-
-        .faq-question i {
-            color: #2b6cb0;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-        }
-
-        .faq-answer p {
-            padding: 0 1.5rem 1.25rem;
-            color: #4a5568;
-            line-height: 1.7;
-            margin: 0;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cta-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-            line-height: 1.3;
-        }
-
-        .cta-content p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-        }
-
-        .btn-cta {
-            display: inline-block;
-            background: white;
-            color: #2b6cb0;
-            padding: 1rem 2.5rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid white;
-        }
-
-        .btn-cta:hover {
-            background: transparent;
-            color: white;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .needs-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .product-row {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .product-row.reverse .product-image,
-            .product-row.reverse .product-content {
-                order: unset;
-            }
-
-            .innovation-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .sustainability-content,
-            .smartlink-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .industry-hero {
-                padding: 120px 0 60px;
-                min-height: 350px;
-            }
-
-            .industry-hero h1 {
-                font-size: 2rem;
-            }
-
-            .industry-hero p {
-                font-size: 0.95rem;
-            }
-
-            .hero-label {
-                font-size: 0.7rem;
-                letter-spacing: 2px;
-            }
-
-            .product-content h2,
-            .smartlink-text h2 {
-                font-size: 1.8rem;
-            }
-
-            .sustainability-text h2,
-            .cta-content h2 {
-                font-size: 2rem;
-            }
-
-            .needs-section .section-header h2 {
-                font-size: 2rem;
-            }
-        }
+        .industry-hero { color: white; padding: 160px 0 100px; text-align: left; position: relative; min-height: 400px; display: flex; align-items: center; overflow: hidden; }
+        .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+        .industry-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: -1; }
+        .industry-hero .container { max-width: 1200px; margin: 0 auto; padding: 2rem; width: 100%; }
+        .hero-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1rem; opacity: 0.9; }
+        .industry-hero h1 { font-size: 3rem; margin-bottom: 1.25rem; font-weight: 300; max-width: 700px; line-height: 1.15; letter-spacing: -0.5px; }
+        .industry-hero p { font-size: 1rem; max-width: 600px; margin: 0 0 2rem 0; opacity: 0.9; line-height: 1.6; font-weight: 300; }
+        .hero-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #3b82f6; color: white; padding: 0.875rem 1.75rem; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border: none; }
+        .hero-btn:hover { background: #2563eb; transform: translateX(5px); }
+        .hero-btn i { font-size: 0.8rem; transition: transform 0.3s ease; }
+        .hero-btn:hover i { transform: translateX(3px); }
+        .intro-section { background: #3d8b8b; padding: 2rem 0 5rem; position: relative; overflow: hidden; }
+        .intro-section::before { content: ''; position: absolute; top: -50px; right: -100px; width: 400px; height: 400px; background: rgba(255,255,255,0.03); border-radius: 50%; }
+        .intro-section::after { content: ''; position: absolute; bottom: -100px; left: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.02); border-radius: 50%; }
+        .intro-section .container { position: relative; z-index: 1; }
+        .intro-nav { margin-bottom: 4rem; }
+        .intro-nav-list { display: inline-flex; align-items: center; gap: 0.5rem; list-style: none; padding: 0; margin: 0; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.3); }
+        .intro-nav-list li { color: rgba(255,255,255,0.8); font-size: 0.8rem; }
+        .intro-nav-list a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s ease; }
+        .intro-nav-list a:hover { color: white; text-decoration: underline; }
+        .intro-nav-list .separator { color: rgba(255,255,255,0.6); }
+        .intro-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .intro-content p { color: white; font-size: 1.5rem; line-height: 1.5; font-weight: 500; margin-bottom: 1.5rem; }
+        .intro-content p:last-child { margin-bottom: 0; }
+        .challenges-section { padding: 5rem 0; background: white; }
+        .challenges-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .challenges-content h2 { font-size: 2rem; color: #1a365d; margin-bottom: 2.5rem; font-weight: 400; line-height: 1.3; }
+        .challenge-item { margin-bottom: 2rem; }
+        .challenge-item:last-child { margin-bottom: 0; }
+        .challenge-item h3 { font-size: 1rem; color: #1a365d; margin-bottom: 0.5rem; font-weight: 600; }
+        .challenge-item p { color: #4a5568; line-height: 1.7; font-size: 0.95rem; margin: 0; }
+        .challenges-image { display: flex; align-items: center; justify-content: center; }
+        .challenges-image img { width: 100%; height: auto; display: block; border-radius: 0; }
+        .product-section { padding: 5rem 0; background: white; }
+        .product-section.alt-bg { background: #f8f9fa; }
+        .product-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .product-row.reverse { direction: rtl; }
+        .product-row.reverse > * { direction: ltr; }
+        .product-image { border-radius: 8px; overflow: hidden; }
+        .product-image img { width: 100%; height: auto; display: block; border-radius: 8px; }
+        .product-content .product-label { font-size: 0.8rem; color: #3b82f6; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem; }
+        .product-content h2 { font-size: 2rem; color: #1a365d; margin-bottom: 1.25rem; font-weight: 400; line-height: 1.3; }
+        .product-content p { color: #4a5568; line-height: 1.7; margin-bottom: 1.5rem; font-size: 1rem; }
+        .product-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-contact { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: #3b82f6; color: white; border: none; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; }
+        .btn-contact:hover { background: #2563eb; transform: translateY(-2px); }
+        .btn-contact i { font-size: 0.8rem; transition: transform 0.3s ease; }
+        .btn-contact:hover i { transform: translateX(3px); }
+        .btn-brochure { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: transparent; color: #1a365d; border: 2px solid #1a365d; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; }
+        .btn-brochure:hover { background: #1a365d; color: white; }
+        .btn-brochure i { font-size: 0.85rem; }
+        .innovation-section { padding: 2.5rem 0 0; background: #dbeafe; position: relative; }
+        .innovation-section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-top: 35px solid #3d8b8b; }
+        .innovation-row { display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .innovation-text-row { display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 2rem; align-items: flex-start; margin-bottom: 1.5rem; }
+        .innovation-label-col { padding-top: 0.5rem; }
+        .innovation-label-col .innovation-label { font-size: 0.7rem; color: #718096; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+        .innovation-heading-col h2 { font-size: 1.75rem; color: #1a365d; font-weight: 400; line-height: 1.3; margin: 0; }
+        .innovation-empty-col { display: block; }
+        .innovation-content-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: flex-end; }
+        .innovation-content { padding-bottom: 1.5rem; }
+        .innovation-content p { color: #4a5568; line-height: 1.6; margin-bottom: 1.25rem; font-size: 0.9rem; max-width: 400px; }
+        .innovation-content .btn-innovation { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #3b82f6; color: white; border: none; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: all 0.3s ease; }
+        .innovation-content .btn-innovation:hover { background: #2563eb; transform: translateY(-2px); }
+        .innovation-content .btn-innovation i { font-size: 0.75rem; transition: transform 0.3s ease; }
+        .innovation-content .btn-innovation:hover i { transform: translateX(3px); }
+        .innovation-image { border-radius: 0; overflow: hidden; }
+        .innovation-image img { width: 100%; height: auto; display: block; border-radius: 0; }
+        .sustainability-section { padding: 5rem 0; background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/thicket-dark-wet-grass.jpg'); background-size: cover; background-position: center; background-attachment: fixed; color: white; position: relative; }
+        .sustainability-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .sustainability-content .sustainability-label { font-size: 0.75rem; color: #7dd3fc; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.75rem; }
+        .sustainability-content h2 { font-size: 2rem; color: white; margin-bottom: 1.25rem; font-weight: 400; line-height: 1.3; }
+        .sustainability-content p { color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 1.5rem; font-size: 1rem; }
+        .sustainability-content .btn-contact { border-color: white; color: white; }
+        .sustainability-content .btn-contact:hover { background: white; color: #1a365d; }
+        .sustainability-image { border-radius: 8px; overflow: hidden; }
+        .sustainability-image img { width: 100%; height: auto; display: block; border-radius: 8px; }
+        .cta-section { padding: 4rem 0; background: #3d8b8b; position: relative; overflow: hidden; }
+        .cta-section::before { content: ''; position: absolute; top: -80px; right: 10%; width: 200px; height: 200px; background: rgba(255,255,255,0.08); border-radius: 50%; }
+        .cta-section::after { content: ''; position: absolute; bottom: -60px; left: 5%; width: 150px; height: 150px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+        .cta-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1; }
+        .cta-content h2 { font-size: 2rem; color: white; margin-bottom: 1rem; font-weight: 400; line-height: 1.3; }
+        .cta-content p { color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 1rem; }
+        .cta-form-card { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .cta-form-card h3 { font-size: 1.25rem; color: #1a365d; margin-bottom: 0.5rem; font-weight: 600; }
+        .cta-form-card p { color: #4a5568; margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6; }
+        .cta-form-card .form-group { margin-bottom: 1rem; }
+        .cta-form-card input, .cta-form-card textarea { width: 100%; padding: 0.875rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.9rem; transition: border-color 0.3s ease, box-shadow 0.3s ease; font-family: inherit; }
+        .cta-form-card input:focus, .cta-form-card textarea:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+        .cta-form-card textarea { resize: vertical; min-height: 100px; }
+        .btn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: #3b82f6; color: white; padding: 0.875rem 2rem; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border: none; width: 100%; cursor: pointer; }
+        .btn-cta:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59,130,246,0.3); }
+        .btn-cta i { transition: transform 0.3s ease; }
+        .btn-cta:hover i { transform: translateX(3px); }
+        .faq-section { padding: 5rem 0; background: #f8fafc; }
+        .faq-container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+        .faq-header { text-align: center; margin-bottom: 3rem; }
+        .faq-header h2 { font-size: 2rem; color: #1a365d; margin-bottom: 1rem; font-weight: 400; }
+        .faq-header p { color: #4a5568; line-height: 1.7; font-size: 1rem; max-width: 600px; margin: 0 auto; }
+        .faq-list { display: flex; flex-direction: column; gap: 1rem; }
+        .faq-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; transition: box-shadow 0.3s ease; }
+        .faq-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+        .faq-question { padding: 1.25rem 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 500; color: #1a365d; font-size: 1rem; transition: background 0.3s ease; gap: 1rem; }
+        .faq-question:hover { background: #f8fafc; }
+        .faq-question span { flex: 1; }
+        .faq-question .faq-icon { width: 28px; height: 28px; border-radius: 50%; background: #e8f4f8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease; }
+        .faq-question .faq-icon i { font-size: 0.75rem; color: #3b82f6; transition: transform 0.3s ease; }
+        .faq-item.active .faq-question .faq-icon { background: #3b82f6; }
+        .faq-item.active .faq-question .faq-icon i { color: white; transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-answer p { padding: 0 1.5rem 1.5rem; color: #4a5568; line-height: 1.7; font-size: 0.95rem; }
+        @media (max-width: 992px) { .challenges-row, .product-row, .product-row.reverse, .sustainability-row, .cta-container { grid-template-columns: 1fr; gap: 2rem; } .product-row.reverse { direction: ltr; } .innovation-text-row, .innovation-content-row { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .industry-hero { padding: 120px 0 60px; min-height: 350px; } .industry-hero h1 { font-size: 2rem; } .industry-hero p { font-size: 0.95rem; } .hero-label { font-size: 0.7rem; letter-spacing: 2px; } .product-content h2, .innovation-heading-col h2, .sustainability-content h2, .cta-content h2, .challenges-content h2 { font-size: 1.75rem; } .intro-content p { font-size: 1.1rem; } }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar-ipl">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>PAK PLASTIC<span>INDUSTRY L.L.C</span></h2>
-            </div>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu-ipl" id="navMenu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Industries <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
-                        <a href="agriculture.html">Agriculture</a>
-                        <a href="retail.html">Retail</a>
-                        <a href="logistics-warehousing.html">Logistics & Warehousing</a>
-                        <a href="groceries.html">Groceries</a>
-                        <a href="automotive.html">Automotive</a>
-                        <a href="healthcare-pharma.html" class="active">Healthcare & Pharma</a>
-                        <a href="food.html">Food</a>
-                        <a href="beverages.html">Beverages</a>
-                        <a href="environmental.html">Environmental</a>
-                        <a href="industrial-chemical.html">Industrial & Chemical</a>
-                        <div class="dropdown-footer">
-                            <a href="../industries.html" class="industry-overview">Industry Overview <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="../products.html">Products</a></li>
-                <li><a href="../technology.html">Technology</a></li>
-                <li><a href="../sustainability.html">Sustainability</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <nav class="navbar-ipl"><div class="nav-container"><div class="nav-logo"><h2>PAK PLASTIC<span>INDUSTRY L.L.C</span></h2></div><button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button><ul class="nav-menu-ipl" id="navMenu"><li><a href="../index.html">Home</a></li><li><a href="../about.html">About</a></li><li class="dropdown"><a href="#" class="dropdown-toggle">Industries <i class="fas fa-chevron-down"></i></a><div class="dropdown-menu"><a href="agriculture.html">Agriculture</a><a href="retail.html">Retail</a><a href="logistics-warehousing.html">Logistics & Warehousing</a><a href="automotive.html">Automotive</a><a href="healthcare-pharma.html" class="active">Healthcare & Pharma</a><a href="food.html">Food</a><a href="beverages.html">Beverages</a><a href="environmental.html">Environmental</a><a href="industrial-chemical.html">Industrial & Chemical</a><div class="dropdown-footer"><a href="../industries.html" class="industry-overview">Industry Overview <i class="fas fa-arrow-right"></i></a></div></div></li><li><a href="../products.html">Products</a></li><li><a href="../technology.html">Technology</a></li><li><a href="../sustainability.html">Sustainability</a></li><li><a href="../contact.html">Contact</a></li></ul></div></nav>
 
-    <!-- Hero Section -->
     <section class="industry-hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="../Videos/Pharma Video.mp4" type="video/mp4">
-        </video>
+        <video class="hero-video" autoplay muted loop playsinline><source src="../Videos/Pharma Video.mp4" type="video/mp4"></video>
         <div class="container">
             <p class="hero-label">Healthcare & Pharma Industry</p>
             <h1>Safe and Efficient Packaging for the Pharmaceutical Industry</h1>
@@ -695,315 +136,21 @@
         </div>
     </section>
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb-list">
-                <li><a href="../index.html">Home</a></li>
-                <li><span class="separator">/</span></li>
-                <li><a href="../industries.html">Industry Overview</a></li>
-                <li><span class="separator">/</span></li>
-                <li><span class="current">Healthcare & Pharma</span></li>
-            </ol>
-        </div>
-    </nav>
+    <section class="intro-section"><div class="container"><nav class="intro-nav"><ul class="intro-nav-list"><li><a href="../index.html">Home</a></li><li class="separator">›</li><li><a href="../industries.html">Industry overview</a></li><li class="separator">›</li><li>Healthcare & Pharma</li></ul></nav><div class="intro-content"><p>In healthcare and pharmaceutical industries, safety and precision are non-negotiable. Our packaging solutions protect sensitive products throughout the supply chain.</p><p>From temperature-sensitive medications to medical devices, we provide reliable, compliant packaging that meets the highest industry standards.</p></div></div></section>
 
-    <!-- Meeting Pharmaceutical Needs Section -->
-    <section class="needs-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Meeting Pharmaceutical Industry Needs</h2>
-            </div>
-            <div class="needs-grid">
-                <div class="needs-card">
-                    <h3>Maintaining Product Safety</h3>
-                    <p>Our packaging solutions are made from clean, durable materials that meet strict pharmaceutical standards. They protect sensitive contents from contamination and damage during storage and transport.</p>
-                </div>
-                <div class="needs-card">
-                    <h3>Streamlining Operations</h3>
-                    <p>With standardised footprints and smart handling features, our reusable containers fit seamlessly into automated systems and global supply chains. They help improve efficiency at every stage, from filling lines to delivery.</p>
-                </div>
-                <div class="needs-card">
-                    <h3>Reducing Environmental Impact</h3>
-                    <p>By switching from single-use packaging to reusables, pharmaceutical companies can lower waste and carbon emissions while meeting sustainability goals. A reliable, future-ready choice for a cleaner industry.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="challenges-section"><div class="challenges-row"><div class="challenges-content"><h2>Meeting pharmaceutical packaging challenges</h2><div class="challenge-item"><h3>Protecting sensitive products</h3><p>Our packaging is designed to protect pharmaceuticals and medical devices from contamination, damage, and environmental factors throughout storage and transport.</p></div><div class="challenge-item"><h3>Ensuring compliance and traceability</h3><p>Built to meet strict regulatory requirements, our containers support full traceability and comply with pharmaceutical industry standards for safety and hygiene.</p></div><div class="challenge-item"><h3>Supporting efficient operations</h3><p>Designed for automated handling and cleanroom environments, our packaging integrates seamlessly with pharmaceutical production and distribution processes.</p></div></div><div class="challenges-image"><img src="../images/products/pharma-container.jpg" alt="Healthcare packaging solutions"></div></div></section>
 
-    <!-- Product Section: Combo Excelsior -->
-    <section class="product-section">
-        <div class="container">
-            <div class="product-row">
-                <div class="product-image">
-                    <img src="../images/bigbins.png" alt="Combo Excelsior IBC Container">
-                </div>
-                <div class="product-content">
-                    <span class="product-label">Combo Excelsior®</span>
-                    <h2>Reusable Foldable IBC for Efficient Liquid Transport</h2>
-                    <p>The Combo Excelsior reusable, foldable container is a smart and cost-effective alternative to drums and steel IBCs. Built for durability and easy handling, it helps you save space, reduce transport costs and simplify logistics.</p>
-                    <a href="../products.html" class="btn-read-more">Read More</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="product-section"><div class="product-row"><div class="product-image"><img src="../images/products/pharma-container.jpg" alt="Pharmaceutical Containers"></div><div class="product-content"><p class="product-label">Pharma Containers</p><h2>Secure containers for pharmaceutical products</h2><p>Our pharmaceutical containers are designed for safe storage and transport of medications, vaccines, and medical supplies. Clean, secure, and compliant with industry regulations.</p><div class="product-buttons"><a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a><a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a></div></div></div><div class="product-row reverse" style="margin-top: 4rem;"><div class="product-image"><img src="../images/products/medical-tray.jpg" alt="Medical Trays"></div><div class="product-content"><p class="product-label">Medical Trays</p><h2>Precision trays for medical devices</h2><p>Our medical trays provide secure organization and protection for surgical instruments, diagnostic equipment, and medical devices throughout sterilization and distribution.</p><div class="product-buttons"><a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a><a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a></div></div></div></section>
 
-    <!-- Product Section: Maestro -->
-    <section class="product-section">
-        <div class="container">
-            <div class="product-row reverse">
-                <div class="product-image">
-                    <img src="../images/plastic_pallets.png" alt="Maestro Pharmaceutical Pallets">
-                </div>
-                <div class="product-content">
-                    <span class="product-label">Maestro®</span>
-                    <h2>Durable and Dependable for Pharmaceutical Transportation</h2>
-                    <p>Hygienic, easy to clean and built to last, Maestro® keeps your products safe while supporting smooth and compliant operations. Durable, dependable and simple to handle, it makes every shipment more efficient.</p>
-                    <a href="../products.html" class="btn-read-more">Read More</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="innovation-section"><div class="innovation-row"><div class="innovation-text-row"><div class="innovation-label-col"><p class="innovation-label">Materials Innovation</p></div><div class="innovation-heading-col"><h2>Materials innovation for sustainable packaging</h2></div><div class="innovation-empty-col"></div></div><div class="innovation-content-row"><div class="innovation-content"><p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard-to-recycle waste streams into long-lasting packaging.</p><a href="../technology.html" class="btn-innovation">More about Material Innovation <i class="fas fa-arrow-right"></i></a></div><div class="innovation-image"><img src="../images/rpcs-various-1920x953.png" alt="Materials Innovation"></div></div></div></section>
 
-    <!-- Product Section: Pharma Pails -->
-    <section class="product-section">
-        <div class="container">
-            <div class="product-row">
-                <div class="product-image">
-                    <img src="../images/houshold.png" alt="Pharma Grade Pails">
-                </div>
-                <div class="product-content">
-                    <span class="product-label">Pails</span>
-                    <h2>Pharma-Grade Safety. Premium Quality</h2>
-                    <p>Our Pharma Pails set the benchmark for purity and protection in pharmaceutical packaging. Produced in ISO-certified facilities, they ensure full compliance, tamper-evident closure and product integrity throughout global supply chains.</p>
-                    <a href="../products.html" class="btn-read-more">Read More</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="sustainability-section"><div class="sustainability-row"><div class="sustainability-content"><p class="sustainability-label">Sustainability</p><h2>Make your impact measurable</h2><p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear sustainability benefits, from using recycled materials to cutting emissions and ensuring easy recyclability.</p><a href="../contact.html" class="btn-contact">Contact us</a></div><div class="sustainability-image"><img src="../images/sustainability/impact.jpg" alt="Sustainability Impact"></div></div></section>
 
-    <!-- Innovation Section -->
-    <section class="innovation-section">
-        <div class="container">
-            <div class="innovation-grid">
-                <div class="innovation-card">
-                    <span class="innovation-label">Trade Moulding</span>
-                    <h3>Turning Ideas into High-Performance Plastic Products</h3>
-                    <p>From design to delivery, our trade moulding expertise transforms concepts into durable, high-quality plastic solutions. Discover how our precision and know-how bring your products to life.</p>
-                    <a href="../technology.html" class="btn-innovation">Explore Trade Moulding</a>
-                </div>
-                <div class="innovation-card">
-                    <span class="innovation-label">Materials Innovation</span>
-                    <h3>Materials Innovation for Sustainable Packaging</h3>
-                    <p>We create materials that combine strength, reliability and sustainability. Using recycled plastics, bio-based and compostable options, we turn hard-to-recycle waste streams into long-lasting packaging.</p>
-                    <a href="../sustainability.html" class="btn-innovation">More About Materials</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="cta-section"><div class="cta-container"><div class="cta-content"><h2>Contact us today to explore how our solutions can work for your business</h2><p>We help you navigate the complexities of your industry as your trusted partner.</p></div><div class="cta-form-card"><h3>Get in touch</h3><p>Fill in the form and our team will get back to you shortly.</p><form><div class="form-group"><input type="text" placeholder="Your name" required></div><div class="form-group"><input type="email" placeholder="Email address" required></div><div class="form-group"><input type="text" placeholder="Company name"></div><div class="form-group"><textarea placeholder="How can we help you?"></textarea></div><button type="submit" class="btn-cta">Send message <i class="fas fa-arrow-right"></i></button></form></div></div></section>
 
-    <!-- Sustainability Section -->
-    <section class="sustainability-section">
-        <div class="container">
-            <div class="sustainability-content">
-                <div class="sustainability-text">
-                    <h2>Make Your Impact Measurable</h2>
-                    <p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear sustainability benefits, from using recycled materials to cutting emissions and ensuring easy recyclability. With our expertise, you can measure impact and make informed choices for a more sustainable packaging and logistics chain.</p>
-                    <p class="note">*Contact us to learn more about our sustainability assessment tools.</p>
-                    <a href="../contact.html" class="btn-sustainability">Contact Us</a>
-                </div>
-                <div class="sustainability-image">
-                    <img src="../images/Pharmaceutical.png" alt="Sustainable Pharmaceutical Packaging" style="width: 100%; border-radius: 8px;">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="faq-section"><div class="faq-container"><div class="faq-header"><h2>Frequently Asked Questions</h2><p>Find answers to common questions about our healthcare and pharmaceutical packaging solutions.</p></div><div class="faq-list"><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>What types of pharmaceutical packaging do you offer?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>We offer pharmaceutical containers, medical trays, temperature-controlled packaging, and custom solutions for medications, vaccines, and medical devices.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Are your containers compliant with pharmaceutical regulations?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. Our packaging meets strict pharmaceutical industry standards and regulatory requirements for safety, hygiene, and traceability.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Can your packaging be used in cleanroom environments?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. Our containers are designed for cleanroom compatibility, with smooth surfaces that are easy to clean and resistant to contamination.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Do you offer temperature-controlled packaging?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. We provide insulated containers and cold chain solutions for temperature-sensitive pharmaceuticals and vaccines.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Are your products recyclable?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. All our packaging is designed to be 100% recyclable at the end of its useful life, supporting sustainable healthcare operations.</p></div></div></div></div></section>
 
-    <!-- SmartLink Section -->
-    <section class="smartlink-section">
-        <div class="container">
-            <div class="smartlink-content">
-                <div class="smartlink-image">
-                    <img src="../images/Warehouse 3.png" alt="SmartLink IoT Tracking" style="width: 100%; border-radius: 8px;">
-                </div>
-                <div class="smartlink-text">
-                    <span class="smartlink-label">SmartLink</span>
-                    <h2>Keep Track of Your Assets Anytime, Anywhere</h2>
-                    <p>With SmartLink, you always know where your assets are and how they're performing. Track each container, see if it's full or folded, and monitor conditions like temperature in real time. Insights that keep your supply chain on track.</p>
-                    <a href="../technology.html" class="btn-read-more">Want to Know More?</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Us Today to Explore How Our Solutions Can Work for Your Business</h2>
-                <p>We help you navigate the complexities of your industry as your trusted partner.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="faq-header">
-                <h3>FAQ</h3>
-                <p>We understand that choosing the right packaging can raise questions. Our packaging solutions are built to improve efficiency, reduce costs, and support sustainability.</p>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>What types of packaging do you offer for pharmaceuticals?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We offer a complete portfolio of primary and returnable transport packaging for the pharmaceutical industry including IBCs, pallets, pails, and containers. Our packaging enables efficiency, protection and sustainability throughout the supply chain.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>What types of primary packaging do you offer?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our primary packaging includes thin-wall packaging, pails, overcaps and bottles for pharmaceutical, petcare, industrial and homecare products. Containers are made from durable, recyclable polypropylene or polyethylene, protecting products and supporting regulatory compliance.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>How does reusable packaging benefit my pharmaceutical business?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our returnable packaging reduces costs, simplifies operations, and keeps materials in circulation. It supports efficiency and sustainability, helping your business work smarter while lowering environmental impact.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Do your packaging solutions meet pharmaceutical standards?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes. Our packaging solutions are made from clean, durable materials that meet strict pharmaceutical standards. They are produced in ISO-certified facilities and ensure full compliance with industry regulations.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>How durable are your returnable packaging solutions?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our returnable packaging is built for long-term use, providing reliable performance for up to 15 years. Designed for repeated handling and transport, it delivers consistent protection, reduces replacement costs, and supports efficiency across your supply chain.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Are your packaging products recyclable at the end of their life?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes. All our new packaging is designed to be 100% recyclable.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Can your packaging solutions be customised?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes. Our packaging solutions can be tailored in size, shape, colour, branding, and labels to meet your business needs. Sustainable material options are available to support environmental goals while ensuring product protection and operational efficiency.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Do you offer trade moulding solutions?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes. We manufacture a broad range of products, from plastic bottles to pallet boxes, delivering efficient and cost-effective trade moulding solutions. Our capabilities ensure precise, high-quality production at scale while meeting each client's specific requirements.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>Ready to Enhance Your Pharmaceutical Packaging?</h2>
-            <p>Fill in our contact form, and our team will get in touch to discuss your requirements and find the best solution for you.</p>
-            <a href="../contact.html" class="btn-cta">Contact Us</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-ipl">
-        <div class="container-ipl">
-            <div class="footer-ipl-grid">
-                <div class="footer-ipl-brand">
-                    <div class="footer-logo">
-                        <h3>PAK PLASTIC<span>INDUSTRY L.L.C</span></h3>
-                    </div>
-                    <p class="footer-about">Leading manufacturer of high-quality plastic packaging solutions for various industries. Committed to innovation, quality, and sustainability.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About Us</a></li>
-                        <li><a href="../products.html">Products</a></li>
-                        <li><a href="../technology.html">Technology</a></li>
-                        <li><a href="../sustainability.html">Sustainability</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Industrial Area, Dubai, UAE</li>
-                        <li><i class="fas fa-phone"></i> +971 4 123 4567</li>
-                        <li><i class="fas fa-envelope"></i> info@pakplasticindustry.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Pak Plastic Industry L.L.C. All Rights Reserved.</p>
-                <div class="footer-legal">
-                    <a href="../privacy-policy.html">Privacy Policy</a>
-                    <a href="../terms-of-service.html">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <footer class="footer-ipl"><div class="container-ipl"><div class="footer-ipl-grid"><div class="footer-ipl-brand"><div class="footer-logo"><h3>PAK PLASTIC<span>INDUSTRY L.L.C</span></h3></div><p class="footer-about">Leading manufacturer of high-quality plastic packaging solutions for various industries. Committed to innovation, quality, and sustainability.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div><div class="footer-links"><h4>Quick Links</h4><ul><li><a href="../index.html">Home</a></li><li><a href="../about.html">About Us</a></li><li><a href="../products.html">Products</a></li><li><a href="../technology.html">Technology</a></li><li><a href="../sustainability.html">Sustainability</a></li><li><a href="../contact.html">Contact</a></li></ul></div><div class="footer-contact"><h4>Contact Us</h4><ul><li><i class="fas fa-map-marker-alt"></i> Industrial Area, Dubai, UAE</li><li><i class="fas fa-phone"></i> +971 4 123 4567</li><li><i class="fas fa-envelope"></i> info@pakplasticindustry.com</li></ul></div></div><div class="footer-bottom"><p>&copy; 2025 Pak Plastic Industry L.L.C. All Rights Reserved.</p><div class="footer-legal"><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-service.html">Terms of Service</a></div></div></div></footer>
     <script src="../script.js"></script>
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                const isActive = faqItem.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                }
-            });
-        });
-    </script>
 </body>
 </html>

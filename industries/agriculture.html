@@ -22,7 +22,8 @@
         .industry-hero .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 2rem;
+            width: 100%;
         }
 
         .hero-label {
@@ -30,8 +31,9 @@
             font-weight: 500;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             opacity: 0.9;
+
         }
 
         .industry-hero h1 {
@@ -81,384 +83,789 @@
             transform: translateX(3px);
         }
 
-        /* Challenge Section */
-        .challenge-section {
-            padding: 6rem 0;
-            background-color: #f8f9fa;
+        /* Intro Section - Teal background */
+        .intro-section {
+            background: #3d8b8b;
+            padding: 2rem 0 5rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .challenge-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
         }
 
-        .challenge-card {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .intro-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 50%;
         }
 
-        .challenge-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        .intro-section .container {
+            position: relative;
+            z-index: 1;
         }
 
-        .challenge-card h3 {
-            color: #2d3748;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-            font-weight: 500;
+        .intro-nav {
+            margin-bottom: 4rem;
         }
 
-        .challenge-card p {
-            color: #4a5568;
-            line-height: 1.7;
+        .intro-nav-list {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
             margin: 0;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            display: inline-flex;
         }
 
-        /* Product Showcase */
-        .product-showcase {
+        .intro-nav-list li {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.8rem;
+        }
+
+        .intro-nav-list a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .intro-nav-list a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .intro-nav-list .separator {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-content p {
+            color: white;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Challenges Section */
+        .challenges-section {
             padding: 5rem 0;
             background: white;
         }
 
-        .product-card {
+        .challenges-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: center;
-            margin-bottom: 6rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
-        .product-card:nth-child(even) .product-image {
-            order: 2;
-        }
-
-        .product-card:nth-child(even) .product-details {
-            order: 1;
-        }
-
-        .product-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-details h2 {
-            font-size: 2.2rem;
+        .challenges-content h2 {
+            font-size: 2rem;
             color: #1a365d;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
             font-weight: 400;
             line-height: 1.3;
         }
 
-        .product-details p {
-            color: #4a5568;
-            line-height: 1.8;
+        .challenge-item {
             margin-bottom: 2rem;
-            font-size: 1.05rem;
         }
 
-        .btn-outline {
-            display: inline-block;
+        .challenge-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .challenge-item h3 {
+            font-size: 1rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .challenge-item p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .challenges-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .challenges-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0;
+        }
+
+        /* Product Row Section */
+        .product-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .product-section.alt-bg {
+            background: #f8f9fa;
+        }
+
+        .product-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .product-row.reverse {
+            direction: rtl;
+        }
+
+        .product-row.reverse > * {
+            direction: ltr;
+        }
+
+        .product-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .product-content .product-label {
+            font-size: 0.8rem;
+            color: #3b82f6;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-content h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .product-content p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .product-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             padding: 0.75rem 1.5rem;
-            border: 2px solid #2b6cb0;
-            color: #2b6cb0;
+            background: #1a365d;
+            color: white;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
-            margin-right: 1rem;
         }
 
-        .btn-outline:hover {
-            background: #2b6cb0;
-            color: white;
+        .btn-download:hover {
+            background: #2d4a7c;
         }
 
-        .btn-primary {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: #2b6cb0;
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            background: #3b82f6;
             color: white;
-            border-radius: 4px;
+            border: none;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
         }
 
-        .btn-primary:hover {
-            background: #2c5282;
+        .btn-contact:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .btn-contact i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-contact:hover i {
+            transform: translateX(3px);
+        }
+
+        .btn-brochure {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            background: transparent;
+            color: #1a365d;
+            border: 2px solid #1a365d;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-brochure:hover {
+            background: #1a365d;
+            color: white;
+        }
+
+        .btn-brochure i {
+            font-size: 0.85rem;
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-link:hover {
+            color: #2563eb;
+        }
+
+        .btn-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-link:hover i {
+            transform: translateX(5px);
         }
 
         /* Innovation Section */
         .innovation-section {
-            padding: 6rem 0;
-            background: #f8f9fa;
+            padding: 2.5rem 0 0;
+            background: #dbeafe;
+            position: relative;
         }
 
-        .innovation-grid {
+        .innovation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 35px solid #3d8b8b;
+        }
+
+        .innovation-row {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .innovation-text-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1.5fr 1fr;
             gap: 2rem;
-            margin-top: 3rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
         }
 
-        .innovation-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+        .innovation-label-col {
+            padding-top: 0.5rem;
         }
 
-        .innovation-card:hover {
-            transform: translateY(-5px);
+        .innovation-label-col .innovation-label {
+            font-size: 0.7rem;
+            color: #718096;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .innovation-image {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
+        .innovation-heading-col h2 {
+            font-size: 1.75rem;
+            color: #1a365d;
+            font-weight: 400;
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .innovation-empty-col {
+            display: block;
+        }
+
+        .innovation-content-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: flex-end;
         }
 
         .innovation-content {
-            padding: 1.5rem;
-        }
-
-        .innovation-content h3 {
-            font-size: 1.5rem;
-            color: #2d3748;
-            margin-bottom: 1rem;
-            font-weight: 500;
+            padding-bottom: 1.5rem;
         }
 
         .innovation-content p {
             color: #4a5568;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            font-size: 0.9rem;
+            max-width: 400px;
         }
 
-        .solutions-section {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: #1a365d;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
-
-        .section-header p {
-            color: #4a5568;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        .solutions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .solution-card {
-            background: #f8fafc;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .solution-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .solution-image {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .solution-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .solution-card:hover .solution-image img {
-            transform: scale(1.05);
-        }
-
-        .solution-content {
-            padding: 1.5rem;
-        }
-
-        .solution-content h3 {
-            font-size: 1.4rem;
-            color: #2d3748;
-            margin-bottom: 0.75rem;
-        }
-
-        .solution-content p {
-            color: #4a5568;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .solution-link {
+        .innovation-content .btn-innovation {
             display: inline-flex;
             align-items: center;
-            color: #2b6cb0;
-            font-weight: 600;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50px;
             text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
             transition: all 0.3s ease;
         }
 
-        .solution-link i {
-            margin-left: 0.5rem;
+        .innovation-content .btn-innovation:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .innovation-content .btn-innovation i {
+            font-size: 0.75rem;
             transition: transform 0.3s ease;
         }
 
-        .solution-link:hover {
-            color: #2c5282;
+        .innovation-content .btn-innovation:hover i {
+            transform: translateX(3px);
         }
 
-        .solution-link:hover i {
-            transform: translateX(5px);
+        .innovation-image {
+            border-radius: 0;
+            overflow: hidden;
         }
 
-        .benefits-section {
+        .innovation-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0;
+        }
+
+        /* Sustainability Section */
+        .sustainability-section {
             padding: 5rem 0;
-            background: #f8fafc;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/thicket-dark-wet-grass.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
         }
 
-        .benefits-grid {
+        .sustainability-row {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .benefit-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%);
-            border-radius: 50%;
-            display: flex;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: white;
-            font-size: 1.8rem;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.4rem;
-            color: #2d3748;
-            margin-bottom: 1rem;
-        }
-
-        .benefit-card p {
-            color: #4a5568;
-            line-height: 1.7;
-        }
-
-        .cta-section {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .sustainability-content .sustainability-label {
+            font-size: 0.75rem;
+            color: #7dd3fc;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .sustainability-content h2 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .sustainability-content p {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .sustainability-content .btn-contact {
+            border-color: white;
+            color: white;
+        }
+
+        .sustainability-content .btn-contact:hover {
+            background: white;
+            color: #1a365d;
+        }
+
+        .sustainability-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .sustainability-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: #3d8b8b;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: 5%;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .cta-decor {
+            position: absolute;
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+
+        .cta-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         .cta-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 400;
             line-height: 1.3;
         }
 
         .cta-content p {
-            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
             line-height: 1.7;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .cta-form-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .cta-form-card h3 {
+            font-size: 1.25rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .cta-form-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .cta-form-card .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .cta-form-card input,
+        .cta-form-card textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            font-family: inherit;
+        }
+
+        .cta-form-card input:focus,
+        .cta-form-card textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+        }
+
+        .cta-form-card textarea {
+            resize: vertical;
+            min-height: 100px;
         }
 
         .btn-cta {
-            display: inline-block;
-            background: white;
-            color: #2b6cb0;
-            padding: 1rem 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #3b82f6;
+            color: white;
+            padding: 0.875rem 2rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-weight: 500;
             transition: all 0.3s ease;
-            border: 2px solid white;
+            border: none;
+            width: 100%;
+            cursor: pointer;
         }
 
         .btn-cta:hover {
-            background: transparent;
-            color: white;
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59,130,246,0.3);
         }
 
-        .btn-cta.outline {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-            margin-left: 1rem;
+        .btn-cta i {
+            transition: transform 0.3s ease;
         }
 
-        .btn-cta.outline:hover {
+        .btn-cta:hover i {
+            transform: translateX(3px);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-header h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .faq-header p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
             background: white;
-            color: #2b6cb0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+            transition: box-shadow 0.3s ease;
         }
 
+        .faq-item:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: #1a365d;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            gap: 1rem;
+        }
+
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+
+        .faq-question span {
+            flex: 1;
+        }
+
+        .faq-question .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #e8f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question .faq-icon i {
+            font-size: 0.75rem;
+            color: #3b82f6;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question .faq-icon {
+            background: #3b82f6;
+        }
+
+        .faq-item.active .faq-question .faq-icon i {
+            color: white;
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem;
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
         @media (max-width: 992px) {
-            .industry-content {
+            .challenges-row {
+                grid-template-columns: 1fr;
+            }
+
+            .product-row,
+            .product-row.reverse,
+            .innovation-row,
+            .sustainability-row,
+            .cta-row {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .industry-image {
-                order: -1;
+            .product-row.reverse {
+                direction: ltr;
             }
 
-            .industry-text {
-                text-align: center;
-            }
-
-            .feature-item {
-                justify-content: center;
-                text-align: left;
+            .faq-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -481,18 +888,16 @@
                 letter-spacing: 2px;
             }
 
-            .section-header h2 {
-                font-size: 2rem;
+            .product-content h2,
+            .innovation-content h2,
+            .sustainability-content h2,
+            .cta-content h2,
+            .challenges-content h2 {
+                font-size: 1.75rem;
             }
 
-            .cta-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn-cta.outline {
-                margin-left: 0;
+            .intro-content p {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -544,193 +949,212 @@
         </div>
     </section>
 
-    <!-- Industry Overview -->
-    <section class="industry-overview">
-        <div class="container-ipl">
-            <div class="industry-content">
-                <div class="industry-text">
-                    <h2>Enhancing Agricultural Efficiency with Smart Packaging</h2>
-                    <p>At Pak Plastic Industry, we understand the unique challenges faced by the agriculture sector. Our specialized packaging solutions are designed to protect crops, seeds, and agricultural products from environmental factors, ensuring they reach their destination in optimal condition.</p>
-                    <p>From storage to transportation, our packaging solutions are engineered to maintain product quality, extend shelf life, and reduce waste throughout the agricultural supply chain.</p>
-                    
-                    <div class="industry-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Superior Protection</h4>
-                                <p>Shield agricultural products from moisture, pests, and contamination during storage and transit.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Eco-Friendly Options</h4>
-                                <p>Sustainable packaging solutions that reduce environmental impact while maintaining performance.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-boxes"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4>Custom Solutions</h4>
-                                <p>Tailored packaging designs to meet the specific needs of different agricultural products.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="industry-image">
-                    <img src="../images/agriculture-detail.jpg" alt="Agriculture Packaging Solutions">
-                </div>
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="container">
+            <nav class="intro-nav">
+                <ul class="intro-nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="separator">›</li>
+                    <li><a href="../industries.html">Industry overview</a></li>
+                    <li class="separator">›</li>
+                    <li>Agriculture</li>
+                </ul>
+            </nav>
+            <div class="intro-content">
+                <p>In agriculture, reliability matters. Our reusable packaging keeps vegetables, seeds and fruit safe at every stage, from harvest to storage and shipment.</p>
+                <p>Designed for efficiency and hygiene, it helps farmers cut waste, make the most of every load and move towards more sustainable operations.</p>
             </div>
         </div>
     </section>
 
     <!-- Meeting Modern Farming Challenges -->
-    <section class="challenge-section">
-        <div class="container">
-    <section class="solutions-section">
-        <div class="container-ipl">
-            <div class="section-header">
-                <h2>Our Agricultural Packaging Solutions</h2>
-                <p>Explore our comprehensive range of packaging solutions designed specifically for the agricultural industry.</p>
+    <section class="challenges-section">
+        <div class="challenges-row">
+            <div class="challenges-content">
+                <h2>Meeting modern farming challenges</h2>
+                <div class="challenge-item">
+                    <h3>Supporting automation</h3>
+                    <p>As technology reshapes farming, our reusable trays and containers are built for smooth integration with automated systems and robotic handling. They keep operations consistent and efficient, season after season.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Advancing sustainability</h3>
+                    <p>Made from durable, food-grade materials, our packaging reduces single-use waste and promotes a circular approach. Easy to clean and reuse, it supports the long-term health of both your business and the planet.</p>
+                </div>
+                <div class="challenge-item">
+                    <h3>Improving transport efficiency</h3>
+                    <p>Designed to optimise truck space and stacking, our containers help farmers move more with fewer trips. A smarter way to transport produce safely and cost-effectively.</p>
+                </div>
             </div>
-            
-            <div class="solutions-grid">
-                <!-- Solution 1 -->
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="../images/seed-packaging.jpg" alt="Seed Packaging">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Seed Packaging</h3>
-                        <p>Specialized packaging solutions that maintain seed viability and protect against moisture, UV light, and pests during storage and transportation.</p>
-                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                    </div>
+            <div class="challenges-image">
+                <img src="../images/final Pictures 3/Agri final.png" alt="Agricultural packaging in orchard">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products: Bulk Bins & ProBin Series -->
+    <section class="product-section">
+        <div class="product-row">
+            <div class="product-image">
+                <img src="../images/final Pictures 3/Gemini_Generated_Image_6t103c6t103c6t10.png" alt="Bulk Bins for Produce">
+            </div>
+            <div class="product-content">
+                <p class="product-label">Bulk Bins</p>
+                <h2>Reusable bulk bins for produce protection</h2>
+                <p>Our bulk bins are built for durability and food safety. Their lightweight, robust design protects apples, citrus, and root vegetables, while smooth, nonporous surfaces simplify cleaning and reduce contamination risks from field to storage.</p>
+                <div class="product-buttons">
+                    <a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a>
+                    <a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
-                <!-- Solution 2 -->
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="../images/produce-packaging.jpg" alt="Produce Packaging">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Produce Packaging</h3>
-                        <p>Breathable and protective packaging that extends the shelf life of fresh fruits and vegetables while maintaining quality and freshness.</p>
-                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Solution 3 -->
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="../images/fertilizer-packaging.jpg" alt="Fertilizer Packaging">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Fertilizer Packaging</h3>
-                        <p>Durable and moisture-resistant packaging solutions for various types of fertilizers, ensuring product integrity and ease of use.</p>
-                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Solution 4 -->
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="../images/grain-storage.jpg" alt="Grain Storage Solutions">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Grain Storage Solutions</h3>
-                        <p>Advanced packaging systems designed for bulk grain storage, protecting against moisture, pests, and contamination.</p>
-                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Solution 5 -->
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="../images/agricultural-film.jpg" alt="Agricultural Films">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Agricultural Films</h3>
-                        <p>High-quality plastic films for mulching, greenhouse covering, and silage, enhancing crop protection and yield.</p>
-                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Solution 6 -->
-                <div class="solution-card">
-                    <div class="solution-image">
-                        <img src="../images/irrigation-solutions.jpg" alt="Irrigation Solutions">
-                    </div>
-                    <div class="solution-content">
-                        <h3>Irrigation Solutions</h3>
-                        <p>Durable and efficient irrigation piping and components for optimal water distribution in agricultural applications.</p>
-                        <a href="#" class="solution-link">Learn more <i class="fas fa-arrow-right"></i></a>
-                    </div>
+            </div>
+        </div>
+        <div class="product-row reverse" style="margin-top: 4rem;">
+            <div class="product-image">
+                <img src="../images/Gemini_Generated_Image_5wwc2p5wwc2p5wwc.png" alt="ProBin Series">
+            </div>
+            <div class="product-content">
+                <p class="product-label">ProBin Series</p>
+                <h2>Tough on the outside, safe on the inside</h2>
+                <p>ProBin containers are ideal for liquids and food processing applications. Made from FDA-approved materials, they're durable, easy to clean, and stack safely for efficient storage and transport.</p>
+                <div class="product-buttons">
+                    <a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a>
+                    <a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits-section">
-        <div class="container-ipl">
-            <div class="section-header">
-                <h2>Benefits of Our Agricultural Packaging</h2>
-                <p>Discover how our packaging solutions can transform your agricultural operations</p>
+    
+    <!-- Innovation Section -->
+    <section class="innovation-section">
+        <div class="innovation-row">
+            <div class="innovation-text-row">
+                <div class="innovation-label-col">
+                    <p class="innovation-label">Materials Innovation</p>
+                </div>
+                <div class="innovation-heading-col">
+                    <h2>Materials innovation for sustainable packaging</h2>
+                </div>
+                <div class="innovation-empty-col"></div>
             </div>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Increased Yields</h3>
-                    <p>Our packaging solutions help maintain optimal conditions for agricultural products, leading to higher yields and better quality.</p>
+            <div class="innovation-content-row">
+                <div class="innovation-content">
+                    <p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard-to-recycle waste streams into long-lasting packaging. Every solution supports a circular economy while helping your business meet its sustainability goals.</p>
+                    <a href="../technology.html" class="btn-innovation">More about Material Innovation <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <h3>Reduced Waste</h3>
-                    <p>Minimize product loss and waste with packaging that extends shelf life and protects against spoilage and damage.</p>
+                <div class="innovation-image">
+                    <img src="../images/rpcs-various-1920x953.png" alt="Materials Innovation">
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3>Efficient Logistics</h3>
-                    <p>Optimized packaging designs that reduce shipping costs and improve handling efficiency throughout the supply chain.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Sustainability</h3>
-                    <p>Eco-friendly packaging options that reduce environmental impact while maintaining performance and durability.</p>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="sustainability-section">
+        <div class="sustainability-row">
+            <div class="sustainability-content">
+                <p class="sustainability-label">Sustainability</p>
+                <h2>Make your impact measurable</h2>
+                <p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear sustainability benefits, from using recycled materials to cutting emissions and ensuring easy recyclability. Make informed choices for a more sustainable packaging and logistics chain.</p>
+                <a href="../contact.html" class="btn-contact">Contact us</a>
+            </div>
+            <div class="sustainability-image">
+                <img src="../images/sustainability/impact.jpg" alt="Sustainability Impact">
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="cta-content">
-            <h2>Ready to Enhance Your Agricultural Packaging?</h2>
-            <p>Our team of experts is ready to help you find the perfect packaging solution for your agricultural needs. Contact us today to discuss your requirements and discover how we can support your business.</p>
-            <div class="cta-buttons">
-                <a href="../contact.html" class="btn-cta">Get a Free Consultation</a>
-                <a href="../products.html" class="btn-cta outline">View Our Products</a>
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Contact us today to explore how our solutions can work for your business</h2>
+                <p>We help you navigate the complexities of your industry as your trusted partner.</p>
+            </div>
+            <div class="cta-form-card">
+                <h3>Get in touch</h3>
+                <p>Fill in the form and our team will get back to you shortly.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Company name">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-cta">Send message <i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>We understand that choosing the right packaging can raise questions. Find answers to common questions below.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What types of packaging do you offer?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a complete portfolio of returnable transport packaging for agriculture including bulk bins, foldable containers, stack-nest containers, and pallets. Our packaging enables efficiency, protection and sustainability throughout the supply chain.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>How does reusable packaging benefit my business?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our returnable packaging reduces costs, simplifies operations, and keeps materials in circulation. It supports efficiency and sustainability, helping your business work smarter while lowering environmental impact.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Are your packaging solutions suitable for all produce types?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our packaging solutions are designed for a wide range of agricultural products including fruits, vegetables, grains, and seeds. We offer ventilated and solid options to suit different produce requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>How durable are your packaging solutions?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our returnable packaging is built for long-term use, providing reliable performance for many years. Designed for repeated handling and transport, it delivers consistent protection, reduces replacement costs, and supports efficiency across your supply chain.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Are your packaging products recyclable?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. All our packaging is designed to be 100% recyclable at the end of its useful life, supporting a circular economy approach.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Can your packaging solutions be customised?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our packaging solutions can be tailored in size, shape, colour, and branding to meet your business needs. Sustainable material options are available to support environmental goals while ensuring product protection and operational efficiency.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

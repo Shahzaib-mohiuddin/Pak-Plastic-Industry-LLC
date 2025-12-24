@@ -93,60 +93,64 @@ window.addEventListener('scroll', () => {
 });
 
 // Industries Swiper - Simple Configuration
-const industriesSwiper = new Swiper('.industriesSwiper', {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    loop: true,
-    slidesPerGroup: 1,
-    centeredSlides: false,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 15
+if (document.querySelector('.industriesSwiper')) {
+    const industriesSwiper = new Swiper('.industriesSwiper', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        slidesPerGroup: 1,
+        centeredSlides: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 15
-        },
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 20
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 20
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 15
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
         }
-    }
-});
+    });
+}
 
 // Products Swiper
-const productsSwiper = new Swiper('.productsSwiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+if (document.querySelector('.productsSwiper')) {
+    const productsSwiper = new Swiper('.productsSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
         },
-        1280: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-        },
-    },
-});
+    });
+}
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
