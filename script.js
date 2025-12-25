@@ -219,3 +219,82 @@ window.addEventListener('scroll', () => {
         element.style.backgroundPositionY = -(scrolled * speed) + 'px';
     });
 });
+
+// ============================================
+// IMAGE & VIDEO PERFORMANCE OPTIMIZATIONS
+// ============================================
+
+// Lazy load videos when they come into view
+const lazyLoadVideos = () => {
+    const videos = document.querySelectorAll('video[preload="metadata"]');
+    
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const video = entry.target;
+                // Start loading the video when it's about to be visible
+                video.preload = 'auto';
+                video.load();
+                videoObserver.unobserve(video);
+            }
+        });
+    }, {
+        rootMargin: '100px 0px', // Start loading 100px before video is visible
+        threshold: 0
+    });
+    
+    videos.forEach(video => videoObserver.observe(video));
+};
+
+// Optimize images by adding decode async
+const optimizeImages = () => {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    
+    images.forEach(img => {
+        // Add decode async for smoother rendering
+        img.decoding = 'async';
+        
+        // Add error handling for broken images
+        img.onerror = function() {
+            this.style.opacity = '0.5';
+            console.warn('Failed to load image:', this.src);
+        };
+    });
+};
+
+// Preload critical images (above the fold)
+const preloadCriticalImages = () => {
+    const criticalImages = document.querySelectorAll('.hero-ipl img, .navbar-ipl img');
+    
+    criticalImages.forEach(img => {
+        if (img.loading === 'lazy') {
+            img.loading = 'eager';
+        }
+        img.fetchPriority = 'high';
+    });
+};
+
+// Connection-aware loading - reduce quality on slow connections
+const connectionAwareLoading = () => {
+    if ('connection' in navigator) {
+        const connection = navigator.connection;
+        
+        if (connection.saveData || connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+            // Disable autoplay for videos on slow connections
+            document.querySelectorAll('video[autoplay]').forEach(video => {
+                video.removeAttribute('autoplay');
+                video.poster = video.querySelector('source')?.src?.replace('.mp4', '-poster.jpg') || '';
+            });
+            
+            console.log('Slow connection detected - video autoplay disabled');
+        }
+    }
+};
+
+// Initialize performance optimizations
+document.addEventListener('DOMContentLoaded', () => {
+    preloadCriticalImages();
+    optimizeImages();
+    lazyLoadVideos();
+    connectionAwareLoading();
+});
