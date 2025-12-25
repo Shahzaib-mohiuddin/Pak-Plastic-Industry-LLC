@@ -8,11 +8,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <span class="language-selector">Global - English <i class="fas fa-chevron-down"></i></span>
+                <a href="mailto:info@pakplastic.com" class="top-bar-email"><i class="far fa-envelope"></i> info@pakplastic.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="about.html#careers">Careers</a>
+                <a href="about.html#locations">Locations</a>
+                <a href="#">Brochures</a>
+                <a href="#">Media center</a>
+                <a href="#">Events</a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar-ipl">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>PAK PLASTIC<span>INDUSTRY L.L.C</span></h2>
+                <a href="index.html"><h2>PAK PLASTIC<span>INDUSTRY L.L.C</span></h2></a>
             </div>
             <button class="nav-toggle" id="navToggle">
                 <span></span>
@@ -20,10 +38,8 @@
                 <span></span>
             </button>
             <ul class="nav-menu-ipl" id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Industries <i class="fas fa-chevron-down"></i></a>
+                    <a href="industries.html" class="dropdown-toggle">Industries</a>
                     <div class="dropdown-menu">
                         <a href="industries/agriculture.html">Agriculture</a>
                         <a href="industries/retail.html">Retail</a>
@@ -31,13 +47,17 @@
                         <a href="industries/groceries.html">Groceries</a>
                         <a href="industries/automotive.html">Automotive</a>
                         <a href="industries/healthcare-pharma.html">Healthcare & Pharma</a>
+                        <a href="industries/food.html">Food</a>
+                        <a href="industries/beverages.html">Beverages</a>
+                        <a href="industries/environmental.html">Environmental</a>
+                        <a href="industries/industrial-chemical.html">Industrial & Chemical</a>
                         <div class="dropdown-footer">
-                            <a href="industries.html" class="industry-overview">Industry Overview <i class="fas fa-arrow-right"></i></a>
+                            <a href="industries.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
                         </div>
                     </div>
                 </li>
-                <li class="dropdown active">
-                    <a href="products.html" class="dropdown-toggle">Products</a>
+                <li class="dropdown">
+                    <a href="products.html" class="dropdown-toggle active">Products & Solutions</a>
                     <div class="dropdown-menu">
                         <a href="products/plastic-pallets.html">Plastic Pallets</a>
                         <a href="products/road-barriers.html">Road Barriers</a>
@@ -46,9 +66,18 @@
                         <a href="products/bottle-caps.html">Bottle Caps</a>
                     </div>
                 </li>
-                <li><a href="technology.html">Technology</a></li>
+                <li><a href="technology.html">Innovation</a></li>
                 <li><a href="sustainability.html">Sustainability</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropdown-toggle">About us</a>
+                    <div class="dropdown-menu">
+                        <a href="about.html">About Us</a>
+                        <a href="about.html#team">Our Team</a>
+                        <a href="about.html#history">Our History</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="contact-btn">Contact</a></li>
+                <li><a href="#" class="nav-search"><i class="fas fa-search"></i></a></li>
             </ul>
         </div>
     </nav>
