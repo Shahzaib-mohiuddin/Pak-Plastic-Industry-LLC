@@ -55,42 +55,32 @@ navLinks.forEach(link => {
     });
 });
 
-// Navbar scroll effect - hide on scroll down, show on scroll up
-let lastScrollY = window.scrollY;
-let ticking = false;
-
+// Navbar scroll effect - Show fixed white navbar after scrolling past hero section
 function updateNavbar() {
     const navbar = document.querySelector('.navbar-ipl');
     const currentScrollY = window.scrollY;
     
-    if (currentScrollY > 100) {
-        if (currentScrollY > lastScrollY) {
-            // Scrolling down - hide navbar
-            navbar.classList.add('nav-hidden');
-            navbar.classList.remove('nav-visible');
-        } else {
-            // Scrolling up - show navbar
-            navbar.classList.remove('nav-hidden');
-            navbar.classList.add('nav-visible');
-        }
-    } else {
-        // At top of page - always show
-        navbar.classList.remove('nav-hidden');
-        navbar.classList.remove('nav-visible');
-    }
+    // Get hero section height (if exists), otherwise use 100px as fallback
+    const heroSection = document.querySelector('.hero-ipl, .industry-hero, .industries-hero, .page-header');
+    const heroHeight = heroSection ? heroSection.offsetHeight : 100;
     
-    lastScrollY = currentScrollY;
-    ticking = false;
+    if (currentScrollY > heroHeight - 50) {
+        // Past hero section - show fixed white navbar
+        navbar.classList.add('fixed-nav');
+    } else {
+        // In hero section - transparent navbar scrolls with hero
+        navbar.classList.remove('fixed-nav');
+    }
 }
 
 window.addEventListener('scroll', () => {
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            updateNavbar();
-        });
-        ticking = true;
-    }
+    window.requestAnimationFrame(() => {
+        updateNavbar();
+    });
 });
+
+// Run on page load to set initial state
+document.addEventListener('DOMContentLoaded', updateNavbar);
 
 // Industries Swiper - Simple Configuration
 if (document.querySelector('.industriesSwiper')) {
