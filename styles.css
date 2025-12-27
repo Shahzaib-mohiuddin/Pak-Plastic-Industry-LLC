@@ -6375,7 +6375,7 @@ body {
 /* Contact Hero Section */
 .contact-page-hero {
     position: relative;
-    min-height: 450px;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6714,10 +6714,11 @@ body {
 @media (max-width: 768px) {
     .contact-page-hero {
         min-height: 350px;
+        padding: 120px 0 60px;
     }
     
     .contact-page-hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     
     .contact-page-hero .hero-subtitle {
@@ -6757,5 +6758,1308 @@ body {
     
     .btn-submit {
         width: 100%;
+    }
+}
+
+/* ========================================
+   ABOUT US PAGE - INDUSTRIES STYLE
+   ======================================== */
+
+/* About Hero Section - Same as Industries */
+.about-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/9c057f30-2e4d-4521-863e-1542862bf1f6.jpeg') no-repeat center center/cover;
+    color: white;
+    padding: 160px 0 100px;
+    text-align: left;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.about-hero-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.about-hero-section .hero-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.about-hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    max-width: 600px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.about-hero-section .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #3b82f6;
+    color: white;
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.about-hero-section .hero-btn:hover {
+    background: #2563eb;
+    transform: translateX(5px);
+}
+
+.about-hero-section .hero-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.about-hero-section .hero-btn:hover i {
+    transform: translateX(3px);
+}
+
+/* About Intro Section - Teal */
+.about-intro-section {
+    background: #3d8b8b;
+    padding: 2rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-intro-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+}
+
+.about-intro-section::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 50%;
+}
+
+.about-intro-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about-intro-section .intro-nav {
+    margin-bottom: 4rem;
+}
+
+.about-intro-section .intro-nav-list {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.about-intro-section .intro-nav-list li {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.about-intro-section .intro-nav-list a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-intro-section .intro-nav-list a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.about-intro-section .intro-nav-list .separator {
+    color: rgba(255,255,255,0.6);
+}
+
+.about-intro-section .intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-intro-section .purpose-ipl-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.about-intro-section .intro-content h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.about-intro-section .intro-content p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* What We Do Section */
+.about-what-we-do {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.what-we-do-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3d8b8b;
+    margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.what-we-do-content h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a365d;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.what-we-do-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.what-we-do-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.what-we-do-list li i {
+    color: #3d8b8b;
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.what-we-do-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.what-we-do-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Sustainable Impact Section - IPL Style Full Width */
+.about-sustainable-impact-ipl {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('images/photorealistic-earth-planet.jpg') no-repeat center center/cover;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.sustainable-ipl-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+
+.sustainable-ipl-content h2 {
+    font-size: 2.75rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+    max-width: 550px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sustainable-ipl-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 550px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-sustainable-ipl {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #3b82f6;
+    color: white;
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-sustainable-ipl:hover {
+    background: #2563eb;
+    transform: translateX(5px);
+}
+
+.btn-sustainable-ipl i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-sustainable-ipl:hover i {
+    transform: translateX(3px);
+}
+
+/* Key Facts & Figures Section */
+.about-key-facts {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.key-facts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.explore-history-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #3d8b8b;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.explore-history-link:hover {
+    color: #2d6b6b;
+}
+
+.explore-history-link i {
+    transition: transform 0.3s ease;
+}
+
+.explore-history-link:hover i {
+    transform: translateX(5px);
+}
+
+.key-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.fact-card {
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.fact-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #0d7377 0%, #14919b 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.fact-icon i {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.fact-number {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #3d8b8b;
+    margin-bottom: 1rem;
+    line-height: 1;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.fact-description {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Purpose & Ambition Section - IPL Style */
+.about-purpose-ipl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    background: #ffffff;
+}
+
+.purpose-ipl-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.purpose-ipl-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.purpose-ipl-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    background: #ffffff;
+}
+
+.purpose-ipl-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.purpose-ipl-content h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #1a1a2e;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.purpose-ipl-content p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-purpose-ipl {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #3b82f6;
+    color: white;
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: fit-content;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-purpose-ipl:hover {
+    background: #2563eb;
+    transform: translateX(5px);
+}
+
+.btn-purpose-ipl i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-purpose-ipl:hover i {
+    transform: translateX(3px);
+}
+
+.purpose-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.purpose-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* About CTA Section */
+.about-cta-section {
+    padding: 6rem 0;
+    background: #3d8b8b;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-pattern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 40%),
+        radial-gradient(circle at 40% 40%, rgba(0,0,0,0.05) 0%, transparent 30%);
+    pointer-events: none;
+}
+
+.about-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-left .section-label {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.cta-left h2 {
+    font-size: 2.75rem;
+    font-weight: 400;
+    color: white;
+    line-height: 1.2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.cta-right {
+    padding-left: 2rem;
+    border-left: 1px solid rgba(255,255,255,0.2);
+}
+
+.cta-right p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-about-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    color: #3d8b8b;
+    padding: 0.75rem 0.75rem 0.75rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-about-cta span {
+    transition: transform 0.3s ease;
+}
+
+.btn-icon-circle {
+    width: 40px;
+    height: 40px;
+    background: #3d8b8b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-icon-circle i {
+    color: white;
+    font-size: 0.875rem;
+}
+
+.btn-about-cta:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.btn-about-cta:hover .btn-icon-circle {
+    background: #2d6b6b;
+}
+
+.btn-about-cta:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.btn-about-cta i {
+    transition: transform 0.3s ease;
+}
+
+.btn-about-cta:hover i {
+    transform: translateX(5px);
+}
+
+/* ========================================
+   PURPOSE & AMBITION PAGE STYLES
+   ======================================== */
+
+/* Values Section */
+.purpose-values-section {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.values-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.values-header h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #1a365d;
+    margin-top: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.value-card {
+    background: #f8fafc;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background: #3d8b8b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.value-icon i {
+    font-size: 1.75rem;
+    color: white;
+}
+
+.value-card h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1a365d;
+    margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Circular Economy Section */
+.purpose-circular-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('images/thicket-dark-wet-grass.jpg') no-repeat center center/cover;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.circular-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.circular-content .left-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.circular-content .right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-label-light {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.circular-content h2 {
+    font-size: 2.75rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+    max-width: 600px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.circular-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-circular {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #3b82f6;
+    color: white;
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-circular:hover {
+    background: #2563eb;
+    transform: translateX(5px);
+}
+
+.btn-circular i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-circular:hover i {
+    transform: translateX(3px);
+}
+
+/* Contact Form Section */
+.purpose-contact-section {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-form-info h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #1a365d;
+    margin: 1rem 0 1.5rem;
+    line-height: 1.3;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.contact-form-info p {
+    font-size: 1.05rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-item i {
+    width: 40px;
+    height: 40px;
+    background: #3d8b8b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.contact-item span {
+    font-size: 1rem;
+    color: #4a5568;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.contact-form-wrapper {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.purpose-contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.purpose-contact-form .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.purpose-contact-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.purpose-contact-form input,
+.purpose-contact-form textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+.purpose-contact-form input:focus,
+.purpose-contact-form textarea:focus {
+    outline: none;
+    border-color: #3d8b8b;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(61, 139, 139, 0.1);
+}
+
+.purpose-contact-form input::placeholder,
+.purpose-contact-form textarea::placeholder {
+    color: #a0aec0;
+}
+
+.purpose-contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-form-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    background: #3d8b8b;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-form-submit:hover {
+    background: #2d6b6b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(61, 139, 139, 0.3);
+}
+
+.btn-form-submit i {
+    font-size: 0.9rem;
+}
+
+/* Purpose Page Responsive */
+@media (max-width: 992px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .values-header h2 {
+        font-size: 2rem;
+    }
+    
+    .circular-content h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-form-info h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .purpose-circular-section {
+        min-height: auto;
+    }
+    
+    .circular-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 1.5rem;
+    }
+    
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+    
+    .purpose-contact-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .values-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .value-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .circular-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .circular-content p {
+        font-size: 1rem;
+    }
+}
+
+/* About Page Responsive */
+@media (max-width: 992px) {
+    .about-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .what-we-do-grid,
+    .sustainable-grid,
+    .purpose-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .what-we-do-content h2,
+    .sustainable-content h2,
+    .purpose-content h2,
+    .about-cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .key-facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .fact-number {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-section {
+        padding: 120px 0 60px;
+        min-height: 350px;
+    }
+
+    .about-hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero-section .hero-label {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+    
+    .about-intro-section .intro-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-intro-section .intro-content p {
+        font-size: 1rem;
+    }
+    
+    .about-what-we-do,
+    .about-key-facts,
+    .about-cta-section {
+        padding: 3.5rem 0;
+    }
+    
+    .about-cta-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .cta-left h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-right {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        padding-top: 2rem;
+    }
+    
+    .about-sustainable-impact-ipl {
+        min-height: 350px;
+    }
+    
+    .sustainable-ipl-content h2 {
+        font-size: 2rem;
+    }
+    
+    .about-purpose-ipl {
+        grid-template-columns: 1fr;
+    }
+    
+    .purpose-ipl-image {
+        height: 300px;
+    }
+    
+    .purpose-ipl-content {
+        padding: 3rem 2rem;
+    }
+    
+    .purpose-ipl-content h2 {
+        font-size: 2rem;
+    }
+    
+    .what-we-do-image img {
+        height: 300px;
+    }
+    
+    .key-facts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .key-facts-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .fact-card {
+        padding: 2rem;
+    }
+    
+    .fact-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .what-we-do-content h2,
+    .sustainable-content h2,
+    .purpose-content h2,
+    .about-cta-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .what-we-do-list li {
+        font-size: 0.95rem;
+    }
+    
+    .sustainable-content p,
+    .purpose-content p,
+    .about-cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   OUR TEAM PAGE STYLES
+   ======================================== */
+
+/* Team Section */
+.team-section {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.team-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.team-header .section-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3d8b8b;
+    margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.team-header h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1a1a2e;
+    line-height: 1.2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.team-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover .team-overlay {
+    opacity: 1;
+}
+
+.team-linkedin {
+    width: 40px;
+    height: 40px;
+    background: #0077b5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.team-linkedin:hover {
+    background: #005885;
+    transform: scale(1.1);
+}
+
+.team-linkedin i {
+    font-size: 1rem;
+}
+
+.team-info {
+    padding: 1.5rem;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.team-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.team-role {
+    font-size: 0.9rem;
+    color: #3d8b8b;
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Team Page Responsive */
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .team-section {
+        padding: 3rem 0;
+    }
+    
+    .team-header {
+        margin-bottom: 2.5rem;
+    }
+    
+    .team-header h2 {
+        font-size: 1.75rem;
     }
 }
