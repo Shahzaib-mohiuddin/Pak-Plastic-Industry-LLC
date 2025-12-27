@@ -29,19 +29,20 @@ document.addEventListener('click', (e) => {
 });
 
 // Handle dropdown toggle on mobile
-const dropdownToggles = document.querySelectorAll('.dropdown > a');
+const dropdownToggles = document.querySelectorAll('.dropdown > .dropdown-toggle');
 dropdownToggles.forEach(toggle => {
     toggle.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) { // Mobile view
-            e.preventDefault();
             const parent = this.parentElement;
             const isActive = parent.classList.contains('active');
             
-            closeAllDropdowns();
-            
+            // If dropdown is not active, prevent navigation and show dropdown
             if (!isActive) {
+                e.preventDefault();
+                closeAllDropdowns();
                 parent.classList.add('active');
             }
+            // If already active, allow navigation to the href
         }
     });
 });
@@ -61,7 +62,7 @@ function updateNavbar() {
     const currentScrollY = window.scrollY;
     
     // Get hero section height (if exists), otherwise use 100px as fallback
-    const heroSection = document.querySelector('.hero-ipl, .industry-hero, .industries-hero, .page-header');
+    const heroSection = document.querySelector('.hero-ipl, .industry-hero, .industries-hero, .page-header, .about-hero-section, .contact-page-hero');
     const heroHeight = heroSection ? heroSection.offsetHeight : 100;
     
     if (currentScrollY > heroHeight - 50) {
