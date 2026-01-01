@@ -6769,10 +6769,10 @@ body {
 .about-hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/9c057f30-2e4d-4521-863e-1542862bf1f6.jpeg') no-repeat center center/cover;
     color: white;
-    padding: 160px 0 100px;
+    padding: 140px 0 80px;
     text-align: left;
     position: relative;
-    min-height: 400px;
+    height: 500px;
     display: flex;
     align-items: center;
 }
@@ -6798,10 +6798,12 @@ body {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
-    max-width: 600px;
+    max-width: 650px;
     line-height: 1.15;
     letter-spacing: -0.5px;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    hyphens: auto;
+    word-wrap: break-word;
 }
 
 .about-hero-section .hero-btn {
@@ -7000,15 +7002,15 @@ body {
 
 .what-we-do-image {
     position: relative;
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
 }
 
 .what-we-do-image img {
     width: 100%;
-    height: 300px;
+    height: 350px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 0;
 }
 
 /* Sustainable Impact Section - IPL Style Full Width */
@@ -7177,12 +7179,18 @@ body {
 .purpose-ipl-image {
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 2rem;
 }
 
 .purpose-ipl-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 110%;
+    max-height: 500px;
+    object-fit: contain;
+    object-position: center;
     display: block;
 }
 
@@ -7789,7 +7797,7 @@ body {
 @media (max-width: 768px) {
     .about-hero-section {
         padding: 120px 0 60px;
-        min-height: 350px;
+        height: 400px;
     }
 
     .about-hero-section h1 {
@@ -8443,5 +8451,853 @@ body {
     
     .stat-item h3 {
         font-size: 2rem;
+    }
+}
+
+/* ============================================
+   SUSTAINABILITY PAGE - IPL Style
+   ============================================ */
+
+/* Sustainability Hero Section */
+.sustainability-hero-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+}
+
+.sustainability-hero-section .container {
+    max-width: 900px;
+}
+
+.sustainability-hero-section .hero-label {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.sustainability-hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.sustainability-hero-section .hero-description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sustainability-hero-section .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #16a89a;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.sustainability-hero-section .hero-btn:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sustainability-hero-section .hero-btn i {
+    transition: transform 0.3s ease;
+}
+
+.sustainability-hero-section .hero-btn:hover i {
+    transform: translateX(3px);
+}
+
+/* Sustainability Intro Section */
+.sustainability-intro-section {
+    background: linear-gradient(135deg, #16a89a 0%, #14a08e 100%);
+    padding: 3rem 0 5rem;
+    color: #ffffff;
+}
+
+.sustainability-intro-section .intro-nav {
+    margin-bottom: 2rem;
+}
+
+.sustainability-intro-section .intro-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sustainability-intro-section .intro-nav-list li {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.sustainability-intro-section .intro-nav-list a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.sustainability-intro-section .intro-nav-list a:hover {
+    opacity: 0.7;
+}
+
+.sustainability-intro-section .intro-nav-list .separator {
+    opacity: 0.6;
+}
+
+.sustainability-intro-section .intro-content {
+    max-width: 800px;
+}
+
+.sustainability-intro-section .intro-label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.sustainability-intro-section h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.sustainability-intro-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+}
+
+.sustainability-intro-section .btn-intro {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: #4da6ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.sustainability-intro-section .btn-intro:hover {
+    background: #3d96ef;
+    transform: translateY(-2px);
+}
+
+.sustainability-intro-section .btn-intro i {
+    transition: transform 0.3s ease;
+}
+
+.sustainability-intro-section .btn-intro:hover i {
+    transform: translateX(3px);
+}
+
+/* Key Pillars Section */
+.sustainability-pillars-section {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.sustainability-pillars-section .pillars-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.sustainability-pillars-section .pillars-header h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.sustainability-pillars-section .pillars-header p {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.pillar-card {
+    background: #f8fafc;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #16a89a;
+}
+
+.pillar-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #16a89a 0%, #14a08e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.pillar-icon i {
+    font-size: 1.75rem;
+    color: #ffffff;
+}
+
+.pillar-card h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+.pillar-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Sustainability Detail Sections */
+.sustainability-detail-section {
+    padding: 5rem 0;
+}
+
+.sustainability-detail-section.decarbonisation-section {
+    background: #f8fafc;
+}
+
+.sustainability-detail-section.circularity-section {
+    background: #f8fafc;
+}
+
+.sustainability-detail-section.people-section {
+    background: #f8fafc;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.sustainability-detail-section.alt-layout .detail-grid {
+    direction: rtl;
+}
+
+.sustainability-detail-section.alt-layout .detail-grid > * {
+    direction: ltr;
+}
+
+.detail-content {
+    max-width: 550px;
+}
+
+.detail-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #16a89a;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.detail-content h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #1e293b;
+    margin-bottom: 1.25rem;
+    line-height: 1.3;
+}
+
+.detail-content p {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.detail-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.detail-list li i {
+    color: #16a89a;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.btn-detail {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: #16a89a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-detail:hover {
+    background: #14a08e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(22, 168, 154, 0.3);
+}
+
+.btn-detail i {
+    transition: transform 0.3s ease;
+}
+
+.btn-detail:hover i {
+    transform: translateX(3px);
+}
+
+.detail-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.detail-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Sustainability Highlight Section */
+.sustainability-highlight-section {
+    padding: 5rem 0;
+    background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(51, 65, 85, 0.85)), 
+                url('images/All Pictures/Small Containers/small-plastic-pallet-box-001.jpg') center/cover no-repeat;
+    color: #ffffff;
+}
+
+.highlight-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.highlight-content h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.highlight-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.btn-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: #16a89a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-highlight:hover {
+    background: #14a08e;
+    transform: translateY(-2px);
+}
+
+.btn-highlight i {
+    transition: transform 0.3s ease;
+}
+
+.btn-highlight:hover i {
+    transform: translateX(3px);
+}
+
+/* Why Sustainability Section */
+.sustainability-why-section {
+    padding: 5rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                url('images/All Pictures/Wastebins/istockphoto-2042974216-2048x2048.jpg') center/cover no-repeat;
+}
+
+.why-header {
+    margin-bottom: 2rem;
+}
+
+.why-header .section-label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #16a89a;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.why-header h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #1e293b;
+    line-height: 1.3;
+}
+
+.why-content {
+    max-width: 800px;
+}
+
+.why-content p {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.btn-why {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: #16a89a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-why:hover {
+    background: #14a08e;
+    transform: translateY(-2px);
+}
+
+.btn-why i {
+    transition: transform 0.3s ease;
+}
+
+.btn-why:hover i {
+    transform: translateX(3px);
+}
+
+/* Solutions Section */
+.sustainability-solutions-section {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.sustainability-solutions-section h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #1e293b;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.solution-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.solution-item:hover {
+    border-color: #16a89a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.solution-item i {
+    font-size: 1.5rem;
+    color: #16a89a;
+    flex-shrink: 0;
+}
+
+.solution-item span {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Case Study Section */
+.sustainability-case-study-section {
+    padding: 5rem 0;
+    background: #ffffff;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.case-study-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.case-study-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.case-study-content {
+    max-width: 500px;
+}
+
+.case-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #16a89a;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.case-study-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #1e293b;
+    margin-bottom: 1.25rem;
+    line-height: 1.3;
+}
+
+.case-study-content p {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.btn-case {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: #16a89a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-case:hover {
+    background: #14a08e;
+    transform: translateY(-2px);
+}
+
+.btn-case i {
+    transition: transform 0.3s ease;
+}
+
+.btn-case:hover i {
+    transform: translateX(3px);
+}
+
+/* FAQ Section */
+.sustainability-faq-section {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.sustainability-faq-section h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sustainability-faq-section .faq-intro {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.faq-item {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #16a89a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.faq-item h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.faq-item p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* Partner CTA Section */
+.sustainability-partner-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #16a89a 0%, #14a08e 100%);
+    color: #ffffff;
+}
+
+.partner-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.partner-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.partner-content h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.partner-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+}
+
+.btn-partner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: #ffffff;
+    color: #16a89a;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-partner:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-partner i {
+    transition: transform 0.3s ease;
+}
+
+.btn-partner:hover i {
+    transform: translateX(3px);
+}
+
+/* Sustainability Page Responsive */
+@media (max-width: 1024px) {
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .detail-grid,
+    .case-study-grid {
+        gap: 3rem;
+    }
+    
+    .sustainability-hero-section h1 {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sustainability-hero-section {
+        min-height: 60vh;
+        padding: 7rem 1.5rem 3rem;
+    }
+    
+    .sustainability-hero-section h1 {
+        font-size: 2.25rem;
+    }
+    
+    .sustainability-hero-section .hero-description {
+        font-size: 1rem;
+    }
+    
+    .sustainability-intro-section h2 {
+        font-size: 2rem;
+    }
+    
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .pillar-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .detail-grid,
+    .case-study-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .sustainability-detail-section.alt-layout .detail-grid {
+        direction: ltr;
+    }
+    
+    .detail-content,
+    .case-study-content {
+        max-width: 100%;
+    }
+    
+    .detail-content h2,
+    .case-study-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .detail-image img,
+    .case-study-image img {
+        height: 280px;
+    }
+    
+    .highlight-content h2 {
+        font-size: 2rem;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .partner-content h2 {
+        font-size: 2rem;
+    }
+    
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .sustainability-hero-section h1 {
+        font-size: 1.875rem;
+    }
+    
+    .sustainability-intro-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .sustainability-pillars-section .pillars-header h2,
+    .sustainability-solutions-section h2,
+    .sustainability-faq-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .detail-content h2,
+    .case-study-content h2,
+    .why-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .highlight-content h2,
+    .partner-content h2 {
+        font-size: 1.75rem;
     }
 }
