@@ -289,3 +289,119 @@ document.addEventListener('DOMContentLoaded', () => {
     lazyLoadVideos();
     connectionAwareLoading();
 });
+
+// ============================================
+// JOB APPLICATION FORM - FILE UPLOAD
+// ============================================
+
+// File upload handling for resume
+const resumeInput = document.getElementById('resume');
+const fileNameDisplay = document.querySelector('.file-name-display');
+
+if (resumeInput && fileNameDisplay) {
+    resumeInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        
+        if (file) {
+            // Check file size (max 5MB)
+            const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+            if (file.size > maxSize) {
+                alert('File size exceeds 5MB. Please upload a smaller file.');
+                this.value = '';
+                fileNameDisplay.classList.remove('show');
+                fileNameDisplay.textContent = '';
+                return;
+            }
+            
+            // Check file type
+            const allowedTypes = ['.pdf', '.doc', '.docx'];
+            const fileName = file.name.toLowerCase();
+            const isValidType = allowedTypes.some(type => fileName.endsWith(type));
+            
+            if (!isValidType) {
+                alert('Invalid file type. Please upload a PDF, DOC, or DOCX file.');
+                this.value = '';
+                fileNameDisplay.classList.remove('show');
+                fileNameDisplay.textContent = '';
+                return;
+            }
+            
+            // Display file name
+            fileNameDisplay.textContent = file.name;
+            fileNameDisplay.classList.add('show');
+        } else {
+            fileNameDisplay.classList.remove('show');
+            fileNameDisplay.textContent = '';
+        }
+    });
+}
+
+// Application form submission
+const applicationForm = document.getElementById('applicationForm');
+if (applicationForm) {
+    applicationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        
+        // Log form data (in production, this would be sent to a server)
+        console.log('Application submitted:');
+        for (let [key, value] of formData.entries()) {
+            if (value instanceof File) {
+                console.log(`${key}: ${value.name} (${(value.size / 1024).toFixed(2)} KB)`);
+            } else {
+                console.log(`${key}: ${value}`);
+            }
+        }
+        
+        // Show success message
+        alert('Thank you for your application! Our HR team will review your resume and get back to you soon.');
+        
+        // Reset form
+        this.reset();
+        if (fileNameDisplay) {
+            fileNameDisplay.classList.remove('show');
+            fileNameDisplay.textContent = '';
+        }
+    });
+}
+
+// Drag and drop functionality for file upload
+const fileUploadBox = document.querySelector('.file-upload-box');
+if (fileUploadBox && resumeInput) {
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        fileUploadBox.addEventListener(eventName, preventDefaults, false);
+    });
+    
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
+    ['dragenter', 'dragover'].forEach(eventName => {
+        fileUploadBox.addEventListener(eventName, () => {
+            fileUploadBox.style.borderColor = '#3b82f6';
+            fileUploadBox.style.background = '#f0f7ff';
+        }, false);
+    });
+    
+    ['dragleave', 'drop'].forEach(eventName => {
+        fileUploadBox.addEventListener(eventName, () => {
+            fileUploadBox.style.borderColor = '#e2e8f0';
+            fileUploadBox.style.background = '#f8fafc';
+        }, false);
+    });
+    
+    fileUploadBox.addEventListener('drop', (e) => {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        
+        if (files.length > 0) {
+            resumeInput.files = files;
+            // Trigger change event
+            const event = new Event('change', { bubbles: true });
+            resumeInput.dispatchEvent(event);
+        }
+    }, false);
+}

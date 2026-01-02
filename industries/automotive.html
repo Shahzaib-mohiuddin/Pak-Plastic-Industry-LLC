@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automotive - Sustainable Transport Packaging | Pak Plastic Industry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -86,143 +88,778 @@
         }
 
         /* Intro Section - Teal background */
-        .intro-section { background: #3d8b8b; padding: 2rem 0 5rem; position: relative; overflow: hidden; }
-        .intro-section::before { content: ''; position: absolute; top: -50px; right: -100px; width: 400px; height: 400px; background: rgba(255,255,255,0.03); border-radius: 50%; }
-        .intro-section::after { content: ''; position: absolute; bottom: -100px; left: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.02); border-radius: 50%; }
-        .intro-section .container { position: relative; z-index: 1; }
-        .intro-nav { margin-bottom: 4rem; }
-        .intro-nav-list { display: inline-flex; align-items: center; gap: 0.5rem; list-style: none; padding: 0; margin: 0; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.3); }
-        .intro-nav-list li { color: rgba(255,255,255,0.8); font-size: 0.8rem; }
-        .intro-nav-list a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s ease; }
-        .intro-nav-list a:hover { color: white; text-decoration: underline; }
-        .intro-nav-list .separator { color: rgba(255,255,255,0.6); }
-        .intro-content { max-width: 800px; margin: 0 auto; text-align: center; }
-        .intro-content p { color: white; font-size: 1.5rem; line-height: 1.5; font-weight: 500; margin-bottom: 1.5rem; }
-        .intro-content p:last-child { margin-bottom: 0; }
+        .intro-section {
+            background: #3d8b8b;
+            padding: 2rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+        }
+
+        .intro-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 50%;
+        }
+
+        .intro-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-nav {
+            margin-bottom: 4rem;
+        }
+
+        .intro-nav-list {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .intro-nav-list li {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.8rem;
+        }
+
+        .intro-nav-list a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .intro-nav-list a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .intro-nav-list .separator {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-content p {
+            color: white;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-content p:last-child {
+            margin-bottom: 0;
+        }
 
         /* Challenges Section */
-        .challenges-section { padding: 5rem 0; background: white; }
-        .challenges-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .challenges-content h2 { font-size: 2rem; color: #1a365d; margin-bottom: 2.5rem; font-weight: 400; line-height: 1.3; }
-        .challenge-item { margin-bottom: 2rem; }
-        .challenge-item:last-child { margin-bottom: 0; }
-        .challenge-item h3 { font-size: 1rem; color: #1a365d; margin-bottom: 0.5rem; font-weight: 600; }
-        .challenge-item p { color: #4a5568; line-height: 1.7; font-size: 0.95rem; margin: 0; }
-        .challenges-image { display: flex; align-items: center; justify-content: center; }
-        .challenges-image img { width: 100%; height: auto; display: block; border-radius: 0; }
+        .challenges-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .challenges-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .challenges-content h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .challenge-item {
+            margin-bottom: 2rem;
+        }
+
+        .challenge-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .challenge-item h3 {
+            font-size: 1rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .challenge-item p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .challenges-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .challenges-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0;
+        }
 
         /* Product Row Section */
-        .product-section { padding: 5rem 0; background: white; }
-        .product-section.alt-bg { background: #f8f9fa; }
-        .product-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .product-row.reverse { direction: rtl; }
-        .product-row.reverse > * { direction: ltr; }
-        .product-image { border-radius: 8px; overflow: hidden; }
-        .product-image img { width: 100%; height: auto; display: block; border-radius: 8px; }
-        .product-content .product-label { font-size: 0.8rem; color: #3b82f6; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem; }
-        .product-content h2 { font-size: 2rem; color: #1a365d; margin-bottom: 1.25rem; font-weight: 400; line-height: 1.3; }
-        .product-content p { color: #4a5568; line-height: 1.7; margin-bottom: 1.5rem; font-size: 1rem; }
-        .product-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .btn-contact { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: #3b82f6; color: white; border: none; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; }
-        .btn-contact:hover { background: #2563eb; transform: translateY(-2px); }
-        .btn-contact i { font-size: 0.8rem; transition: transform 0.3s ease; }
-        .btn-contact:hover i { transform: translateX(3px); }
-        .btn-brochure { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: transparent; color: #1a365d; border: 2px solid #1a365d; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; }
-        .btn-brochure:hover { background: #1a365d; color: white; }
-        .btn-brochure i { font-size: 0.85rem; }
+        .product-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .product-section.alt-bg {
+            background: #f8f9fa;
+        }
+
+        .product-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .product-row.reverse {
+            direction: rtl;
+        }
+
+        .product-row.reverse>* {
+            direction: ltr;
+        }
+
+        .product-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .product-content .product-label {
+            font-size: 0.8rem;
+            color: #3b82f6;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-content h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .product-content p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .product-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-contact:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .btn-contact i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-contact:hover i {
+            transform: translateX(3px);
+        }
+
+        .btn-brochure {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            background: transparent;
+            color: #1a365d;
+            border: 2px solid #1a365d;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-brochure:hover {
+            background: #1a365d;
+            color: white;
+        }
+
+        .btn-brochure i {
+            font-size: 0.85rem;
+        }
 
         /* Innovation Section */
-        .innovation-section { padding: 2.5rem 0 0; background: #dbeafe; position: relative; }
-        .innovation-section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-top: 35px solid #3d8b8b; }
-        .innovation-row { display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .innovation-text-row { display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 2rem; align-items: flex-start; margin-bottom: 1.5rem; }
-        .innovation-label-col { padding-top: 0.5rem; }
-        .innovation-label-col .innovation-label { font-size: 0.7rem; color: #718096; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
-        .innovation-heading-col h2 { font-size: 1.75rem; color: #1a365d; font-weight: 400; line-height: 1.3; margin: 0; }
-        .innovation-empty-col { display: block; }
-        .innovation-content-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: flex-end; }
-        .innovation-content { padding-bottom: 1.5rem; }
-        .innovation-content p { color: #4a5568; line-height: 1.6; margin-bottom: 1.25rem; font-size: 0.9rem; max-width: 400px; }
-        .innovation-content .btn-innovation { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #3b82f6; color: white; border: none; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: all 0.3s ease; }
-        .innovation-content .btn-innovation:hover { background: #2563eb; transform: translateY(-2px); }
-        .innovation-content .btn-innovation i { font-size: 0.75rem; transition: transform 0.3s ease; }
-        .innovation-content .btn-innovation:hover i { transform: translateX(3px); }
-        .innovation-image { border-radius: 0; overflow: hidden; }
-        .innovation-image img { width: 100%; height: auto; display: block; border-radius: 0; }
+        .innovation-section {
+            padding: 2.5rem 0 0;
+            background: #dbeafe;
+            position: relative;
+        }
+
+        .innovation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 35px solid #3d8b8b;
+        }
+
+        .innovation-row {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .innovation-text-row {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .innovation-label-col {
+            padding-top: 0.5rem;
+        }
+
+        .innovation-label-col .innovation-label {
+            font-size: 0.7rem;
+            color: #718096;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .innovation-heading-col h2 {
+            font-size: 1.75rem;
+            color: #1a365d;
+            font-weight: 400;
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .innovation-empty-col {
+            display: block;
+        }
+
+        .innovation-content-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: flex-end;
+        }
+
+        .innovation-content {
+            padding-bottom: 1.5rem;
+        }
+
+        .innovation-content p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            font-size: 0.9rem;
+            max-width: 400px;
+        }
+
+        .innovation-content .btn-innovation {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .innovation-content .btn-innovation:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .innovation-content .btn-innovation i {
+            font-size: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+
+        .innovation-content .btn-innovation:hover i {
+            transform: translateX(3px);
+        }
+
+        .innovation-image {
+            border-radius: 0;
+            overflow: hidden;
+        }
+
+        .innovation-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0;
+        }
 
         /* Sustainability Section */
-        .sustainability-section { padding: 5rem 0; background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/thicket-dark-wet-grass.jpg'); background-size: cover; background-position: center; background-attachment: fixed; color: white; position: relative; }
-        .sustainability-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .sustainability-content .sustainability-label { font-size: 0.75rem; color: #7dd3fc; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.75rem; }
-        .sustainability-content h2 { font-size: 2rem; color: white; margin-bottom: 1.25rem; font-weight: 400; line-height: 1.3; }
-        .sustainability-content p { color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 1.5rem; font-size: 1rem; }
-        .sustainability-content .btn-contact { border-color: white; color: white; }
-        .sustainability-content .btn-contact:hover { background: white; color: #1a365d; }
-        .sustainability-image { border-radius: 8px; overflow: hidden; }
-        .sustainability-image img { width: 100%; height: auto; display: block; border-radius: 8px; }
+        .sustainability-section {
+            padding: 5rem 0;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/thicket-dark-wet-grass.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+        }
+
+        .sustainability-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .sustainability-content .sustainability-label {
+            font-size: 0.75rem;
+            color: #7dd3fc;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .sustainability-content h2 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .sustainability-content p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .sustainability-content .btn-contact {
+            border-color: white;
+            color: white;
+        }
+
+        .sustainability-content .btn-contact:hover {
+            background: white;
+            color: #1a365d;
+        }
+
+        .sustainability-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .sustainability-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
 
         /* CTA Section */
-        .cta-section { padding: 4rem 0; background: #3d8b8b; position: relative; overflow: hidden; }
-        .cta-section::before { content: ''; position: absolute; top: -80px; right: 10%; width: 200px; height: 200px; background: rgba(255,255,255,0.08); border-radius: 50%; }
-        .cta-section::after { content: ''; position: absolute; bottom: -60px; left: 5%; width: 150px; height: 150px; background: rgba(255,255,255,0.05); border-radius: 50%; }
-        .cta-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 1; }
-        .cta-content h2 { font-size: 2rem; color: white; margin-bottom: 1rem; font-weight: 400; line-height: 1.3; }
-        .cta-content p { color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 1rem; }
-        .cta-form-card { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
-        .cta-form-card h3 { font-size: 1.25rem; color: #1a365d; margin-bottom: 0.5rem; font-weight: 600; }
-        .cta-form-card p { color: #4a5568; margin-bottom: 1.5rem; font-size: 0.9rem; line-height: 1.6; }
-        .cta-form-card .form-group { margin-bottom: 1rem; }
-        .cta-form-card input, .cta-form-card textarea { width: 100%; padding: 0.875rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.9rem; transition: border-color 0.3s ease, box-shadow 0.3s ease; font-family: inherit; }
-        .cta-form-card input:focus, .cta-form-card textarea:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
-        .cta-form-card textarea { resize: vertical; min-height: 100px; }
-        .btn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: #3b82f6; color: white; padding: 0.875rem 2rem; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border: none; width: 100%; cursor: pointer; }
-        .btn-cta:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59,130,246,0.3); }
-        .btn-cta i { transition: transform 0.3s ease; }
-        .btn-cta:hover i { transform: translateX(3px); }
+        .cta-section {
+            padding: 4rem 0;
+            background: #3d8b8b;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: 5%;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .cta-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .cta-form-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-form-card h3 {
+            font-size: 1.25rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .cta-form-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .cta-form-card .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .cta-form-card input,
+        .cta-form-card textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            font-family: inherit;
+        }
+
+        .cta-form-card input:focus,
+        .cta-form-card textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .cta-form-card textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #3b82f6;
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn-cta:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-cta i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-cta:hover i {
+            transform: translateX(3px);
+        }
 
         /* FAQ Section */
-        .faq-section { padding: 5rem 0; background: #f8fafc; }
-        .faq-container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-        .faq-header { text-align: center; margin-bottom: 3rem; }
-        .faq-header h2 { font-size: 2rem; color: #1a365d; margin-bottom: 1rem; font-weight: 400; }
-        .faq-header p { color: #4a5568; line-height: 1.7; font-size: 1rem; max-width: 600px; margin: 0 auto; }
-        .faq-list { display: flex; flex-direction: column; gap: 1rem; }
-        .faq-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; transition: box-shadow 0.3s ease; }
-        .faq-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-        .faq-question { padding: 1.25rem 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 500; color: #1a365d; font-size: 1rem; transition: background 0.3s ease; gap: 1rem; }
-        .faq-question:hover { background: #f8fafc; }
-        .faq-question span { flex: 1; }
-        .faq-question .faq-icon { width: 28px; height: 28px; border-radius: 50%; background: #e8f4f8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease; }
-        .faq-question .faq-icon i { font-size: 0.75rem; color: #3b82f6; transition: transform 0.3s ease; }
-        .faq-item.active .faq-question .faq-icon { background: #3b82f6; }
-        .faq-item.active .faq-question .faq-icon i { color: white; transform: rotate(180deg); }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .faq-item.active .faq-answer { max-height: 500px; }
-        .faq-answer p { padding: 0 1.5rem 1.5rem; color: #4a5568; line-height: 1.7; font-size: 0.95rem; }
+        .faq-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-header h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .faq-header p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: #1a365d;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            gap: 1rem;
+        }
+
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+
+        .faq-question span {
+            flex: 1;
+        }
+
+        .faq-question .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #e8f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question .faq-icon i {
+            font-size: 0.75rem;
+            color: #3b82f6;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question .faq-icon {
+            background: #3b82f6;
+        }
+
+        .faq-item.active .faq-question .faq-icon i {
+            color: white;
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem;
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
 
         /* Responsive */
         @media (max-width: 992px) {
-            .challenges-row, .product-row, .product-row.reverse, .sustainability-row, .cta-container { grid-template-columns: 1fr; gap: 2rem; }
-            .product-row.reverse { direction: ltr; }
-            .innovation-text-row, .innovation-content-row { grid-template-columns: 1fr; }
+
+            .challenges-row,
+            .product-row,
+            .product-row.reverse,
+            .sustainability-row,
+            .cta-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-row.reverse {
+                direction: ltr;
+            }
+
+            .innovation-text-row,
+            .innovation-content-row {
+                grid-template-columns: 1fr;
+            }
         }
+
         @media (max-width: 768px) {
-            .industry-hero { padding: 120px 0 60px; min-height: 350px; }
-            .industry-hero h1 { font-size: 2rem; }
-            .industry-hero p { font-size: 0.95rem; }
-            .hero-label { font-size: 0.7rem; letter-spacing: 2px; }
-            .product-content h2, .innovation-heading-col h2, .sustainability-content h2, .cta-content h2, .challenges-content h2 { font-size: 1.75rem; }
-            .intro-content p { font-size: 1.1rem; }
+            .industry-hero {
+                padding: 120px 0 60px;
+                min-height: 350px;
+            }
+
+            .industry-hero h1 {
+                font-size: 2rem;
+            }
+
+            .industry-hero p {
+                font-size: 0.95rem;
+            }
+
+            .hero-label {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+
+            .product-content h2,
+            .innovation-heading-col h2,
+            .sustainability-content h2,
+            .cta-content h2,
+            .challenges-content h2 {
+                font-size: 1.75rem;
+            }
+
+            .intro-content p {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-bar-container">
             <div class="top-bar-left">
                 <span class="language-selector">Global - English <i class="fas fa-chevron-down"></i></span>
-                <a href="mailto:info@pakplastic.com" class="top-bar-email"><i class="far fa-envelope"></i> info@pakplastic.com</a>
+                <a href="mailto:info@pakplastic.com" class="top-bar-email"><i class="far fa-envelope"></i>
+                    info@pakplastic.com</a>
             </div>
             <div class="top-bar-right">
                 <a href="../about.html#careers">Careers</a>
@@ -230,7 +867,8 @@
                 <a href="#">Brochures</a>
                 <a href="#">Media center</a>
                 <a href="#">Events</a>
-                <a href="https://www.linkedin.com/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-link"><i
+                        class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </div>
@@ -238,7 +876,9 @@
     <!-- Navigation -->
     <nav class="navbar-ipl">
         <div class="nav-container">
-            <div class="nav-logo"><a href="../index.html"><h2>PAK PLASTIC<span>INDUSTRY L.L.C</span></h2></a></div>
+            <div class="nav-logo"><a href="../index.html">
+                    <h2>PAK PLASTIC<span>INDUSTRY L.L.C</span></h2>
+                </a></div>
             <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
             <ul class="nav-menu-ipl" id="navMenu">
                 <li class="dropdown">
@@ -254,7 +894,9 @@
                         <a href="beverages.html">Beverages</a>
                         <a href="environmental.html">Environmental</a>
                         <a href="industrial-chemical.html">Industrial & Chemical</a>
-                        <div class="dropdown-footer"><a href="../industries.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a></div>
+                        <div class="dropdown-footer"><a href="../industries.html" class="industry-overview">Industry
+                                Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
+                        </div>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -273,7 +915,7 @@
                     <a href="../about.html" class="dropdown-toggle">About us</a>
                     <div class="dropdown-menu">
                         <a href="../about.html">About Us</a>
-                        <a href="../our-team.html">Our Team</a>
+                        <a href="../join-us.html">Join Us</a>
                         <a href="../our-history.html">Our History</a>
                     </div>
                 </li>
@@ -288,7 +930,8 @@
         <div class="container">
             <p class="hero-label">Automotive Industry</p>
             <h1>Driven by Innovation. Powered by Sustainable Packaging</h1>
-            <p>In the fast-moving automotive world, we deliver packaging solutions that keep your operations efficient and performance high.</p>
+            <p>In the fast-moving automotive world, we deliver packaging solutions that keep your operations efficient
+                and performance high.</p>
             <a href="../contact.html" class="hero-btn">Contact us <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
@@ -306,8 +949,10 @@
                 </ul>
             </nav>
             <div class="intro-content">
-                <p>In automotive manufacturing, precision and reliability are essential. Our packaging solutions protect components throughout the supply chain, from production to assembly.</p>
-                <p>Designed for efficiency and durability, our containers help manufacturers reduce damage, optimize logistics, and maintain just-in-time delivery schedules.</p>
+                <p>In automotive manufacturing, precision and reliability are essential. Our packaging solutions protect
+                    components throughout the supply chain, from production to assembly.</p>
+                <p>Designed for efficiency and durability, our containers help manufacturers reduce damage, optimize
+                    logistics, and maintain just-in-time delivery schedules.</p>
             </div>
         </div>
     </section>
@@ -319,15 +964,18 @@
                 <h2>Meeting automotive industry challenges</h2>
                 <div class="challenge-item">
                     <h3>Protecting precision components</h3>
-                    <p>Our packaging is engineered to protect sensitive automotive parts during transport and storage. Custom inserts and secure closures prevent damage and contamination.</p>
+                    <p>Our packaging is engineered to protect sensitive automotive parts during transport and storage.
+                        Custom inserts and secure closures prevent damage and contamination.</p>
                 </div>
                 <div class="challenge-item">
                     <h3>Supporting lean manufacturing</h3>
-                    <p>Designed for automated handling and just-in-time delivery, our containers integrate seamlessly with production lines, reducing handling time and improving efficiency.</p>
+                    <p>Designed for automated handling and just-in-time delivery, our containers integrate seamlessly
+                        with production lines, reducing handling time and improving efficiency.</p>
                 </div>
                 <div class="challenge-item">
                     <h3>Driving sustainability forward</h3>
-                    <p>Made from recyclable materials and built for long-term reuse, our packaging helps automotive manufacturers meet sustainability targets while reducing packaging waste.</p>
+                    <p>Made from recyclable materials and built for long-term reuse, our packaging helps automotive
+                        manufacturers meet sustainability targets while reducing packaging waste.</p>
                 </div>
             </div>
             <div class="challenges-image">
@@ -345,7 +993,9 @@
             <div class="product-content">
                 <p class="product-label">Automotive Containers</p>
                 <h2>Precision packaging for automotive components</h2>
-                <p>Our automotive containers are designed to protect and organize parts throughout the supply chain. Stackable, durable, and compatible with automated systems, they keep your production line running smoothly.</p>
+                <p>Our automotive containers are designed to protect and organize parts throughout the supply chain.
+                    Stackable, durable, and compatible with automated systems, they keep your production line running
+                    smoothly.</p>
                 <div class="product-buttons">
                     <a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a>
                     <a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a>
@@ -359,7 +1009,8 @@
             <div class="product-content">
                 <p class="product-label">Foldable Containers</p>
                 <h2>Space-saving solutions for return logistics</h2>
-                <p>Our foldable containers collapse flat when empty, reducing return transport costs and storage space. Ideal for closed-loop supply chains in automotive manufacturing.</p>
+                <p>Our foldable containers collapse flat when empty, reducing return transport costs and storage space.
+                    Ideal for closed-loop supply chains in automotive manufacturing.</p>
                 <div class="product-buttons">
                     <a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a>
                     <a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a>
@@ -372,14 +1023,22 @@
     <section class="innovation-section">
         <div class="innovation-row">
             <div class="innovation-text-row">
-                <div class="innovation-label-col"><p class="innovation-label">Materials Innovation</p></div>
-                <div class="innovation-heading-col"><h2>Materials innovation for sustainable packaging</h2></div>
+                <div class="innovation-label-col">
+                    <p class="innovation-label">Materials Innovation</p>
+                </div>
+                <div class="innovation-heading-col">
+                    <h2>Materials innovation for sustainable packaging</h2>
+                </div>
                 <div class="innovation-empty-col"></div>
             </div>
             <div class="innovation-content-row">
                 <div class="innovation-content">
-                    <p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard-to-recycle waste streams into long-lasting packaging. Every solution supports a circular economy while helping your business meet its sustainability goals.</p>
-                    <a href="../technology.html" class="btn-innovation">More about Material Innovation <i class="fas fa-arrow-right"></i></a>
+                    <p>We create materials that combine strength, reliability and sustainability. Using recycled
+                        plastics and durable options, we turn hard-to-recycle waste streams into long-lasting packaging.
+                        Every solution supports a circular economy while helping your business meet its sustainability
+                        goals.</p>
+                    <a href="../technology.html" class="btn-innovation">More about Material Innovation <i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="innovation-image">
                     <img src="../images/rpcs-various-1920x953.png" alt="Materials Innovation">
@@ -394,7 +1053,9 @@
             <div class="sustainability-content">
                 <p class="sustainability-label">Sustainability</p>
                 <h2>Make your impact measurable</h2>
-                <p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear sustainability benefits, from using recycled materials to cutting emissions and ensuring easy recyclability.</p>
+                <p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear
+                    sustainability benefits, from using recycled materials to cutting emissions and ensuring easy
+                    recyclability.</p>
                 <a href="../contact.html" class="btn-contact">Contact us</a>
             </div>
             <div class="sustainability-image">
@@ -437,35 +1098,51 @@
                         <span>What types of automotive packaging do you offer?</span>
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </div>
-                    <div class="faq-answer"><p>We offer a complete range of automotive packaging including stackable containers, foldable crates, custom inserts, and pallet systems designed for component protection and efficient logistics.</p></div>
+                    <div class="faq-answer">
+                        <p>We offer a complete range of automotive packaging including stackable containers, foldable
+                            crates, custom inserts, and pallet systems designed for component protection and efficient
+                            logistics.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
                         <span>Are your containers compatible with automated systems?</span>
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </div>
-                    <div class="faq-answer"><p>Yes. Our containers are designed for seamless integration with automated handling, conveyor systems, and robotic picking, supporting lean manufacturing processes.</p></div>
+                    <div class="faq-answer">
+                        <p>Yes. Our containers are designed for seamless integration with automated handling, conveyor
+                            systems, and robotic picking, supporting lean manufacturing processes.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
                         <span>Can you provide custom packaging solutions?</span>
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </div>
-                    <div class="faq-answer"><p>Yes. We offer custom inserts, dividers, and container configurations tailored to your specific component requirements and production processes.</p></div>
+                    <div class="faq-answer">
+                        <p>Yes. We offer custom inserts, dividers, and container configurations tailored to your
+                            specific component requirements and production processes.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
                         <span>How durable are your automotive containers?</span>
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </div>
-                    <div class="faq-answer"><p>Our containers are built for long-term use in demanding automotive environments, providing reliable performance for many years of repeated use.</p></div>
+                    <div class="faq-answer">
+                        <p>Our containers are built for long-term use in demanding automotive environments, providing
+                            reliable performance for many years of repeated use.</p>
+                    </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
                         <span>Are your products recyclable?</span>
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </div>
-                    <div class="faq-answer"><p>Yes. All our packaging is designed to be 100% recyclable at the end of its useful life, supporting circular economy principles.</p></div>
+                    <div class="faq-answer">
+                        <p>Yes. All our packaging is designed to be 100% recyclable at the end of its useful life,
+                            supporting circular economy principles.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -476,8 +1153,11 @@
         <div class="container-ipl">
             <div class="footer-ipl-grid">
                 <div class="footer-ipl-brand">
-                    <div class="footer-logo"><h3>PAK PLASTIC<span>INDUSTRY L.L.C</span></h3></div>
-                    <p class="footer-about">Leading manufacturer of high-quality plastic packaging solutions for various industries. Committed to innovation, quality, and sustainability.</p>
+                    <div class="footer-logo">
+                        <h3>PAK PLASTIC<span>INDUSTRY L.L.C</span></h3>
+                    </div>
+                    <p class="footer-about">Leading manufacturer of high-quality plastic packaging solutions for various
+                        industries. Committed to innovation, quality, and sustainability.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -516,4 +1196,5 @@
     </footer>
     <script src="../script.js"></script>
 </body>
+
 </html>
