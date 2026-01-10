@@ -7466,7 +7466,7 @@ body {
 
 /* Circular Economy Section */
 .purpose-circular-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
                 url('images/thicket-dark-wet-grass.jpg') no-repeat center center/cover;
     min-height: 400px;
     display: flex;
@@ -8878,7 +8878,7 @@ body {
 .sustainability-why-section {
     padding: 5rem 0;
     background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
-                url('images/All Pictures/Wastebins/istockphoto-2042974216-2048x2048.jpg') center/cover no-repeat;
+                url('images/ChatGPT Image Dec 31, 2025, 11_35_23 PM.png') center/cover no-repeat;
 }
 
 .why-header {
