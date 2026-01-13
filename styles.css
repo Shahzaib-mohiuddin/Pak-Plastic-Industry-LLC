@@ -3946,9 +3946,28 @@ body {
 }
 
 .products-layout {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 3rem;
+    display: block;
+    text-align: center;
+}
+
+.products-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.category-description {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.category-description h2 {
+    margin-bottom: 1rem;
+}
+
+.category-description p {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Sidebar Filter */
@@ -4033,6 +4052,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    justify-content: center;
     position: relative;
     z-index: 1;
 }
@@ -9586,3 +9606,258 @@ body {
         font-size: 2rem;
     }
 }
+
+/* ============================================
+   PALLETCO-STYLE PRODUCT CATEGORY PAGES
+   ============================================ */
+
+/* Thin Panoramic Hero Section */
+.product-category-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/CE86C8C5-2F1C-4F9C-B5E8-2466249CE7BE_1_201_a.jpeg') center top/cover no-repeat;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.product-category-hero .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.product-category-hero-content {
+    text-align: center;
+}
+
+.product-category-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Minimalist Product Grid */
+.product-category-section {
+    padding: 40px 0 80px;
+    background: #f5f5f5;
+}
+
+.product-category-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-grid-minimal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card-minimal {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.product-card-minimal:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card-minimal-image {
+    aspect-ratio: 1;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card-minimal-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card-minimal:hover .product-card-minimal-image img {
+    transform: scale(1.02);
+}
+
+/* Product Card Content - moves up on hover */
+.product-card-minimal-content {
+    padding: 20px;
+    text-align: left;
+    background: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.product-card-minimal:hover .product-card-minimal-content {
+    transform: translateY(-60px);
+}
+
+.product-card-minimal-content h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.product-card-minimal-content .product-dimensions {
+    font-size: 0.85rem;
+    color: #718096;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Hover Actions - slides up from bottom */
+.product-card-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.product-card-minimal:hover .product-card-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-card-actions .btn-read-more {
+    flex: 1;
+    background: #e8a87c;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.product-card-actions .btn-read-more:hover {
+    background: #d35400;
+}
+
+.product-card-actions .btn-icon {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.product-card-actions .btn-icon:hover {
+    background: #f0f0f0;
+    color: #e67e22;
+}
+
+/* Category Card Styles */
+.category-card {
+    text-decoration: none;
+    display: block;
+}
+
+.category-card .product-card-minimal-image {
+    background: #ffffff;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.category-card .product-card-minimal-image img {
+    max-height: 160px;
+    width: auto;
+    object-fit: contain;
+}
+
+.category-card .product-card-minimal-content {
+    padding: 15px 20px;
+    background: #ffffff;
+}
+
+.category-card .product-card-minimal-content h3 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .product-grid-minimal {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .product-category-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .product-grid-minimal {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .product-category-hero {
+        padding: 50px 0;
+    }
+    
+    .product-category-hero-content h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .product-grid-minimal {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .product-card-minimal-content {
+        padding: 12px 15px 15px;
+    }
+}
+
