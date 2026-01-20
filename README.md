@@ -1,10 +1,10 @@
-# Pak Plastic Industry LLC
+# Nexgen Plastic Industries
 
 A modern, responsive website for a UAE-based plastic manufacturing company, built with HTML, CSS, and JavaScript.
 
 ## Overview
 
-This website showcases Pak Plastic Industry's products, services, and commitment to quality manufacturing and sustainability. The site features a clean, professional design with smooth animations and full mobile responsiveness.
+This website showcases Nexgen Plastic Industries' products, services, and commitment to quality manufacturing and sustainability. The site features a clean, professional design with smooth animations and full mobile responsiveness.
 
 ## Features
 
@@ -167,13 +167,13 @@ Potential additions for future versions:
 
 ## Credits
 
-**Design & Development:** Custom built for Pak Plastic Industry
+**Design & Development:** Custom built for Nexgen Plastic Industries
 **Icons:** Font Awesome
 **Images:** Product images provided by client
 
 ## License
 
-© 2024 Pak Plastic Industry. All rights reserved.
+© 2024 Nexgen Plastic Industries. All rights reserved.
 
 ## Contact
 

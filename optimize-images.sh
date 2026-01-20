@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Image Optimization Script for Pak Plastic Industry Website
+# Image Optimization Script for Nexgen Plastic Industries Website
 # This script converts images to WebP format and compresses them for faster loading
 # 
 # Prerequisites:
@@ -13,7 +13,7 @@ IMAGES_DIR="./images"
 OUTPUT_DIR="./images/optimized"
 QUALITY=80
 
-echo "🖼️  Image Optimization Script for Pak Plastic Industry"
+echo "🖼️  Image Optimization Script for Nexgen Plastic Industries"
 echo "======================================================="
 echo ""
 
