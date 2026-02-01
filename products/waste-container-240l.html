@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Container 240L - Nexgen Plastic Industries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar-ipl">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/logo/NEX GEN (1).png" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu-ipl" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../products.html" class="active">Products</a></li>
+                <li><a href="../technology.html">Technology</a></li>
+                <li><a href="../sustainability.html">Sustainability</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> / <a href="../products.html">Products</a> / <a href="waste-management.html">Waste Management</a> / <span>Waste Container 240L</span>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-palletco">
+        <div class="container">
+            <div class="product-detail-wrapper">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image-container">
+                        <img id="mainProductImage" src="../images/waste management/Untitled design (9).png" alt="Waste Container 240L">
+                        <button class="zoom-btn" onclick="openLightbox()">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active" onclick="changeMainImage(this)">
+                            <img src="../images/waste management/Untitled design (9).png" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail" onclick="changeMainImage(this)">
+                            <img src="../images/waste management/Untitled design (9).png" alt="Thumbnail 2">
+                        </div>
+                        <div class="thumbnail" onclick="changeMainImage(this)">
+                            <img src="../images/waste management/Untitled design (9).png" alt="Thumbnail 3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info-palletco">
+                    <h1 class="product-title-palletco">WASTE CONTAINER 240L</h1>
+                    <p class="product-sku">SKU: <span>WC-240L</span></p>
+                    <p class="product-name-sub">Medium Capacity Waste Management Solution</p>
+                    <p class="product-size-label">SIZE: <span>L:730 x W:580 x H:1050MM</span></p>
+                    
+                    <ul class="product-specs-list">
+                        <li><span class="spec-dash">–</span> Heavy-duty HDPE construction for commercial use</li>
+                        <li><span class="spec-dash">–</span> Reinforced base for enhanced durability</li>
+                        <li><span class="spec-dash">–</span> UV-stabilized material for outdoor placement</li>
+                        <li><span class="spec-dash">–</span> Smooth interior for easy waste removal</li>
+                        <li><span class="spec-dash">–</span> Dual handles for improved maneuverability</li>
+                        <li><span class="spec-dash">–</span> Secure locking mechanism on lid</li>
+                    </ul>
+
+                    <!-- Quantity and Buy Now Section -->
+                    <div class="buy-section">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus" onclick="decreaseQty()">-</button>
+                            <input type="number" id="productQty" value="1" min="1" readonly>
+                            <button class="qty-btn plus" onclick="increaseQty()">+</button>
+                        </div>
+                        <button class="btn-buy-now" onclick="buyNow()">Buy now</button>
+                    </div>
+
+                    <!-- Add to Wishlist -->
+                    <button class="wishlist-btn-palletco" onclick="addToWishlist()">
+                        <i class="far fa-heart"></i> Add to wishlist
+                    </button>
+
+                    <!-- Product Accordion -->
+                    <div class="product-accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Shipping and returns</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Free shipping on orders over AED 500. Returns accepted within 14 days of delivery. Products must be in original condition.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Product care</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Clean with water and mild detergent. Avoid exposure to extreme temperatures. Store in a dry place when not in use.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details Box -->
+        <div class="product-details-box">
+            <div class="container">
+                <h2 class="product-details-title">Product details</h2>
+                
+                <div class="product-details-new-design">
+                    <!-- Technical Data Section -->
+                    <div class="data-section">
+                        <h3 class="section-title">Technical Data</h3>
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <div class="data-label">Dimensions</div>
+                                <div class="data-value">L:730 x W:580 x H:1050mm</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Material</div>
+                                <div class="data-value">High-Density Polyethylene (HDPE)</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Available Colors</div>
+                                <div class="data-value">
+                                    <div class="color-options">
+                                        <span class="color-option green" title="Green"></span>
+                                        <span class="color-option blue" title="Blue"></span>
+                                        <span class="color-option gray" title="Gray"></span>
+                                        <span class="color-option black" title="Black"></span>
+                                        <span class="color-option red" title="Red"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-item loading-capacity">
+                                <div class="data-label">Loading Capacity (Kgs)</div>
+                                <div class="data-value">
+                                    <div class="capacity-grid">
+                                        <div class="capacity-item">
+                                            <span class="capacity-label">STATIC</span>
+                                            <span class="capacity-value">150 Kg</span>
+                                        </div>
+                                        <div class="capacity-item">
+                                            <span class="capacity-label">DYNAMIC</span>
+                                            <span class="capacity-value">120 Kg</span>
+                                        </div>
+                                        <div class="capacity-item">
+                                            <span class="capacity-label">VOLUME</span>
+                                            <span class="capacity-value">240 L</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Item Code / Barcode</div>
+                                <div class="data-value">Coming soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer IPL Style -->
+    <footer class="footer-ipl">
+        <div class="container-ipl">
+            <div class="footer-ipl-grid">
+                <div class="footer-ipl-brand">
+                    <div class="footer-logo">
+                        <img src="../images/logo/NEX GEN (1).png" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
+                    </div>
+                    <p class="footer-tagline">Leading plastic manufacturing solutions in UAE with 15+ years of excellence in innovation and sustainability.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-ipl-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../products.html">Products</a></li>
+                        <li><a href="../technology.html">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-ipl-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="../products.html">Custom Molding</a></li>
+                        <li><a href="../products.html">Packaging Solutions</a></li>
+                        <li><a href="../sustainability.html">Sustainability</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-ipl-section footer-contact">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Umm Dera, Emirate of Umm Al Quwain, UAE</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+971544933295</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@pakplasticllc.com">info@pakplasticllc.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-ipl-bottom">
+                <p>© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved.</p>
+                <div class="footer-ipl-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.classList.remove('active');
+                header.nextElementSibling.classList.remove('active');
+            });
+            if (!isActive) {
+                button.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainProductImage');
+            const newSrc = thumbnail.querySelector('img').src;
+            mainImage.src = newSrc;
+            
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbnail.classList.add('active');
+        }
+
+        function openLightbox() {
+            alert('Lightbox feature coming soon!');
+        }
+
+        function decreaseQty() {
+            const qtyInput = document.getElementById('productQty');
+            if (qtyInput.value > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+            }
+        }
+
+        function increaseQty() {
+            const qtyInput = document.getElementById('productQty');
+            qtyInput.value = parseInt(qtyInput.value) + 1;
+        }
+
+        function buyNow() {
+            const qty = document.getElementById('productQty').value;
+            alert(`Thank you for your interest! You want to buy ${qty} unit(s). Our sales team will contact you soon.`);
+        }
+
+        function addToWishlist() {
+            alert('Product added to wishlist!');
+        }
+    </script>
+</body>
+</html>

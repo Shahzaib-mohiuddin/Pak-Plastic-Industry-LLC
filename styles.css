@@ -213,10 +213,6 @@ p.small, .small-text {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-ipl.fixed-nav .nav-logo h2,
-.navbar-ipl.fixed-nav .nav-logo span {
-    color: #1a1a2e;
-}
 
 .navbar-ipl.fixed-nav .nav-menu-ipl > li > a {
     color: #1a1a2e;
@@ -259,30 +255,30 @@ p.small, .small-text {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.nav-logo {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-logo a {
     text-decoration: none;
 }
 
-.nav-logo h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #ffffff;
+.nav-logo-img {
+    height: 250px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
     transition: all 0.3s ease;
-    line-height: 1.2;
-}
-
-.nav-logo span {
-    display: block;
-    font-size: 0.6rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    color: #ffffff;
-    text-transform: uppercase;
-    margin-top: 2px;
-    transition: all 0.3s ease;
+    position: absolute;
+    top: -85px;
+    left: 0rem;
+    z-index: 10;
 }
 
 .nav-menu-ipl {
@@ -485,10 +481,6 @@ p.small, .small-text {
     top: 0;
 }
 
-.navbar-ipl.scrolled .nav-logo h2,
-.navbar-ipl.scrolled .nav-logo span {
-    color: #1e293b;
-}
 
 .navbar-ipl.scrolled .nav-menu-ipl > li > a {
     color: #1e293b;
@@ -1827,21 +1819,20 @@ p.small, .small-text {
     padding-right: 2rem;
 }
 
-.footer-logo h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: white;
+.footer-logo {
+    position: relative;
+    height: 60px;
     margin-bottom: 0.5rem;
 }
 
-.footer-logo span {
-    display: block;
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-    color: #16a89a;
-    text-transform: uppercase;
-    margin-top: 3px;
+.footer-logo-img {
+    height: 250px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+    position: absolute;
+    top: -95px;
+    left: 0;
 }
 
 .footer-tagline {
@@ -2220,19 +2211,12 @@ p.small, .small-text {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    .nav-menu-ipl .dropdown-footer a {
-        font-size: 0.8rem;
-        color: #4a5568;
+    .nav-logo-img {
+        height: 50px;
+        max-width: 220px;
     }
 
-    .nav-logo h2 {
-        font-size: 1rem;
-    }
-
-    .nav-logo span {
-        font-size: 0.55rem;
-    }
-
+    
     .hero-ipl-title {
         font-size: 2rem;
         line-height: 1.3;
