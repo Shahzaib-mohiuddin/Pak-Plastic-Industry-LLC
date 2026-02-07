@@ -61,6 +61,15 @@ function updateNavbar() {
     const navbar = document.querySelector('.navbar-ipl');
     const currentScrollY = window.scrollY;
     
+    // Check if this is a product detail page
+    const isProductDetailPage = document.body.classList.contains('product-detail-page');
+    
+    if (isProductDetailPage) {
+        // For product detail pages, always add fixed-nav class like other pages
+        navbar.classList.add('fixed-nav');
+        return;
+    }
+    
     // Get hero section height (if exists), otherwise use 100px as fallback
     const heroSection = document.querySelector('.hero-ipl, .industry-hero, .industries-hero, .page-header, .about-hero-section, .contact-page-hero');
     const heroHeight = heroSection ? heroSection.offsetHeight : 100;

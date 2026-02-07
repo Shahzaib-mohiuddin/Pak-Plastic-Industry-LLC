@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="product-detail-page">
     <!-- Navigation -->
     <nav class="navbar-ipl">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="../index.html" class="logo-link">
-                    <img src="../images/logo/NEX GEN (1).png" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
+                    <img src="../images/1[1] (2).png" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
                 </a>
             </div>
             <button class="nav-toggle" id="navToggle">
@@ -25,22 +25,54 @@
                 <span></span>
             </button>
             <ul class="nav-menu-ipl" id="navMenu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../products.html" class="active">Products</a></li>
-                <li><a href="../technology.html">Technology</a></li>
+                <li class="dropdown">
+                    <a href="../industries.html" class="dropdown-toggle">Industries</a>
+                    <div class="dropdown-menu">
+                        <a href="../industries/agriculture.html">Agriculture</a>
+                        <a href="../industries/retail.html">Retail</a>
+                        <a href="../industries/logistics-warehousing.html">Logistics & Warehousing</a>
+                        <a href="../industries/groceries.html">Groceries</a>
+                        <a href="../industries/automotive.html">Automotive</a>
+                        <a href="../industries/healthcare-pharma.html">Healthcare & Pharma</a>
+                        <a href="../industries/food.html">Food</a>
+                        <a href="../industries/beverages.html">Beverages</a>
+                        <a href="../industries/environmental.html">Environmental</a>
+                        <a href="../industries/industrial-chemical.html">Industrial & Chemical</a>
+                        <div class="dropdown-footer">
+                            <a href="../industries.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="../products.html" class="dropdown-toggle">Products & Solutions</a>
+                    <div class="dropdown-menu">
+                        <a href="../products/plastic-pallets.html">Plastic Pallets</a>
+                        <a href="../products/large-containers.html">Large Containers</a>
+                        <a href="../products/waste-management.html">Waste Management</a>
+                        <a href="../products/small-containers.html">Small Containers</a>
+                    </div>
+                </li>
+                <li><a href="../technology.html">Innovation</a></li>
                 <li><a href="../sustainability.html">Sustainability</a></li>
-                <li><a href="../contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="../about.html" class="dropdown-toggle">About us</a>
+                    <div class="dropdown-menu">
+                        <a href="../about.html">About Us</a>
+                        <a href="../about.html#careers">Careers</a>
+                        <a href="../about.html#locations">Locations</a>
+                        <a href="../brochures.html">Brochures</a>
+                        <a href="../media.html">Media center</a>
+                        <a href="../events.html">Events</a>
+                        <div class="dropdown-footer">
+                            <a href="../about.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../contact.html" class="contact-btn">Contact</a></li>
+                <li><a href="#" class="nav-search"><i class="fas fa-search"></i></a></li>
             </ul>
         </div>
     </nav>
-
-    <!-- Breadcrumb -->
-    <section class="breadcrumb">
-        <div class="container">
-            <a href="../index.html">Home</a> / <a href="../products.html">Products</a> / <a href="large-containers.html">Large Containers</a> / <span>Pallet Box NG-1210</span>
-        </div>
-    </section>
 
     <!-- Product Detail Section -->
     <section class="product-detail-palletco">
@@ -175,7 +207,7 @@
             <div class="footer-ipl-grid">
                 <div class="footer-ipl-brand">
                     <div class="footer-logo">
-                        <img src="../images/logo/NEX GEN (1).png" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
+                        <img src="../images/1[1] (2).png" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
                     </div>
                     <p class="footer-tagline">Leading plastic manufacturing solutions in UAE with 15+ years of excellence in innovation and sustainability.</p>
                     <div class="footer-social">
