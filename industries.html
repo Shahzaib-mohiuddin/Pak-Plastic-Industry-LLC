@@ -219,27 +219,29 @@
 
         .industry-card {
             position: relative;
-            height: 320px;
-            border-radius: 0;
+            height: 340px;
+            border-radius: 12px;
             overflow: hidden;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         .industry-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
         .industry-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
         .industry-card:hover img {
-            transform: scale(1.08);
+            transform: scale(1.1);
         }
 
         .industry-card-overlay {
@@ -248,12 +250,17 @@
             left: 0;
             right: 0;
             padding: 2rem;
-            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
             color: white;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             height: 100%;
+            transition: background 0.4s ease;
+        }
+
+        .industry-card:hover .industry-card-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 55%, transparent 100%);
         }
 
         .industry-card-tagline {
@@ -261,11 +268,12 @@
             opacity: 0.9;
             margin-bottom: 0.5rem;
             font-weight: 400;
+            letter-spacing: 0.3px;
         }
 
         .industry-card-title {
-            font-size: 1.5rem;
-            font-weight: 500;
+            font-size: 1.4rem;
+            font-weight: 600;
             margin: 0;
             display: flex;
             align-items: center;
@@ -434,6 +442,10 @@
             align-items: center;
             position: relative;
             z-index: 1;
+        }
+
+        .cta-content {
+            display: block;
         }
 
         .cta-content h2 {
@@ -617,14 +629,12 @@
                     <div class="dropdown-menu">
                         <a href="industries/agriculture.html">Agriculture</a>
                         <a href="industries/retail.html">Retail</a>
-                        <a href="industries/logistics-warehousing.html">Logistics & Warehousing</a>
-                        <a href="industries/groceries.html">Groceries</a>
+                        <a href="industries/logistics-warehousing.html">Logistic & e-commerce</a>
                         <a href="industries/automotive.html">Automotive</a>
-                        <a href="industries/healthcare-pharma.html">Healthcare & Pharma</a>
+                        <a href="industries/healthcare-pharma.html">Pharmaceuticals</a>
                         <a href="industries/food.html">Food</a>
-                        <a href="industries/beverages.html">Beverages</a>
-                        <a href="industries/environmental.html">Environmental</a>
-                        <a href="industries/industrial-chemical.html">Industrial & Chemical</a>
+                        <a href="industries/environmental.html">Waste management</a>
+                        <a href="industries/industrial-chemical.html">Petro chemical industry</a>
                         <div class="dropdown-footer">
                             <a href="industries.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
                         </div>
@@ -660,7 +670,7 @@
     <section class="industries-hero">
         <div class="container">
             <p class="hero-label">Industry Overview</p>
-            <h1>Your industry's calling</h1>
+            <h1>Your industry is calling</h1>
             <a href="contact.html" class="hero-btn">Contact us <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
@@ -677,8 +687,8 @@
             </nav>
             <div class="intro-content">
                 <p class="intro-label">Focus Industries</p>
-                <p>Nexgen Plastic Industries delivers durable, high quality packaging and custom engineered products for many industries. We offer reusable transport packaging, bulk systems, rigid food packaging, pails, thin wall containers and tailored trade moulded components.</p>
-                <p>Our solutions are built to perform in complex environments and produced with advanced moulding technologies. With integrated Design and Engineering teams and in house Materials Innovation, we turn customer challenges into reliable and sustainable packaging that improves logistics, reduces waste and supports circular operations.</p>
+                <p>Nexgen Plastic Industries delivers durable, high-quality packaging and custom-engineered products across a wide range of industries. We offer reusable transport packaging, bulk systems, rigid food packaging, pails, thin-wall containers, and tailored trade-moulded components.</p>
+                <p>Our solutions are built to perform in complex environments and are produced using advanced moulding technologies. With integrated design and engineering teams and in-house materials innovation, we turn customer challenges into reliable and sustainable packaging solutions that improve logistics, reduce waste, and support circular operations.</p>
             </div>
         </div>
     </section>
@@ -695,35 +705,23 @@
                 <a href="industries/agriculture.html" class="industry-card">
                     <img src="images/final Pictures 3/Agri final.png" alt="Agriculture">
                     <div class="industry-card-overlay">
-                        <p class="industry-card-tagline">Efficiency from field to flow</p>
                         <h3 class="industry-card-title">Agriculture <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
-                <!-- Beverages -->
-                <a href="industries/beverages.html" class="industry-card">
-                    <img src="images/final Pictures 3/Beverages Final.png" alt="Beverages">
-                    <div class="industry-card-overlay">
-                        <p class="industry-card-tagline">Smart, sustainable packaging for your beverage business</p>
-                        <h3 class="industry-card-title">Beverages <i class="fas fa-arrow-right"></i></h3>
-                    </div>
-                </a>
-
-                <!-- Healthcare & Pharma -->
+                <!-- Pharmaceuticals -->
                 <a href="industries/healthcare-pharma.html" class="industry-card">
-                    <img src="images/final Pictures 3/Pharma Final.png" alt="Healthcare & Pharma">
+                    <img src="images/final Pictures 3/Pharma Final.png" alt="Pharmaceuticals">
                     <div class="industry-card-overlay">
-                        <p class="industry-card-tagline">Confidence in every batch</p>
-                        <h3 class="industry-card-title">Healthcare & Pharma <i class="fas fa-arrow-right"></i></h3>
+                        <h3 class="industry-card-title">Pharmaceuticals <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
-                <!-- Industrial & Chemical -->
+                <!-- Petro chemical industry -->
                 <a href="industries/industrial-chemical.html" class="industry-card">
-                    <img src="images/final Pictures 3/Industry and Ch.png" alt="Industrial & Chemical">
+                    <img src="images/final Pictures 3/Industry and Ch.png" alt="Petro chemical industry">
                     <div class="industry-card-overlay">
-                        <p class="industry-card-tagline">Reliability under pressure</p>
-                        <h3 class="industry-card-title">Industrial & Chemical <i class="fas fa-arrow-right"></i></h3>
+                        <h3 class="industry-card-title">Petro chemical industry <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
@@ -731,35 +729,31 @@
                 <a href="industries/retail.html" class="industry-card">
                     <img src="images/final Pictures 3/Retail Final.png" alt="Retail">
                     <div class="industry-card-overlay">
-                        <p class="industry-card-tagline">Faster moves from shelf to sale</p>
                         <h3 class="industry-card-title">Retail <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
-                <!-- Logistics & Warehousing -->
+                <!-- Logistic & e-commerce -->
                 <a href="industries/logistics-warehousing.html" class="industry-card">
-                    <img src="images/final Pictures 3/Logistic 2 final.png" alt="Logistics & Warehousing">
+                    <img src="images/final Pictures 3/Logistic 2 final.png" alt="Logistic & e-commerce">
                     <div class="industry-card-overlay">
-                        <p class="industry-card-tagline">Flow that never stops</p>
-                        <h3 class="industry-card-title">Logistics & Warehousing <i class="fas fa-arrow-right"></i></h3>
+                        <h3 class="industry-card-title">Logistic & e-commerce <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
                 <!-- Food -->
                 <a href="industries/food.html" class="industry-card">
-                    <img src="images/final Pictures 3/Food Final.png" alt="Food">
+                    <img src="images/final Pictures 3/Food.png" alt="Food">
                     <div class="industry-card-overlay">
-                        <p class="industry-card-tagline">Quality protected end to end</p>
                         <h3 class="industry-card-title">Food <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
-                <!-- Environmental -->
+                <!-- Waste management -->
                 <a href="industries/environmental.html" class="industry-card">
-                    <img src="images/final Pictures 3/Environmental Final.png" alt="Environmental">
+                    <img src="images/final Pictures 3/environmental pic.png" alt="Waste management">
                     <div class="industry-card-overlay">
-                        <p class="industry-card-tagline">Smart. Sustainable. Strong.</p>
-                        <h3 class="industry-card-title">Environmental <i class="fas fa-arrow-right"></i></h3>
+                        <h3 class="industry-card-title">Waste management <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
@@ -767,7 +761,6 @@
                 <a href="industries/automotive.html" class="industry-card">
                     <img src="images/final Pictures 3/Automotive Final.png" alt="Automotive">
                     <div class="industry-card-overlay">
-                        <p class="industry-card-tagline">Engineered for high performance</p>
                         <h3 class="industry-card-title">Automotive <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
@@ -832,7 +825,7 @@
                     <div class="footer-logo">
                         <img src="images/1[1] (2).png" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
                     </div>
-                    <p class="footer-tagline">Leading plastic manufacturing solutions in UAE with 15+ years of excellence in innovation and sustainability.</p>
+                    <p class="footer-tagline">Leading plastic manufacturing solutions backed by 30+ years of global experience in innovation and sustainability.</p>
                     <div class="footer-social">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -852,8 +845,8 @@
                 <div class="footer-ipl-section">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="products.html">Custom Molding</a></li>
-                        <li><a href="products.html">Packaging Solutions</a></li>
+                        <li><a href="custom-molding.html">Custom Molding</a></li>
+                        <li><a href="packaging-solutions.html">Packaging Solutions</a></li>
                         <li><a href="sustainability.html">Sustainability</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
