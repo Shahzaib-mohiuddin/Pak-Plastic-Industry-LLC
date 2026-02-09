@@ -89,7 +89,7 @@
 
         /* Intro Section - Teal background */
         .intro-section {
-            background: #3d8b8b;
+            background: linear-gradient(135deg, #0d7377 0%, #14919b 100%);
             padding: 2rem 0 5rem;
             position: relative;
             overflow: hidden;
@@ -359,7 +359,7 @@
 
         /* Innovation Section */
         .innovation-section {
-            padding: 2.5rem 0 0;
+            padding: 4rem 0;
             background: #dbeafe;
             position: relative;
         }
@@ -374,66 +374,47 @@
             height: 0;
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
-            border-top: 35px solid #3d8b8b;
+            border-top: 35px solid #0d7377;
         }
 
         .innovation-row {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+            align-items: center;
         }
 
-        .innovation-text-row {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr 1fr;
-            gap: 2rem;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
+        .innovation-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .innovation-label-col {
-            padding-top: 0.5rem;
-        }
-
-        .innovation-label-col .innovation-label {
-            font-size: 0.7rem;
+        .innovation-content .innovation-label {
+            font-size: 0.75rem;
             color: #718096;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
+            margin-bottom: 0.75rem;
         }
 
-        .innovation-heading-col h2 {
-            font-size: 1.75rem;
+        .innovation-content h2 {
+            font-size: 2rem;
             color: #1a365d;
-            font-weight: 400;
+            font-weight: 600;
             line-height: 1.3;
-            margin: 0;
-        }
-
-        .innovation-empty-col {
-            display: block;
-        }
-
-        .innovation-content-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: flex-end;
-        }
-
-        .innovation-content {
-            padding-bottom: 1.5rem;
+            margin: 0 0 1.25rem;
         }
 
         .innovation-content p {
             color: #4a5568;
-            line-height: 1.6;
-            margin-bottom: 1.25rem;
-            font-size: 0.9rem;
-            max-width: 400px;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
         .innovation-content .btn-innovation {
@@ -547,7 +528,7 @@
         /* CTA Section */
         .cta-section {
             padding: 4rem 0;
-            background: #3d8b8b;
+            background: linear-gradient(135deg, #0d7377 0%, #14919b 100%);
             position: relative;
             overflow: hidden;
         }
@@ -858,8 +839,8 @@
         <div class="top-bar-container">
             <div class="top-bar-left">
                 <span class="language-selector">Global - English <i class="fas fa-chevron-down"></i></span>
-                <a href="mailto:info@pakplastic.com" class="top-bar-email"><i class="far fa-envelope"></i>
-                    info@pakplastic.com</a>
+                <a href="mailto:gm@nexgenplasticsme.com" class="top-bar-email"><i class="far fa-envelope"></i>
+                    gm@nexgenplasticsme.com</a>
             </div>
             <div class="top-bar-right">
                 <a href="../about.html#careers">Careers</a>
@@ -1023,27 +1004,14 @@
     <!-- Innovation Section -->
     <section class="innovation-section">
         <div class="innovation-row">
-            <div class="innovation-text-row">
-                <div class="innovation-label-col">
-                    <p class="innovation-label">Materials Innovation</p>
-                </div>
-                <div class="innovation-heading-col">
-                    <h2>Materials innovation for sustainable packaging</h2>
-                </div>
-                <div class="innovation-empty-col"></div>
+            <div class="innovation-content">
+                <p class="innovation-label">Materials Innovation</p>
+                <h2>Materials innovation for sustainable packaging</h2>
+                <p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard-to-recycle waste streams into long-lasting packaging. Every solution supports a circular economy while helping your business meet its sustainability goals.</p>
+                <a href="../technology.html" class="btn-innovation">More about Material Innovation <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="innovation-content-row">
-                <div class="innovation-content">
-                    <p>We create materials that combine strength, reliability and sustainability. Using recycled
-                        plastics and durable options, we turn hard-to-recycle waste streams into long-lasting packaging.
-                        Every solution supports a circular economy while helping your business meet its sustainability
-                        goals.</p>
-                    <a href="../technology.html" class="btn-innovation">More about Material Innovation <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="innovation-image">
-                    <img src="../images/rpcs-various-1920x953.png" alt="Materials Innovation">
-                </div>
+            <div class="innovation-image">
+                <img src="../images/rpcs-various-1920x953.png" alt="Materials Innovation">
             </div>
         </div>
     </section>
@@ -1195,7 +1163,7 @@
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@pakplasticllc.com">info@pakplasticllc.com</a>
+                        <a href="mailto:gm@nexgenplasticsme.com">gm@nexgenplasticsme.com</a>
                     </div>
                 </div>
             </div>

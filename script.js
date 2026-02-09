@@ -92,17 +92,26 @@ window.addEventListener('scroll', () => {
 // Run on page load to set initial state
 document.addEventListener('DOMContentLoaded', updateNavbar);
 
-// Industries Swiper - Simple Configuration
+// Industries Swiper - Improved Configuration
 if (document.querySelector('.industriesSwiper')) {
     const industriesSwiper = new Swiper('.industriesSwiper', {
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
         slidesPerGroup: 1,
         centeredSlides: false,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        preventClicks: false,
+        preventClicksPropagation: false,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true,
         },
         breakpoints: {
             320: {
@@ -111,15 +120,29 @@ if (document.querySelector('.industriesSwiper')) {
             },
             640: {
                 slidesPerView: 2,
-                spaceBetween: 15
-            },
+                spaceBetween: 20
+                            },
             768: {
                 slidesPerView: 3,
-                spaceBetween: 20
+                spaceBetween: 25
             },
             1024: {
                 slidesPerView: 4,
-                spaceBetween: 20
+                spaceBetween: 30
+            },
+            1440: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            }
+        },
+        on: {
+            init: function() {
+                // Ensure proper initialization
+                this.update();
+            },
+            resize: function() {
+                // Update on resize for better responsiveness
+                this.update();
             }
         }
     });

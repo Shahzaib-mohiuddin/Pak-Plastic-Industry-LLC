@@ -178,7 +178,7 @@ Potential additions for future versions:
 ## Contact
 
 For website support or inquiries:
-- Email: info@pakplastic.ae
+- Email: gm@nexgenplasticsme.com
 - Phone: +971 XX XXX XXXX
 
 ---
