@@ -32,6 +32,9 @@
             object-fit: cover;
             z-index: -2;
         }
+        .hero-video::-webkit-media-controls { display: none !important; }
+        .hero-video::-webkit-media-controls-start-playback-button { display: none !important; }
+        .hero-video::-webkit-media-controls-play-button { display: none !important; }
 
         .industry-hero::before {
             content: '';
@@ -67,6 +70,8 @@
             max-width: 700px;
             line-height: 1.15;
             letter-spacing: -0.5px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
 
         .industry-hero p {
@@ -190,6 +195,8 @@
             line-height: 1.5;
             font-weight: 500;
             margin-bottom: 1.5rem;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
 
         .intro-content p:last-child {
@@ -826,7 +833,7 @@
         }
 
         /* Responsive */
-        @media (max-width: 992px) {
+        @media (max-width: 1024px) {
             .challenges-row {
                 grid-template-columns: 1fr;
             }
@@ -860,7 +867,13 @@
             }
 
             .industry-hero h1 {
-                font-size: 2rem;
+                font-size: 1.75rem;
+                max-width: 100%;
+                letter-spacing: -0.3px;
+            }
+            
+            .industry-hero p {
+                max-width: 100%;
             }
 
             .industry-hero p {
@@ -882,6 +895,73 @@
 
             .intro-content p {
                 font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .cta-section { padding: 2.5rem 0; }
+            .cta-container { padding: 0 1.25rem; text-align: center; }
+            .cta-content h2 { font-size: 1.5rem; text-align: center; }
+            .cta-content p { font-size: 0.9rem; text-align: center; }
+            .cta-form-card { padding: 1.75rem 1.25rem; border-radius: 14px; }
+            .cta-form-card h3 { font-size: 1.1rem; }
+            .cta-form-card p { font-size: 0.85rem; }
+            .cta-form-card input, .cta-form-card textarea { padding: 0.75rem 0.875rem; font-size: 0.85rem; }
+            .btn-cta { padding: 0.75rem 1.5rem; font-size: 0.85rem; }
+            .innovation-section { padding: 3rem 0; }
+            .innovation-row { padding: 0 1.25rem; }
+            .innovation-content h2 { font-size: 1.5rem; }
+            .innovation-content p { font-size: 0.9rem; }
+            .sustainability-section { padding: 3rem 0; background-attachment: scroll; }
+            .sustainability-row { padding: 0 1.25rem; }
+            .sustainability-content h2 { font-size: 1.5rem; }
+            .sustainability-content p { font-size: 0.9rem; }
+            .challenges-section { padding: 3rem 0; }
+            .challenges-row { padding: 0 1.25rem; }
+            .product-section { padding: 3rem 0; }
+            .product-row { padding: 0 1.25rem; }
+            .faq-section { padding: 3rem 0; }
+            .faq-container { padding: 0 1.25rem; }
+            .faq-header h2 { font-size: 1.5rem; }
+            .faq-question { font-size: 0.9rem; padding: 1rem 1.25rem; }
+            .faq-answer p { padding: 0 1.25rem 1.25rem; font-size: 0.88rem; }
+            .intro-section { padding: 1.5rem 0 3rem; }
+            .product-buttons { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 480px) {
+            .industry-hero {
+                padding: 100px 0 50px;
+                min-height: 300px;
+            }
+            .industry-hero .container {
+                padding: 1.25rem;
+            }
+            .industry-hero h1 {
+                font-size: 1.6rem;
+                max-width: 100%;
+            }
+            .industry-hero p {
+                font-size: 0.88rem;
+                max-width: 100%;
+            }
+            .hero-label {
+                font-size: 0.65rem;
+                letter-spacing: 1.5px;
+            }
+            .hero-btn {
+                padding: 0.75rem 1.4rem;
+                font-size: 0.82rem;
+            }
+            .intro-content p {
+                font-size: 0.95rem;
+            }
+            .challenges-content h2,
+            .product-content h2,
+            .innovation-content h2,
+            .sustainability-content h2,
+            .cta-content h2 {
+                font-size: 1.35rem;
             }
         }
     </style>
@@ -918,6 +998,8 @@
                 <span></span>
                 <span></span>
             </button>
+            <a href="../contact.html" class="mobile-contact-btn">Contact</a>
+            <a href="#" class="mobile-search-btn"><i class="fas fa-search"></i></a>
             <ul class="nav-menu-ipl" id="navMenu">
                 <li class="dropdown">
                     <a href="../industries.html" class="dropdown-toggle active">Industries</a>
@@ -962,8 +1044,8 @@
 
     <!-- Hero Section -->
     <section class="industry-hero">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
-            <source src="../Videos/environmental Video.mp4" type="video/mp4">
+        <video class="hero-video" autoplay muted loop playsinline preload="none" poster="../Videos/optimized/posters/environmental-hero-poster.jpg">
+            <source src="../Videos/optimized/desktop/environmental-hero.mp4" type="video/mp4">
         </video>
         <div class="container">
             <p class="hero-label">Environmental Industry</p>
@@ -987,7 +1069,7 @@
             </nav>
             <div class="intro-content">
                 <p>In waste management, durability and sustainability go hand in hand. Our innovative products are built for daily use, helping communities manage waste efficiently.</p>
-                <p>Made from high-quality, recyclable materials, our products keep waste secure, reduce contamination and make sorting simple for a cleaner future.</p>
+                <p>Made from high&#8209;quality, recyclable materials, our products keep waste secure, reduce contamination and make sorting simple for a cleaner future.</p>
             </div>
         </div>
     </section>
@@ -1003,7 +1085,7 @@
                 </div>
                 <div class="challenge-item">
                     <h3>Durable by design, sustainable by nature</h3>
-                    <p>Made from high-quality, recyclable materials, our products are made to last. They keep waste secure, reduce contamination and make sorting simple.</p>
+                    <p>Made from high&#8209;quality, recyclable materials, our products are made to last. They keep waste secure, reduce contamination and make sorting simple.</p>
                 </div>
                 <div class="challenge-item">
                     <h3>Working together for a cleaner future</h3>
@@ -1025,7 +1107,7 @@
             <div class="product-content">
                 <p class="product-label">Durable Products</p>
                 <h2>Durable products for efficient waste collection</h2>
-                <p>Our innovative products are designed for heavy-duty use in municipal and commercial settings. Built to withstand daily handling, they ensure reliable waste collection while supporting recycling initiatives.</p>
+                <p>Our innovative products are designed for heavy&#8209;duty use in municipal and commercial settings. Built to withstand daily handling, they ensure reliable waste collection while supporting recycling initiatives.</p>
                 <div class="product-buttons">
                     <a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a>
                     <a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a>
@@ -1054,7 +1136,7 @@
             <div class="innovation-content">
                 <p class="innovation-label">Materials Innovation</p>
                 <h2>Materials innovation for sustainable packaging</h2>
-                <p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard-to-recycle waste streams into long-lasting packaging. Every solution supports a circular economy while helping your business meet its sustainability goals.</p>
+                <p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard&#8209;to&#8209;recycle waste streams into long&#8209;lasting packaging. Every solution supports a circular economy while helping your business meet its sustainability goals.</p>
                 <a href="../technology.html" class="btn-innovation">More about Material Innovation <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="innovation-image">
@@ -1130,7 +1212,7 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </div>
                     <div class="faq-answer">
-                        <p>Our products are built for long-term use, providing reliable performance for many years. They're designed to withstand daily handling, weather exposure, and heavy loads.</p>
+                        <p>Our products are built for long&#8209;term use, providing reliable performance for many years. They're designed to withstand daily handling, weather exposure, and heavy loads.</p>
                     </div>
                 </div>
                 <div class="faq-item">

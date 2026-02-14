@@ -32,6 +32,9 @@
             object-fit: cover;
             z-index: -2;
         }
+        .hero-video::-webkit-media-controls { display: none !important; }
+        .hero-video::-webkit-media-controls-start-playback-button { display: none !important; }
+        .hero-video::-webkit-media-controls-play-button { display: none !important; }
 
         .industry-hero::before {
             content: '';
@@ -67,6 +70,8 @@
             max-width: 700px;
             line-height: 1.15;
             letter-spacing: -0.5px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
 
         .industry-hero p {
@@ -190,6 +195,8 @@
             line-height: 1.5;
             font-weight: 500;
             margin-bottom: 1.5rem;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
 
         .intro-content p:last-child {
@@ -826,7 +833,7 @@
         }
 
         /* Responsive */
-        @media (max-width: 992px) {
+        @media (max-width: 1024px) {
             .challenges-row {
                 grid-template-columns: 1fr;
             }
@@ -860,7 +867,13 @@
             }
 
             .industry-hero h1 {
-                font-size: 2rem;
+                font-size: 1.75rem;
+                max-width: 100%;
+                letter-spacing: -0.3px;
+            }
+            
+            .industry-hero p {
+                max-width: 100%;
             }
 
             .industry-hero p {
@@ -882,6 +895,73 @@
 
             .intro-content p {
                 font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .cta-section { padding: 2.5rem 0; }
+            .cta-container { padding: 0 1.25rem; text-align: center; }
+            .cta-content h2 { font-size: 1.5rem; text-align: center; }
+            .cta-content p { font-size: 0.9rem; text-align: center; }
+            .cta-form-card { padding: 1.75rem 1.25rem; border-radius: 14px; }
+            .cta-form-card h3 { font-size: 1.1rem; }
+            .cta-form-card p { font-size: 0.85rem; }
+            .cta-form-card input, .cta-form-card textarea { padding: 0.75rem 0.875rem; font-size: 0.85rem; }
+            .btn-cta { padding: 0.75rem 1.5rem; font-size: 0.85rem; }
+            .innovation-section { padding: 3rem 0; }
+            .innovation-row { padding: 0 1.25rem; }
+            .innovation-content h2 { font-size: 1.5rem; }
+            .innovation-content p { font-size: 0.9rem; }
+            .sustainability-section { padding: 3rem 0; background-attachment: scroll; }
+            .sustainability-row { padding: 0 1.25rem; }
+            .sustainability-content h2 { font-size: 1.5rem; }
+            .sustainability-content p { font-size: 0.9rem; }
+            .challenges-section { padding: 3rem 0; }
+            .challenges-row { padding: 0 1.25rem; }
+            .product-section { padding: 3rem 0; }
+            .product-row { padding: 0 1.25rem; }
+            .faq-section { padding: 3rem 0; }
+            .faq-container { padding: 0 1.25rem; }
+            .faq-header h2 { font-size: 1.5rem; }
+            .faq-question { font-size: 0.9rem; padding: 1rem 1.25rem; }
+            .faq-answer p { padding: 0 1.25rem 1.25rem; font-size: 0.88rem; }
+            .intro-section { padding: 1.5rem 0 3rem; }
+            .product-buttons { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 480px) {
+            .industry-hero {
+                padding: 100px 0 50px;
+                min-height: 300px;
+            }
+            .industry-hero .container {
+                padding: 1.25rem;
+            }
+            .industry-hero h1 {
+                font-size: 1.6rem;
+                max-width: 100%;
+            }
+            .industry-hero p {
+                font-size: 0.88rem;
+                max-width: 100%;
+            }
+            .hero-label {
+                font-size: 0.65rem;
+                letter-spacing: 1.5px;
+            }
+            .hero-btn {
+                padding: 0.75rem 1.4rem;
+                font-size: 0.82rem;
+            }
+            .intro-content p {
+                font-size: 0.95rem;
+            }
+            .challenges-content h2,
+            .product-content h2,
+            .innovation-content h2,
+            .sustainability-content h2,
+            .cta-content h2 {
+                font-size: 1.35rem;
             }
         }
     </style>
@@ -918,6 +998,8 @@
                 <span></span>
                 <span></span>
             </button>
+            <a href="../contact.html" class="mobile-contact-btn">Contact</a>
+            <a href="#" class="mobile-search-btn"><i class="fas fa-search"></i></a>
             <ul class="nav-menu-ipl" id="navMenu">
                 <li class="dropdown">
                     <a href="../industries.html" class="dropdown-toggle active">Industries</a>
@@ -962,7 +1044,7 @@
 
     <!-- Hero Section -->
     <section class="industry-hero">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+        <video class="hero-video" autoplay muted loop playsinline preload="none" poster="../Videos/optimized/posters/food-hero-poster.jpg">
             <source src="../Videos/Food proc.mp4" type="video/mp4">
         </video>
         <div class="container">
@@ -999,7 +1081,7 @@
                 <h2>Meeting modern food production challenges</h2>
                 <div class="challenge-item">
                     <h3>Protecting food quality and safety</h3>
-                    <p>We design food-grade packaging that keeps products fresh and secure from filling to delivery. Smooth surfaces and tamper-evident closures prevent contamination, ensuring hygiene and quality at every stage.</p>
+                    <p>We design food&#8209;grade packaging that keeps products fresh and secure from filling to delivery. Smooth surfaces and tamper-evident closures prevent contamination, ensuring hygiene and quality at every stage.</p>
                 </div>
                 <div class="challenge-item">
                     <h3>Designed for efficient production</h3>
@@ -1054,7 +1136,7 @@
             <div class="innovation-content">
                 <p class="innovation-label">Materials Innovation</p>
                 <h2>Materials innovation for sustainable packaging</h2>
-                <p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard-to-recycle waste streams into long-lasting packaging. Every solution supports a circular economy while helping your business meet its sustainability goals.</p>
+                <p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard&#8209;to&#8209;recycle waste streams into long&#8209;lasting packaging. Every solution supports a circular economy while helping your business meet its sustainability goals.</p>
                 <a href="../technology.html" class="btn-innovation">More about Material Innovation <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="innovation-image">
@@ -1121,7 +1203,7 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </div>
                     <div class="faq-answer">
-                        <p>We offer a complete portfolio of food-grade packaging including innovative products and specialty packaging. Our solutions are designed for dairy, deli, bakery, and processed food applications.</p>
+                        <p>We offer a complete portfolio of food&#8209;grade packaging including innovative products and specialty packaging. Our solutions are designed for dairy, deli, bakery, Butchery and processed food applications.</p>
                     </div>
                 </div>
                 <div class="faq-item">

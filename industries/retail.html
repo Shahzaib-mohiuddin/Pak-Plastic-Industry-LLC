@@ -13,6 +13,9 @@
         .industry-hero { color: white; padding: 160px 0 100px; text-align: left; position: relative; min-height: 400px; display: flex; align-items: center; overflow: hidden; }
         .hero-video {
             pointer-events: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+        .hero-video::-webkit-media-controls { display: none !important; }
+        .hero-video::-webkit-media-controls-start-playback-button { display: none !important; }
+        .hero-video::-webkit-media-controls-play-button { display: none !important; }
         .industry-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: -1; }
         .industry-hero .container { max-width: 1200px; margin: 0 auto; padding: 2rem; width: 100%; }
         .hero-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1rem; opacity: 0.9; }
@@ -123,8 +126,75 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
         .faq-item.active .faq-answer { max-height: 500px; }
         .faq-answer p { padding: 0 1.5rem 1.5rem; color: #4a5568; line-height: 1.7; font-size: 0.95rem; }
-        @media (max-width: 992px) { .challenges-row, .product-row, .product-row.reverse, .sustainability-row, .cta-container { grid-template-columns: 1fr; gap: 2rem; } .product-row.reverse { direction: ltr; } .innovation-text-row, .innovation-content-row { grid-template-columns: 1fr; } }
-        @media (max-width: 768px) { .industry-hero { padding: 120px 0 60px; min-height: 350px; } .industry-hero h1 { font-size: 2rem; } .industry-hero p { font-size: 0.95rem; } .hero-label { font-size: 0.7rem; letter-spacing: 2px; } .product-content h2, .innovation-heading-col h2, .sustainability-content h2, .cta-content h2, .challenges-content h2 { font-size: 1.75rem; } .intro-content p { font-size: 1.1rem; } }
+        @media (max-width: 1024px) { .challenges-row, .product-row, .product-row.reverse, .sustainability-row, .cta-container, .innovation-row { grid-template-columns: 1fr; gap: 2rem; } .product-row.reverse { direction: ltr; } .innovation-text-row, .innovation-content-row { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .industry-hero { padding: 120px 0 60px; min-height: 350px; } .industry-hero h1 { font-size: 1.75rem; max-width: 100%; letter-spacing: -0.3px; } .industry-hero p { font-size: 0.95rem; } .hero-label { font-size: 0.7rem; letter-spacing: 2px; } .product-content h2, .innovation-heading-col h2, .sustainability-content h2, .cta-content h2, .challenges-content h2 { font-size: 1.75rem; } .intro-content p { font-size: 1.1rem; } }
+
+        @media (max-width: 1024px) {
+            .cta-section { padding: 2.5rem 0; }
+            .cta-container { padding: 0 1.25rem; text-align: center; }
+            .cta-content h2 { font-size: 1.5rem; text-align: center; }
+            .cta-content p { font-size: 0.9rem; text-align: center; }
+            .cta-form-card { padding: 1.75rem 1.25rem; border-radius: 14px; }
+            .cta-form-card h3 { font-size: 1.1rem; }
+            .cta-form-card p { font-size: 0.85rem; }
+            .cta-form-card input, .cta-form-card textarea { padding: 0.75rem 0.875rem; font-size: 0.85rem; }
+            .btn-cta { padding: 0.75rem 1.5rem; font-size: 0.85rem; }
+            .innovation-section { padding: 3rem 0; }
+            .innovation-row { padding: 0 1.25rem; }
+            .innovation-content h2 { font-size: 1.5rem; }
+            .innovation-content p { font-size: 0.9rem; }
+            .sustainability-section { padding: 3rem 0; background-attachment: scroll; }
+            .sustainability-row { padding: 0 1.25rem; }
+            .sustainability-content h2 { font-size: 1.5rem; }
+            .sustainability-content p { font-size: 0.9rem; }
+            .challenges-section { padding: 3rem 0; }
+            .challenges-row { padding: 0 1.25rem; }
+            .product-section { padding: 3rem 0; }
+            .product-row { padding: 0 1.25rem; }
+            .faq-section { padding: 3rem 0; }
+            .faq-container { padding: 0 1.25rem; }
+            .faq-header h2 { font-size: 1.5rem; }
+            .faq-question { font-size: 0.9rem; padding: 1rem 1.25rem; }
+            .faq-answer p { padding: 0 1.25rem 1.25rem; font-size: 0.88rem; }
+            .intro-section { padding: 1.5rem 0 3rem; }
+            .product-buttons { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 480px) {
+            .industry-hero {
+                padding: 100px 0 50px;
+                min-height: 300px;
+            }
+            .industry-hero .container {
+                padding: 1.25rem;
+            }
+            .industry-hero h1 {
+                font-size: 1.6rem;
+                max-width: 100%;
+            }
+            .industry-hero p {
+                font-size: 0.88rem;
+                max-width: 100%;
+            }
+            .hero-label {
+                font-size: 0.65rem;
+                letter-spacing: 1.5px;
+            }
+            .hero-btn {
+                padding: 0.75rem 1.4rem;
+                font-size: 0.82rem;
+            }
+            .intro-content p {
+                font-size: 0.95rem;
+            }
+            .challenges-content h2,
+            .product-content h2,
+            .innovation-content h2,
+            .sustainability-content h2,
+            .cta-content h2 {
+                font-size: 1.35rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -159,6 +229,8 @@
                 <span></span>
                 <span></span>
             </button>
+            <a href="../contact.html" class="mobile-contact-btn">Contact</a>
+            <a href="#" class="mobile-search-btn"><i class="fas fa-search"></i></a>
             <ul class="nav-menu-ipl" id="navMenu">
                 <li class="dropdown">
                     <a href="../industries.html" class="dropdown-toggle active">Industries</a>
@@ -202,7 +274,9 @@
     </nav>
 
     <section class="industry-hero">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata"><source src="../images/Gen-4_5 Ultra-realistic 10-second forward tracking shot down the center of a modern supermarket  grocery store aisle Camera is at chest height and glides smoothly forward (steadycamdolly feel) with a 4K.mp4" type="video/mp4"></video>
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+            <source src="../images/industries_videos/AdobeStock_299965316.mov" type="video/mp4">
+        </video>
         <div class="container">
             <p class="hero-label">Retail Industry</p>
             <h1>Smart Reusable Packaging for Efficient Retail Logistics</h1>
@@ -211,19 +285,19 @@
         </div>
     </section>
 
-    <section class="intro-section"><div class="container"><nav class="intro-nav"><ul class="intro-nav-list"><li><a href="../index.html">Home</a></li><li class="separator">›</li><li><a href="../industries.html">Industry overview</a></li><li class="separator">›</li><li>Retail</li></ul></nav><div class="intro-content"><p>In retail, efficiency and presentation matter. Our packaging solutions help you move products smoothly from distribution centers to store shelves.</p><p>From stackable products to display-ready solutions, we provide practical products that reduce handling time and improve store operations.</p></div></div></section>
+    <section class="intro-section"><div class="container"><nav class="intro-nav"><ul class="intro-nav-list"><li><a href="../index.html">Home</a></li><li class="separator">›</li><li><a href="../industries.html">Industry overview</a></li><li class="separator">›</li><li>Retail</li></ul></nav><div class="intro-content"><p>In retail, efficiency and presentation matter. Our packaging solutions help you move products smoothly from distribution centers to store shelves.</p><p>From stackable products to display&#8209;ready solutions, we provide practical products that reduce handling time and improve store operations.</p></div></div></section>
 
-    <section class="challenges-section"><div class="challenges-row"><div class="challenges-content"><h2>Meeting the demands of modern retail</h2><div class="challenge-item"><h3>Streamlining store operations</h3><p>Our packaging is designed for quick handling and easy stocking. Display-ready products reduce shelf replenishment time, keeping your store running efficiently.</p></div><div class="challenge-item"><h3>Protecting products throughout the supply chain</h3><p>From distribution center to shop floor, our durable products protect goods from damage, reducing waste and ensuring quality presentation.</p></div><div class="challenge-item"><h3>Supporting sustainable retail</h3><p>Reusable packaging reduces single-use waste and supports your sustainability goals. Made from recyclable materials, our solutions help you build a greener retail operation.</p></div></div><div class="challenges-image"><img src="../images/Indoor hotel view _ Free Photo_files/clothing-retail-store-shop-with-interactive-information-display-panel_1235831-53433.jpg" alt="Retail packaging solutions"></div></div></section>
+    <section class="challenges-section"><div class="challenges-row"><div class="challenges-content"><h2>Meeting the demands of modern retail</h2><div class="challenge-item"><h3>Streamlining store operations</h3><p>Our packaging is designed for quick handling and easy stocking. Display&#8209;ready products reduce shelf replenishment time, keeping your store running efficiently.</p></div><div class="challenge-item"><h3>Protecting products throughout the supply chain</h3><p>From distribution center to shop floor, our durable products protect goods from damage, reducing waste and ensuring quality presentation.</p></div><div class="challenge-item"><h3>Supporting sustainable retail</h3><p>Reusable packaging reduces single&#8209;use waste and supports your sustainability goals. Made from recyclable materials, our solutions help you build a greener retail operation.</p></div></div><div class="challenges-image"><img src="../images/Indoor hotel view _ Free Photo_files/clothing-retail-store-shop-with-interactive-information-display-panel_1235831-53433.jpg" alt="Retail packaging solutions"></div></div></section>
 
-    <section class="product-section"><div class="product-row"><div class="product-image"><img src="../images/Whisk_fa02d9e10a99615af844901699ddb87adr.jpeg" alt="Retail Products"></div><div class="product-content"><p class="product-label">Retail Products</p><h2>Versatile products for retail distribution</h2><p>Our retail products are designed for efficient handling and attractive presentation. Stackable, durable, and available in multiple sizes, they keep your supply chain running smoothly.</p><div class="product-buttons"><a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a><a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a></div></div></div><div class="product-row reverse" style="margin-top: 4rem;"><div class="product-image"><img src="../images/Whisk_28d2148b434a776b3dc4234299c5cd77eg.png" alt="Display Products"></div><div class="product-content"><p class="product-label">Display Products</p><h2>Display-ready solutions for faster stocking</h2><p>Our display products go straight from delivery to shelf, reducing handling time and labor costs. Clean, attractive designs enhance product presentation on the shop floor.</p><div class="product-buttons"><a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a><a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a></div></div></div></section>
+    <section class="product-section"><div class="product-row"><div class="product-image"><img src="../images/Whisk_fa02d9e10a99615af844901699ddb87adr.jpeg" alt="Retail Products"></div><div class="product-content"><p class="product-label">Retail Products</p><h2>Versatile products for retail distribution</h2><p>Our retail products are designed for efficient handling and attractive presentation. Stackable, durable, and available in multiple sizes, they keep your supply chain running smoothly.</p><div class="product-buttons"><a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a><a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a></div></div></div><div class="product-row reverse" style="margin-top: 4rem;"><div class="product-image"><img src="../images/Whisk_28d2148b434a776b3dc4234299c5cd77eg.png" alt="Display Products"></div><div class="product-content"><p class="product-label">Display Products</p><h2>Display&#8209;ready solutions for faster stocking</h2><p>Our display products go straight from delivery to shelf, reducing handling time and labor costs. Clean, attractive designs enhance product presentation on the shop floor.</p><div class="product-buttons"><a href="#" class="btn-brochure"><i class="fas fa-download"></i> Download brochure</a><a href="../contact.html" class="btn-contact">Contact us <i class="fas fa-arrow-right"></i></a></div></div></div></section>
 
-    <section class="innovation-section"><div class="innovation-row"><div class="innovation-content"><p class="innovation-label">Materials Innovation</p><h2>Materials innovation for sustainable packaging</h2><p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard-to-recycle waste streams into long-lasting packaging.</p><a href="../technology.html" class="btn-innovation">More about Material Innovation <i class="fas fa-arrow-right"></i></a></div><div class="innovation-image"><img src="../images/rpcs-various-1920x953.png" alt="Materials Innovation"></div></div></section>
+    <section class="innovation-section"><div class="innovation-row"><div class="innovation-content"><p class="innovation-label">Materials Innovation</p><h2>Materials innovation for sustainable packaging</h2><p>We create materials that combine strength, reliability and sustainability. Using recycled plastics and durable options, we turn hard&#8209;to&#8209;recycle waste streams into long&#8209;lasting packaging.</p><a href="../technology.html" class="btn-innovation">More about Material Innovation <i class="fas fa-arrow-right"></i></a></div><div class="innovation-image"><img src="../images/rpcs-various-1920x953.png" alt="Materials Innovation"></div></div></section>
 
     <section class="sustainability-section"><div class="sustainability-row"><div class="sustainability-content"><p class="sustainability-label">Sustainability</p><h2>Make your impact measurable</h2><p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear sustainability benefits, from using recycled materials to cutting emissions and ensuring easy recyclability.</p><a href="../contact.html" class="btn-contact">Contact us</a></div><div class="sustainability-image"><img src="../images/sustainability/impact.jpg" alt="Sustainability Impact"></div></div></section>
 
     <section class="cta-section"><div class="cta-container"><div class="cta-content"><h2>Contact us today to explore how our solutions can work for your business</h2><p>We help you navigate the complexities of your industry as your trusted partner.</p></div><div class="cta-form-card"><h3>Get in touch</h3><p>Fill in the form and our team will get back to you shortly.</p><form><div class="form-group"><input type="text" placeholder="Your name" required></div><div class="form-group"><input type="email" placeholder="Email address" required></div><div class="form-group"><input type="text" placeholder="Company name"></div><div class="form-group"><textarea placeholder="How can we help you?"></textarea></div><button type="submit" class="btn-cta">Send message <i class="fas fa-arrow-right"></i></button></form></div></div></section>
 
-    <section class="faq-section"><div class="faq-container"><div class="faq-header"><h2>Frequently Asked Questions</h2><p>Find answers to common questions about our retail packaging solutions.</p></div><div class="faq-list"><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>What types of retail packaging do you offer?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>We offer innovative retail products, display solutions, foldable options, and custom packaging designed for distribution centers, warehouses, and store operations.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>How do display-ready products save time?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Display-ready products go straight from delivery to shelf without unpacking, reducing handling time and labor costs while improving store efficiency.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Can your packaging be customized with branding?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. We offer custom colors, logos, and branding options to help reinforce your brand identity throughout the supply chain and on the shop floor.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>How durable are your retail products?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Our products are built for long-term use, providing reliable performance for many years of repeated handling and transport cycles.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Are your products recyclable?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. All our packaging is designed to be 100% recyclable at the end of its useful life, supporting sustainable retail operations.</p></div></div></div></div></section>
+    <section class="faq-section"><div class="faq-container"><div class="faq-header"><h2>Frequently Asked Questions</h2><p>Find answers to common questions about our retail packaging solutions.</p></div><div class="faq-list"><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>What types of retail packaging do you offer?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>We offer innovative retail products, display solutions, foldable options, and custom packaging designed for distribution centers, warehouses, and store operations.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>How do display&#8209;ready products save time?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Display&#8209;ready products go straight from delivery to shelf without unpacking, reducing handling time and labor costs while improving store efficiency.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Can your packaging be customized with branding?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. We offer custom colors, logos, and branding options to help reinforce your brand identity throughout the supply chain and on the shop floor.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>How durable are your retail products?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Our products are built for long&#8209;term use, providing reliable performance for many years of repeated handling and transport cycles.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Are your products recyclable?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. All our packaging is designed to be 100% recyclable at the end of its useful life, supporting sustainable retail operations.</p></div></div></div></div></section>
 
     <!-- Footer IPL Style -->
     <footer class="footer-ipl">

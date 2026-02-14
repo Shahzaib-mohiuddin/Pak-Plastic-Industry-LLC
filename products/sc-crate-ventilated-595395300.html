@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLASTIC CRATE VENTILATED 595x395x300mm - Nexgen Plastic Industries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="product-detail-page">
+    <!-- Navigation -->
+    <nav class="navbar-ipl">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/1[1] (2).png" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="../contact.html" class="mobile-contact-btn">Contact</a>
+            <a href="#" class="mobile-search-btn"><i class="fas fa-search"></i></a>
+            <ul class="nav-menu-ipl" id="navMenu">
+                <li class="dropdown">
+                    <a href="../industries.html" class="dropdown-toggle">Industries</a>
+                    <div class="dropdown-menu">
+                        <a href="../industries/agriculture.html">Agriculture</a>
+                        <a href="../industries/retail.html">Retail</a>
+                        <a href="../industries/logistics-warehousing.html">Logistic & e-commerce</a>
+                        <a href="../industries/automotive.html">Automotive</a>
+                        <a href="../industries/healthcare-pharma.html">Pharmaceuticals</a>
+                        <a href="../industries/food.html">Food</a>
+                        <a href="../industries/environmental.html">Waste management</a>
+                        <a href="../industries/industrial-chemical.html">Petro chemical industry</a>
+                        <div class="dropdown-footer">
+                            <a href="../industries.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="../products.html" class="dropdown-toggle active">Products & Solutions</a>
+                    <div class="dropdown-menu">
+                        <a href="plastic-pallets.html">Plastic Pallets</a>
+                        <a href="large-containers.html">Large Containers</a>
+                        <a href="waste-management.html">Waste Management</a>
+                        <a href="small-containers.html">Small Containers</a>
+                    </div>
+                </li>
+                <li><a href="../technology.html">Innovation</a></li>
+                <li><a href="../sustainability.html">Sustainability</a></li>
+                <li class="dropdown">
+                    <a href="../about.html" class="dropdown-toggle">About us</a>
+                    <div class="dropdown-menu">
+                        <a href="../about.html">About Us</a>
+                        <a href="../join-us.html">Join Us</a>
+                        <a href="../our-history.html">Our History</a>
+                    </div>
+                </li>
+                <li><a href="../contact.html" class="contact-btn">Contact</a></li>
+                <li><a href="#" class="nav-search"><i class="fas fa-search"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-palletco">
+        <div class="container">
+            <div class="product-detail-wrapper">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image-container">
+                        <img id="mainProductImage" src="../images/small_container/595x395x300-ventilated.jpg" alt="PLASTIC CRATE VENTILATED 595x395x300mm">
+                        <button class="zoom-btn" onclick="openLightbox()">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active" onclick="changeMainImage(this)">
+                            <img src="../images/small_container/595x395x300-ventilated.jpg" alt="Thumbnail 1">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info-palletco">
+                    <h1 class="product-title-palletco">PLASTIC CRATE VENTILATED 595x395x300mm</h1>
+                    <p class="product-sku">SKU: <span>SC-CV-595395300</span></p>
+                    <p class="product-name-sub">Ventilated Crate for Optimal Airflow</p>
+                    <p class="product-size-label">SIZE: <span>L:595 x W:395 x H:300MM</span></p>
+                    
+                    <ul class="product-specs-list">
+                        <li><span class="spec-dash">–</span> Perforated walls and base allow maximum ventilation for fresh products</li>
+                        <li><span class="spec-dash">–</span> Sturdy stackable design for safe multi&#8209;tier storage</li>
+                        <li><span class="spec-dash">–</span> Smooth surfaces for easy washing and sanitization</li>
+                        <li><span class="spec-dash">–</span> Ideal for fruits, vegetables, and bakery product transport</li>
+                        <li><span class="spec-dash">–</span> Durable HDPE material withstands repeated use and cleaning cycles</li>
+                    </ul>
+
+                    <!-- Quantity and Buy Now Section -->
+                    <div class="buy-section">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus" onclick="decreaseQty()">-</button>
+                            <input type="number" id="productQty" value="1" min="1" readonly>
+                            <button class="qty-btn plus" onclick="increaseQty()">+</button>
+                        </div>
+                        <button class="btn-buy-now" onclick="buyNow()">Buy now</button>
+                    </div>
+
+                    <!-- Add to Wishlist -->
+                    <button class="wishlist-btn-palletco" onclick="addToWishlist()">
+                        <i class="far fa-heart"></i> Add to wishlist
+                    </button>
+
+                    <!-- Product Accordion -->
+                    <div class="product-accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Shipping and returns</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Free shipping on orders over AED 500. Returns accepted within 14 days of delivery. Products must be in original condition.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Product care</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Clean with water and mild detergent. Avoid exposure to extreme temperatures. Store in a dry place when not in use.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details Box -->
+        <div class="product-details-box">
+            <div class="container">
+                <h2 class="product-details-title">Product details</h2>
+                
+                <div class="product-details-new-design">
+                    <!-- Technical Data Section -->
+                    <div class="data-section">
+                        <h3 class="section-title">Technical Data</h3>
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <div class="data-label">Material</div>
+                                <div class="data-value">High&#8209;Density Polyethylene (HDPE)</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Available Colors</div>
+                                <div class="data-value">All Colors</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer IPL Style -->
+    <footer class="footer-ipl">
+        <div class="container-ipl">
+            <div class="footer-ipl-grid">
+                <div class="footer-ipl-brand">
+                    <div class="footer-logo">
+                        <img src="../images/1[1] (2).png" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
+                    </div>
+                    <p class="footer-tagline">Leading plastic manufacturing solutions backed by 30+ years of global experience in innovation and sustainability.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-ipl-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../products.html">Products</a></li>
+                        <li><a href="../technology.html">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-ipl-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="../custom-molding.html">Custom Molding</a></li>
+                        <li><a href="../packaging-solutions.html">Packaging Solutions</a></li>
+                        <li><a href="../sustainability.html">Sustainability</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-ipl-section footer-contact">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Umm Dera, Emirate of Umm Al Quwain, UAE</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+971544933295</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:gm@nexgenplasticsme.com">gm@nexgenplasticsme.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-ipl-bottom">
+                <p>&copy; 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved.</p>
+                <div class="footer-ipl-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.classList.remove('active');
+                header.nextElementSibling.classList.remove('active');
+            });
+            if (!isActive) {
+                button.classList.add('active');
+                content.classList.add('active');
+            }
+        }
+
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainProductImage');
+            const newSrc = thumbnail.querySelector('img').src;
+            mainImage.src = newSrc;
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbnail.classList.add('active');
+        }
+
+        function openLightbox() {
+            alert('Lightbox feature coming soon!');
+        }
+
+        function decreaseQty() {
+            const qtyInput = document.getElementById('productQty');
+            if (qtyInput.value > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+            }
+        }
+
+        function increaseQty() {
+            const qtyInput = document.getElementById('productQty');
+            qtyInput.value = parseInt(qtyInput.value) + 1;
+        }
+
+        function buyNow() {
+            const qty = document.getElementById('productQty').value;
+            alert('Thank you for your interest! You want to buy ' + qty + ' unit(s). Our sales team will contact you soon.');
+        }
+
+        function addToWishlist() {
+            alert('Product added to wishlist!');
+        }
+    </script>
+</body>
+</html>

@@ -16,14 +16,16 @@ if (navToggle) {
     navToggle.addEventListener('click', (e) => {
         e.stopPropagation();
         navMenu.classList.toggle('active');
+        navToggle.classList.toggle('active');
         closeAllDropdowns();
     });
 }
 
 // Close menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+    if (navToggle && navMenu && !navToggle.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
         closeAllDropdowns();
     }
 });
@@ -32,7 +34,7 @@ document.addEventListener('click', (e) => {
 const dropdownToggles = document.querySelectorAll('.dropdown > .dropdown-toggle');
 dropdownToggles.forEach(toggle => {
     toggle.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) { // Mobile view
+        if (window.innerWidth <= 1024) { // Mobile/Tablet view
             const parent = this.parentElement;
             const isActive = parent.classList.contains('active');
             
@@ -71,7 +73,7 @@ function updateNavbar() {
     }
     
     // Get hero section height (if exists), otherwise use 100px as fallback
-    const heroSection = document.querySelector('.hero-ipl, .industry-hero, .industries-hero, .page-header, .about-hero-section, .contact-page-hero');
+    const heroSection = document.querySelector('.hero-ipl, .industry-hero, .industries-hero, .page-header, .about-hero-section, .contact-page-hero, .sustainability-hero-section');
     const heroHeight = heroSection ? heroSection.offsetHeight : 100;
     
     if (currentScrollY > heroHeight - 50) {
