@@ -50,7 +50,7 @@ dropdownToggles.forEach(toggle => {
 });
 
 // Close dropdowns when clicking on a nav link
-const navLinks = document.querySelectorAll('.nav-menu-ipl a:not(.dropdown > a)');
+const navLinks = document.querySelectorAll('.nav-menu-nexgen a:not(.dropdown > a)');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -60,7 +60,7 @@ navLinks.forEach(link => {
 
 // Navbar scroll effect - Show fixed white navbar after scrolling past hero section
 function updateNavbar() {
-    const navbar = document.querySelector('.navbar-ipl');
+    const navbar = document.querySelector('.navbar-nexgen');
     const currentScrollY = window.scrollY;
     
     // Check if this is a product detail page
@@ -73,7 +73,7 @@ function updateNavbar() {
     }
     
     // Get hero section height (if exists), otherwise use 100px as fallback
-    const heroSection = document.querySelector('.hero-ipl, .industry-hero, .industries-hero, .page-header, .about-hero-section, .contact-page-hero, .sustainability-hero-section');
+    const heroSection = document.querySelector('.hero-nexgen, .industry-hero, .industries-hero, .page-header, .about-hero-section, .contact-page-hero, .sustainability-hero-section');
     const heroHeight = heroSection ? heroSection.offsetHeight : 100;
     
     if (currentScrollY > heroHeight - 50) {
@@ -227,7 +227,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.tech-content, .trade-content, .innovation-content, .product-card-ipl, .industry-card').forEach(el => {
+document.querySelectorAll('.tech-content, .trade-content, .innovation-content, .product-card-nexgen, .industry-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -237,7 +237,7 @@ document.querySelectorAll('.tech-content, .trade-content, .innovation-content, .
 // Parallax effect for background images
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.hero-ipl, .sustainability-ipl, .rtp-section');
+    const parallaxElements = document.querySelectorAll('.hero-nexgen, .sustainability-nexgen, .rtp-section');
     
     parallaxElements.forEach(element => {
         const speed = 0.5;
@@ -289,7 +289,7 @@ const optimizeImages = () => {
 
 // Preload critical images (above the fold)
 const preloadCriticalImages = () => {
-    const criticalImages = document.querySelectorAll('.hero-ipl img, .navbar-ipl img');
+    const criticalImages = document.querySelectorAll('.hero-nexgen img, .navbar-nexgen img');
     
     criticalImages.forEach(img => {
         if (img.loading === 'lazy') {
