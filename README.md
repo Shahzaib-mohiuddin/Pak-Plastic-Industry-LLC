@@ -53,13 +53,21 @@ This website showcases Nexgen Plastic Industries' products, services, and commit
 │   ├── sc-*.html              # Small container products
 │   └── waste-*.html           # Waste management products
 │
-├── images/                     # Image assets
-│   ├── HM-IndPic/             # Homepage & industry images
-│   ├── Crates NP/             # Pallet box product images
-│   ├── PLASTIC PALLET */      # Pallet product images
-│   ├── All Pictures/          # Category images
-│   ├── small_container/       # Small container images
-│   └── waste management/      # Waste management images
+├── images/                     # Image assets (all clean kebab-case names)
+│   ├── nexgen-logo.png        # Site logo
+│   ├── *-hero.png/jpg         # Hero backgrounds for each page
+│   ├── industry-*.png/jpeg    # Industry page images
+│   ├── pallet-*.jpg           # Pallet thumbnail images
+│   ├── homepage-products/     # Homepage product showcase images
+│   ├── pallet-boxes/          # Pallet box product galleries
+│   ├── pallet-st*/            # Pallet product galleries
+│   ├── category-images/       # Product category images
+│   ├── industry-banners-v2/   # Industry page banners (set 2)
+│   ├── industry-banners-v3/   # Industry page banners (set 3)
+│   ├── small-containers/      # Small container product images
+│   ├── waste-management/      # Waste management product images
+│   ├── optimized/             # Optimized web assets
+│   └── retail-references/     # Retail reference images
 │
 └── Videos/
     ├── Food proc.mp4           # Food industry hero video

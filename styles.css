@@ -888,7 +888,7 @@ p.small, .small-text {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('images/9c057f30-2e4d-4521-863e-1542862bf1f6.jpeg') center/cover no-repeat fixed;
+                url('images/hero-background.jpeg') center/cover no-repeat fixed;
     color: white;
     text-align: center;
 }
@@ -5963,7 +5963,7 @@ p.small, .small-text {
 
 /* About Hero Section - Same as Industries */
 .about-hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/9c057f30-2e4d-4521-863e-1542862bf1f6.jpeg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpeg') no-repeat center center/cover;
     color: white;
     padding: 140px 0 80px;
     text-align: left;
@@ -6212,7 +6212,7 @@ p.small, .small-text {
 /* Sustainable Impact Section - IPL Style Full Width */
 .about-sustainable-impact-nexgen {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('images/photorealistic-earth-planet.jpg') no-repeat center center/cover;
+                url('images/earth-planet.jpg') no-repeat center center/cover;
     min-height: 350px;
     display: flex;
     align-items: center;
@@ -6663,7 +6663,7 @@ p.small, .small-text {
 /* Circular Economy Section */
 .purpose-circular-section {
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
-                url('images/thicket-dark-wet-grass.jpg') no-repeat center center/cover;
+                url('images/dark-grass-texture.jpg') no-repeat center center/cover;
     min-height: 400px;
     display: flex;
     align-items: center;
@@ -8019,7 +8019,7 @@ p.small, .small-text {
 .sustainability-highlight-section {
     padding: 5rem 0;
     background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(51, 65, 85, 0.85)), 
-                url('images/All Pictures/Small Containers/small-plastic-pallet-box-001.jpg') center/cover no-repeat;
+                url('images/category-images/small-containers/small-pallet-box.jpg') center/cover no-repeat;
     color: #ffffff;
 }
 
@@ -8074,7 +8074,7 @@ p.small, .small-text {
 .sustainability-why-section {
     padding: 5rem 0;
     background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
-                url('images/Untitled design (5) (1).png') center/cover no-repeat;
+                url('images/products-bg-pattern.png') center/cover no-repeat;
 }
 
 .why-header {
