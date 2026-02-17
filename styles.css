@@ -888,7 +888,7 @@ p.small, .small-text {
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('images/hero-background.jpeg') center/cover no-repeat fixed;
+                url('images/home-hero-banner.png') center/cover no-repeat fixed;
     color: white;
     text-align: center;
 }
