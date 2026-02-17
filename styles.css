@@ -774,7 +774,6 @@ p.small, .small-text {
     /* Hero sections mobile/tablet */
     .hero-nexgen {
         height: 100vh;
-        background-attachment: scroll;
     }
 
     .hero-nexgen-content {
