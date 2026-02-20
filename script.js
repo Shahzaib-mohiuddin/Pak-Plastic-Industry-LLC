@@ -1,3 +1,22 @@
+// ============================================
+// LENIS SMOOTH SCROLL
+// ============================================
+const lenis = new Lenis({
+    duration: 1.8,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    orientation: 'vertical',
+    smoothWheel: true,
+    wheelMultiplier: 0.8,
+    touchMultiplier: 1.5,
+    infinite: false,
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 // Navigation Toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
@@ -12,11 +31,13 @@ const closeAllDropdowns = (except = null) => {
 };
 
 // Toggle mobile menu
+const navbar = document.querySelector('.navbar-nexgen');
 if (navToggle) {
     navToggle.addEventListener('click', (e) => {
         e.stopPropagation();
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
+        if (navbar) navbar.classList.toggle('menu-open');
         closeAllDropdowns();
     });
 }
@@ -26,6 +47,7 @@ document.addEventListener('click', (e) => {
     if (navToggle && navMenu && !navToggle.contains(e.target) && !navMenu.contains(e.target)) {
         navMenu.classList.remove('active');
         navToggle.classList.remove('active');
+        if (navbar) navbar.classList.remove('menu-open');
         closeAllDropdowns();
     }
 });
@@ -34,17 +56,16 @@ document.addEventListener('click', (e) => {
 const dropdownToggles = document.querySelectorAll('.dropdown > .dropdown-toggle');
 dropdownToggles.forEach(toggle => {
     toggle.addEventListener('click', function(e) {
-        if (window.innerWidth <= 1024) { // Mobile/Tablet view
+        if (window.innerWidth <= 1138) { // Mobile/Tablet view
+            e.preventDefault();
             const parent = this.parentElement;
             const isActive = parent.classList.contains('active');
             
-            // If dropdown is not active, prevent navigation and show dropdown
-            if (!isActive) {
-                e.preventDefault();
-                closeAllDropdowns();
-                parent.classList.add('active');
-            }
-            // If already active, allow navigation to the href
+            // Close all other dropdowns first
+            closeAllDropdowns(parent);
+            
+            // Toggle this dropdown
+            parent.classList.toggle('active');
         }
     });
 });
@@ -54,6 +75,8 @@ const navLinks = document.querySelectorAll('.nav-menu-nexgen a:not(.dropdown > a
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        if (navbar) navbar.classList.remove('menu-open');
         closeAllDropdowns();
     });
 });
@@ -211,38 +234,145 @@ if (contactForm) {
     });
 }
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// ============================================
+// SMOOTH SCROLL REVEAL ANIMATION SYSTEM
+// ============================================
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+(function() {
+    // Reveal observer - triggers when elements scroll into view
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                // Don't unobserve - allows re-animation if needed
+            }
+        });
+    }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -60px 0px'
     });
-}, observerOptions);
 
-// Observe elements for animation
-document.querySelectorAll('.tech-content, .trade-content, .innovation-content, .product-card-nexgen, .industry-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+    // Auto-detect and apply reveal classes to elements across all pages
+    function initScrollReveal() {
+        // Fade up - general sections, headings, text blocks
+        const fadeUpSelectors = [
+            '.tech-content', '.trade-content', '.innovation-content',
+            '.product-section .product-row', '.product-content',
+            '.challenges-content', '.challenges-image',
+            '.product-details-box', '.quote-form-wrapper',
+            '.product-category-hero-content',
+            '.about-content', '.about-image',
+            '.sustainability-content',
+            '.contact-form-container', '.contact-info-container',
+            '.capability-card', '.process-step',
+            '.footer-nexgen-grid',
+            'section > .container > h2',
+            'section > .container > p',
+            '.section-header',
+            '.product-detail-wrapper',
+            '.product-gallery', '.product-info-palletco',
+            '.data-section',
+            '.hero-nexgen-content', '.industry-hero-content',
+            '.page-header-content'
+        ];
 
-// Parallax effect for background images
+        // Slide from left - images on the left side
+        const slideLeftSelectors = [
+            '.product-row:not(.reverse) .product-image',
+            '.tech-image',
+            '.challenges-section .challenges-image'
+        ];
+
+        // Slide from right - images on the right side
+        const slideRightSelectors = [
+            '.product-row.reverse .product-image'
+        ];
+
+        // Scale up - cards, grid items
+        const scaleSelectors = [
+            '.product-card-nexgen', '.industry-card',
+            '.product-card-minimal',
+            '.stat-card', '.value-card',
+            '.timeline-item'
+        ];
+
+        // Stagger children - grids and lists
+        const staggerSelectors = [
+            '.product-grid-minimal',
+            '.capabilities-grid',
+            '.process-steps',
+            '.footer-nexgen-grid',
+            '.related-products-grid',
+            '.stats-grid', '.values-grid',
+            '.data-grid'
+        ];
+
+        // Apply reveal class
+        fadeUpSelectors.forEach(selector => {
+            document.querySelectorAll(selector).forEach(el => {
+                if (!el.closest('.hero-nexgen, .industry-hero, .product-category-hero')) {
+                    el.classList.add('reveal');
+                    revealObserver.observe(el);
+                }
+            });
+        });
+
+        // Apply slide-left class
+        slideLeftSelectors.forEach(selector => {
+            document.querySelectorAll(selector).forEach(el => {
+                el.classList.add('reveal-left');
+                revealObserver.observe(el);
+            });
+        });
+
+        // Apply slide-right class
+        slideRightSelectors.forEach(selector => {
+            document.querySelectorAll(selector).forEach(el => {
+                el.classList.add('reveal-right');
+                revealObserver.observe(el);
+            });
+        });
+
+        // Apply scale class
+        scaleSelectors.forEach(selector => {
+            document.querySelectorAll(selector).forEach(el => {
+                el.classList.add('reveal-scale');
+                revealObserver.observe(el);
+            });
+        });
+
+        // Apply stagger class
+        staggerSelectors.forEach(selector => {
+            document.querySelectorAll(selector).forEach(el => {
+                el.classList.add('stagger-children');
+                revealObserver.observe(el);
+            });
+        });
+    }
+
+    // Initialize on DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollReveal);
+    } else {
+        initScrollReveal();
+    }
+})();
+
+// Parallax effect for background images (throttled for performance)
+let ticking = false;
 window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.hero-nexgen, .sustainability-nexgen, .rtp-section');
-    
-    parallaxElements.forEach(element => {
-        const speed = 0.5;
-        element.style.backgroundPositionY = -(scrolled * speed) + 'px';
-    });
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.hero-nexgen, .sustainability-nexgen, .rtp-section');
+            parallaxElements.forEach(element => {
+                const speed = 0.3;
+                element.style.backgroundPositionY = -(scrolled * speed) + 'px';
+            });
+            ticking = false;
+        });
+        ticking = true;
+    }
 });
 
 // ============================================

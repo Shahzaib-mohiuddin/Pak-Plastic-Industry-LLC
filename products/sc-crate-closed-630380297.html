@@ -50,6 +50,9 @@
                         <a href="large-containers.html">Large Containers</a>
                         <a href="waste-management.html">Waste Management</a>
                         <a href="small-containers.html">Small Containers</a>
+                        <div class="dropdown-footer">
+                            <a href="../products.html" class="industry-overview">Products Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
+                        </div>
                     </div>
                 </li>
                 <li><a href="../technology.html">Innovation</a></li>
@@ -109,7 +112,7 @@
                             <input type="number" id="productQty" value="1" min="1" readonly>
                             <button class="qty-btn plus" onclick="increaseQty()">+</button>
                         </div>
-                        <button class="btn-buy-now" onclick="buyNow()">Buy now</button>
+                        <button class="btn-buy-now" onclick="requestQuote()">Request a Quote</button>
                     </div>
 
                     <!-- Add to Wishlist -->
@@ -153,8 +156,20 @@
                         <h3 class="section-title">Technical Data</h3>
                         <div class="data-grid">
                             <div class="data-item">
+                                <div class="data-label">Size (mm)</div>
+                                <div class="data-value">L: 630 x W: 380 x H: 297</div>
+                            </div>
+                            <div class="data-item">
                                 <div class="data-label">Material</div>
-                                <div class="data-value">High&#8209;Density Polyethylene (HDPE)</div>
+                                <div class="data-value">HDPE / PP</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Capacity</div>
+                                <div class="data-value">60 Ltr</div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-label">Type</div>
+                                <div class="data-value">Closed</div>
                             </div>
                             <div class="data-item">
                                 <div class="data-label">Available Colors</div>
@@ -163,6 +178,59 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Quote Request Form -->
+    <section class="quote-request-section" id="quoteForm">
+        <div class="container">
+            <div class="quote-form-wrapper">
+                <div class="quote-form-header">
+                    <h2>Request a Quote</h2>
+                    <p>Fill out the form below and our team will get back to you shortly.</p>
+                </div>
+                <form class="quote-form" id="productQuoteForm" onsubmit="submitQuoteForm(event)">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+                    <input type="hidden" name="subject" value="Quote Request - PLASTIC CRATE CLOSED 630x380x297mm">
+                    <input type="hidden" name="from_name" value="Nexgen Plastic Industries Website">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="quoteName">Full Name *</label>
+                            <input type="text" id="quoteName" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="quoteEmail">Email Address *</label>
+                            <input type="email" id="quoteEmail" name="email" required placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="quotePhone">Phone Number</label>
+                            <input type="tel" id="quotePhone" name="phone" placeholder="+971 XXX XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="quoteCompany">Company Name</label>
+                            <input type="text" id="quoteCompany" name="company" placeholder="Your company name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="quoteProduct">Product *</label>
+                            <input type="text" id="quoteProduct" name="product" required readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="quoteQuantity">Quantity *</label>
+                            <input type="number" id="quoteQuantity" name="quantity" required min="1" value="1" placeholder="Enter quantity">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="quoteMessage">Additional Requirements</label>
+                        <textarea id="quoteMessage" name="message" rows="4" placeholder="Tell us about your specific requirements, customization needs, or any questions..."></textarea>
+                    </div>
+                    <button type="submit" class="quote-submit-btn">Submit Quote Request <i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
     </section>
@@ -228,6 +296,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="../script.js"></script>
     <script>
         function toggleAccordion(button) {
@@ -269,13 +338,58 @@
             qtyInput.value = parseInt(qtyInput.value) + 1;
         }
 
-        function buyNow() {
+        function requestQuote() {
             const qty = document.getElementById('productQty').value;
-            alert('Thank you for your interest! You want to buy ' + qty + ' unit(s). Our sales team will contact you soon.');
+            document.getElementById('quoteQuantity').value = qty;
+            document.getElementById('quoteForm').scrollIntoView({ behavior: 'smooth' });
         }
 
         function addToWishlist() {
             alert('Product added to wishlist!');
+        }
+    
+        // Set product name on load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('quoteProduct').value = 'PLASTIC CRATE CLOSED 630x380x297mm';
+        });
+
+        function submitQuoteForm(event) {
+            event.preventDefault();
+            const form = document.getElementById('productQuoteForm');
+            const submitBtn = form.querySelector('.quote-submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    submitBtn.innerHTML = 'Sent Successfully! <i class="fas fa-check"></i>';
+                    submitBtn.style.background = '#10b981';
+                    form.reset();
+                    document.getElementById('quoteProduct').value = 'PLASTIC CRATE CLOSED 630x380x297mm';
+                    setTimeout(function() {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    alert('Something went wrong. Please try again or email us directly at gm@nexgenplasticsme.com');
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
+            })
+            .catch(error => {
+                alert('Something went wrong. Please try again or email us directly at gm@nexgenplasticsme.com');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
         }
     </script>
 </body>

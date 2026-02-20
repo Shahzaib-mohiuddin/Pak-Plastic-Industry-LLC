@@ -43,6 +43,9 @@
                         <a href="../products/large-containers.html">Large Containers</a>
                         <a href="../products/waste-management.html">Waste Management</a>
                         <a href="../products/small-containers.html">Small Containers</a>
+                        <div class="dropdown-footer">
+                            <a href="../products.html" class="industry-overview">Products Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
+                        </div>
                     </div>
                 </li>
                 <li><a href="../technology.html">Innovation</a></li>
@@ -103,7 +106,7 @@
                             <input type="number" id="productQty" value="1" min="1" readonly>
                             <button class="qty-btn plus" onclick="increaseQty()">+</button>
                         </div>
-                        <button class="btn-buy-now" onclick="buyNow()">Buy now</button>
+                        <button class="btn-buy-now" onclick="requestQuote()">Request a Quote</button>
                     </div>
 
                     <button class="wishlist-btn-palletco" onclick="addToWishlist()"><i class="far fa-heart"></i> Add to wishlist</button>
@@ -158,14 +161,56 @@
         </div>
     </section>
 
-    <section class="related-products-palletco">
+
+
+    <!-- Quote Request Form -->
+    <section class="quote-request-section" id="quoteForm">
         <div class="container">
-            <h2 class="related-title">Related Products</h2>
-            <div class="related-products-grid">
-                <div class="related-product-card"><div class="related-product-image"><a href="pallet-st08-3r.html"><img src="../images/pallet-st08-3r.jpg" alt="ST-08 3 Runner"></a></div><div class="related-product-info"><h3><a href="pallet-st08-3r.html">PLASTIC PALLET ST-08 3 RUNNER</a></h3><p class="related-product-size">L: 1200 x W: 1000 x H: 150MM</p><span class="related-product-price">Price on Request</span></div></div>
-                <div class="related-product-card"><div class="related-product-image"><a href="pallet-st18-5r.html"><img src="../images/pallet-st18-5r.jpg" alt="ST-18 5 Runner"></a></div><div class="related-product-info"><h3><a href="pallet-st18-5r.html">PLASTIC PALLET ST-18 5 RUNNER</a></h3><p class="related-product-size">L: 1200 x W: 1000 x H: 160MM</p><span class="related-product-price">Price on Request</span></div></div>
-                <div class="related-product-card"><div class="related-product-image"><a href="pallet-st10-6r.html"><img src="../images/pallet-st10-6r.jpg" alt="ST-10 6 Runner"></a></div><div class="related-product-info"><h3><a href="pallet-st10-6r.html">PLASTIC PALLET ST-10 6 RUNNER</a></h3><p class="related-product-size">L: 1200 x W: 1000 x H: 150MM</p><span class="related-product-price">Price on Request</span></div></div>
-                <div class="related-product-card"><div class="related-product-image"><a href="pallet-st15-6r.html"><img src="../images/pallet-st15-6r.jpg" alt="ST-15 6 Runners"></a></div><div class="related-product-info"><h3><a href="pallet-st15-6r.html">PLASTIC PALLET ST-15 6 RUNNERS</a></h3><p class="related-product-size">L: 1100 x W: 1100 x H: 150MM</p><span class="related-product-price">Price on Request</span></div></div>
+            <div class="quote-form-wrapper">
+                <div class="quote-form-header">
+                    <h2>Request a Quote</h2>
+                    <p>Fill out the form below and our team will get back to you shortly.</p>
+                </div>
+                <form class="quote-form" id="productQuoteForm" onsubmit="submitQuoteForm(event)">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+                    <input type="hidden" name="subject" value="Quote Request - Plastic Pallet NG-1210-15-5 L:1200xW:1000xH:150MM">
+                    <input type="hidden" name="from_name" value="Nexgen Plastic Industries Website">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="quoteName">Full Name *</label>
+                            <input type="text" id="quoteName" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="quoteEmail">Email Address *</label>
+                            <input type="email" id="quoteEmail" name="email" required placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="quotePhone">Phone Number</label>
+                            <input type="tel" id="quotePhone" name="phone" placeholder="+971 XXX XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="quoteCompany">Company Name</label>
+                            <input type="text" id="quoteCompany" name="company" placeholder="Your company name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="quoteProduct">Product *</label>
+                            <input type="text" id="quoteProduct" name="product" required readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="quoteQuantity">Quantity *</label>
+                            <input type="number" id="quoteQuantity" name="quantity" required min="1" value="1" placeholder="Enter quantity">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="quoteMessage">Additional Requirements</label>
+                        <textarea id="quoteMessage" name="message" rows="4" placeholder="Tell us about your specific requirements, customization needs, or any questions..."></textarea>
+                    </div>
+                    <button type="submit" class="quote-submit-btn">Submit Quote Request <i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
     </section>
@@ -231,6 +276,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="../script.js"></script>
     <script>
         function toggleAccordion(button) { const content = button.nextElementSibling; const isActive = button.classList.contains('active'); document.querySelectorAll('.accordion-header').forEach(h => { h.classList.remove('active'); h.nextElementSibling.classList.remove('active'); }); if (!isActive) { button.classList.add('active'); content.classList.add('active'); } }
@@ -239,7 +285,55 @@
         function openLightbox() { window.open(document.getElementById('mainProductImage').src, '_blank'); }
         function decreaseQty() { const q = document.getElementById('productQty'); if (parseInt(q.value) > 1) q.value = parseInt(q.value) - 1; }
         function increaseQty() { const q = document.getElementById('productQty'); q.value = parseInt(q.value) + 1; }
-        function buyNow() { alert('Added ' + document.getElementById('productQty').value + ' x Plastic Pallet NG-1210-15-5 to cart!'); }
+        function requestQuote() {
+            const qty = document.getElementById('productQty').value;
+            document.getElementById('quoteQuantity').value = qty;
+            document.getElementById('quoteForm').scrollIntoView({ behavior: 'smooth' });
+        }
+    
+        // Set product name on load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('quoteProduct').value = 'Plastic Pallet NG-1210-15-5 L:1200xW:1000xH:150MM';
+        });
+
+        function submitQuoteForm(event) {
+            event.preventDefault();
+            const form = document.getElementById('productQuoteForm');
+            const submitBtn = form.querySelector('.quote-submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    submitBtn.innerHTML = 'Sent Successfully! <i class="fas fa-check"></i>';
+                    submitBtn.style.background = '#10b981';
+                    form.reset();
+                    document.getElementById('quoteProduct').value = 'Plastic Pallet NG-1210-15-5 L:1200xW:1000xH:150MM';
+                    setTimeout(function() {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    alert('Something went wrong. Please try again or email us directly at gm@nexgenplasticsme.com');
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }
+            })
+            .catch(error => {
+                alert('Something went wrong. Please try again or email us directly at gm@nexgenplasticsme.com');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+        }
     </script>
 </body>
 </html>
