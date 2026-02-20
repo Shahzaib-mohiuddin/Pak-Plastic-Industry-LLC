@@ -5,6 +5,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Prevent horizontal overflow on mobile devices */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+}
+
 html.lenis, html.lenis body {
     height: auto;
 }
@@ -21,6 +33,11 @@ html {
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+}
+
+img, video, iframe, svg {
+    max-width: 100%;
+    height: auto;
 }
 
 h1, h2, h3, h4, h5, h6, p, li, span, a {
@@ -691,8 +708,8 @@ p.small, .small-text {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         background: rgba(0, 0, 0, 0.35);
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(2px);
@@ -1284,6 +1301,7 @@ p.small, .small-text {
     padding: 80px 0;
     background: #f8fafc;
     position: relative;
+    overflow: hidden;
 }
 
 .industries-bg-shape {
@@ -1899,7 +1917,7 @@ p.small, .small-text {
 .contact-info-image img {
     width: 1550px;
     height: auto;
-    margin-left: -388px;
+    margin-left: -310px;
 }
 
 .contact-nexgen-info .section-label-nexgen {
@@ -2127,6 +2145,7 @@ p.small, .small-text {
     color: white;
     padding: 5rem 0 2rem;
     position: relative;
+    overflow: hidden;
 }
 
 /* Home Screen Footer Specific Style */
