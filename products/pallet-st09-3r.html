@@ -14,7 +14,7 @@
     <nav class="navbar-nexgen">
         <div class="nav-container">
             <div class="nav-logo"><a href="../index.html" class="logo-link">
-                    <img src="../images/nexgen-logo.png" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
+                    <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
                 </a></div>
             <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
             <a href="../contact.html" class="mobile-contact-btn">Contact</a>
@@ -23,14 +23,14 @@
                 <li class="dropdown">
                     <a href="../industries.html" class="dropdown-toggle">Industries</a>
                     <div class="dropdown-menu">
-                        <a href="../industries/agriculture.html">Agriculture</a>
-                        <a href="../industries/retail.html">Retail</a>
-                        <a href="../industries/logistics-warehousing.html">Logistic & e-commerce</a>
-                        <a href="../industries/automotive.html">Automotive</a>
-                        <a href="../industries/healthcare-pharma.html">Pharmaceuticals</a>
-                        <a href="../industries/food.html">Food</a>
-                        <a href="../industries/environmental.html">Waste management</a>
-                        <a href="../industries/industrial-chemical.html">Petro chemical industry</a>
+                        <a href="../industries/agriculture-industry.html">Agriculture</a>
+                        <a href="../industries/retail-industry.html">Retail</a>
+                        <a href="../industries/logistics-e-commerce-industry.html">Logistic & e-commerce</a>
+                        <a href="../industries/automotive-industry.html">Automotive</a>
+                        <a href="../industries/pharmaceuticals.html">Pharmaceuticals</a>
+                        <a href="../industries/food-processing-industry.html">Food</a>
+                        <a href="../industries/waste-management.html">Waste management</a>
+                        <a href="../industries/petro-chemical-industry.html">Petro chemical industry</a>
                         <div class="dropdown-footer">
                             <a href="../industries.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
                         </div>
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="../technology.html">Innovation</a></li>
+                <li><a href="../innovation.html">Innovation</a></li>
                 <li><a href="../sustainability.html">Sustainability</a></li>
                 <li class="dropdown">
                     <a href="../about.html" class="dropdown-toggle">About us</a>
@@ -75,13 +75,13 @@
             <div class="product-detail-wrapper">
                 <div class="product-gallery">
                     <div class="main-image-container">
-                        <img id="mainProductImage" src="../images/pallet-st09-3r/view-2.png" alt="Plastic Pallet NG-1208-15-3" style="transform: scale(1.1); transform-origin: center;">
+                        <img id="mainProductImage" src="../images/pallet-st09-3r/view-2.webp" alt="Plastic Pallet NG-1208-15-3" style="transform: scale(1.1); transform-origin: center;">
                         <button class="zoom-btn" onclick="openLightbox()"><i class="fas fa-search-plus"></i></button>
                     </div>
                     <div class="thumbnail-gallery">
-                        <div class="thumbnail active" onclick="changeMainImage(this)"><img src="../images/pallet-st09-3r/view-2.png" alt="Thumbnail 1"></div>
-                        <div class="thumbnail" onclick="changeMainImage(this)"><img src="../images/pallet-st09-3r/view-3.png" alt="Thumbnail 2"></div>
-                        <div class="thumbnail" onclick="changeMainImage(this)"><img src="../images/pallet-st09-3r/view-4.png" alt="Thumbnail 3"></div>
+                        <div class="thumbnail active" onclick="changeMainImage(this)"><img src="../images/pallet-st09-3r/view-2.webp" alt="Thumbnail 1"></div>
+                        <div class="thumbnail" onclick="changeMainImage(this)"><img src="../images/pallet-st09-3r/view-3.webp" alt="Thumbnail 2"></div>
+                        <div class="thumbnail" onclick="changeMainImage(this)"><img src="../images/pallet-st09-3r/view-4.webp" alt="Thumbnail 3"></div>
                     </div>
                 </div>
 
@@ -222,7 +222,7 @@
             <div class="footer-nexgen-grid">
                 <div class="footer-nexgen-brand">
                     <div class="footer-logo">
-                        <img src="../images/nexgen-logo.png" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
+                        <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
                     </div>
                     <p class="footer-tagline">Leading plastic manufacturing solutions backed by 30+ years of global experience in innovation and sustainability.</p>
                     <div class="footer-social">
@@ -238,7 +238,7 @@
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="../about.html">About Us</a></li>
                         <li><a href="../products.html">Products</a></li>
-                        <li><a href="../technology.html">Technology</a></li>
+                        <li><a href="../innovation.html">Technology</a></li>
                     </ul>
                 </div>
                 <div class="footer-nexgen-section">
@@ -262,12 +262,12 @@
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:gm@nexgenplasticsme.com">gm@nexgenplasticsme.com</a>
+                        <a href="mailto:info@nexgenplasticsme.com">info@nexgenplasticsme.com</a>
                     </div>
                 </div>
             </div>
             <div class="footer-nexgen-bottom">
-                <p>© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved.</p>
+                <p>© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved. All Rights Reserved. L.L.C. All Rights Reserved.</p>
                 <div class="footer-nexgen-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -324,17 +324,24 @@
                         submitBtn.disabled = false;
                     }, 3000);
                 } else {
-                    alert('Something went wrong. Please try again or email us directly at gm@nexgenplasticsme.com');
+                    alert('Something went wrong. Please try again or email us directly at info@nexgenplasticsme.com');
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
                 }
             })
             .catch(error => {
-                alert('Something went wrong. Please try again or email us directly at gm@nexgenplasticsme.com');
+                alert('Something went wrong. Please try again or email us directly at info@nexgenplasticsme.com');
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             });
         }
     </script>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/971544933295?text=Hi!%20I'm%20interested%20in%20your%20plastic%20manufacturing%20solutions.%20Can%20you%20help%20me?" 
+       class="whatsapp-chat-button" 
+       target="_blank" 
+       title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>

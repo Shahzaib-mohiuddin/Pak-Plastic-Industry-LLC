@@ -819,35 +819,52 @@ p.small, .small-text {
         padding: 0.6rem 1.5rem 0.75rem;
     }
 
-    .industry-overview {
+    .industry-overview,
+    .products-overview {
         display: flex !important;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 0.5rem;
         margin-top: 0;
-        padding: 0.6rem 1.25rem !important;
+        padding: 0.75rem 1.25rem !important;
         background: linear-gradient(135deg, #0d7377 0%, #14919b 100%);
         color: #ffffff !important;
-        border-radius: 8px;
-        font-size: 0.82rem;
+        border-radius: 10px;
+        font-size: 0.85rem;
         font-weight: 600;
         text-decoration: none;
         border-left: none !important;
         transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(13, 115, 119, 0.2);
+        border: 1px solid rgba(13, 115, 119, 0.1);
     }
 
-    .industry-overview:hover {
+    .industry-overview:hover,
+    .products-overview:hover {
         background: linear-gradient(135deg, #0b6264 0%, #117f88 100%) !important;
         color: #ffffff !important;
-        transform: translateY(-1px);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(13, 115, 119, 0.3);
     }
 
-    .industry-overview .more-link {
+    .industry-overview .more-link,
+    .products-overview .more-link {
         color: #ffffff;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
     }
 
-    .industry-overview .more-link i {
+    .industry-overview .more-link i,
+    .products-overview .more-link i {
         color: #ffffff;
+        transition: transform 0.3s ease;
+    }
+
+    .industry-overview:hover .more-link i,
+    .products-overview:hover .more-link i {
+        transform: translateX(2px);
     }
 
     /* Hide search icon on mobile */
@@ -973,8 +990,9 @@ p.small, .small-text {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #1a365d; /* Fallback color matching image tones */
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('images/home-hero-banner.png') center/cover no-repeat fixed;
+                url('images/home-hero-banner.webp') center/cover no-repeat fixed;
     color: white;
     text-align: center;
 }
@@ -6126,7 +6144,7 @@ p.small, .small-text {
 
 /* About Hero Section - Same as Industries */
 .about-hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpeg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.webp') no-repeat center center/cover;
     color: white;
     padding: 140px 0 80px;
     text-align: left;
@@ -6375,7 +6393,7 @@ p.small, .small-text {
 /* Sustainable Impact Section - IPL Style Full Width */
 .about-sustainable-impact-nexgen {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('images/earth-planet.jpg') no-repeat center center/cover;
+                url('images/earth-planet.webp') no-repeat center center/cover;
     min-height: 350px;
     display: flex;
     align-items: center;
@@ -6826,7 +6844,7 @@ p.small, .small-text {
 /* Circular Economy Section */
 .purpose-circular-section {
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
-                url('images/dark-grass-texture.jpg') no-repeat center center/cover;
+                url('images/dark-grass-texture.webp') no-repeat center center/cover;
     min-height: 400px;
     display: flex;
     align-items: center;
@@ -7887,6 +7905,59 @@ p.small, .small-text {
     transform: translateX(3px);
 }
 
+/* Industry Pages Intro Section */
+.intro-section {
+    padding: 4rem 0;
+}
+
+.intro-section .container {
+    max-width: 1400px; /* Wider than default */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.intro-section .intro-nav {
+    display: none; /* Hide breadcrumb navigation */
+}
+
+.intro-section .intro-content {
+    max-width: 1200px; /* Wider content area */
+    margin: 0 auto; /* Center the content */
+    text-align: center; /* Center-align text */
+}
+
+.intro-section .intro-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff; /* White text color */
+    margin-bottom: 1.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.intro-section .intro-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive for industry intro sections */
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 3rem 0;
+    }
+    
+    .intro-section .container {
+        padding: 0 1rem;
+    }
+    
+    .intro-section .intro-content {
+        max-width: 100%;
+    }
+    
+    .intro-section .intro-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
 /* Sustainability Intro Section */
 .sustainability-intro-section {
     background: linear-gradient(135deg, #0d7377 0%, #14919b 100%);
@@ -8182,7 +8253,7 @@ p.small, .small-text {
 .sustainability-highlight-section {
     padding: 5rem 0;
     background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(51, 65, 85, 0.85)), 
-                url('images/category-images/small-containers/small-pallet-box.jpg') center/cover no-repeat;
+                url('images/category-images/small-containers/small-pallet-box.webp') center/cover no-repeat;
     color: #ffffff;
 }
 
@@ -8237,7 +8308,7 @@ p.small, .small-text {
 .sustainability-why-section {
     padding: 5rem 0;
     background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
-                url('images/products-bg-pattern.png') center/cover no-repeat;
+                url('images/products-bg-pattern.webp') center/cover no-repeat;
 }
 
 .why-header {
@@ -10108,6 +10179,110 @@ section {
 
     .quote-request-section {
         padding: 50px 0;
+    }
+}
+
+/* WhatsApp Chat Button */
+.whatsapp-chat-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-chat-button:hover {
+    background: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-chat-button i {
+    color: white;
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-chat-button:hover i {
+    transform: rotate(15deg);
+}
+
+.whatsapp-chat-button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background: #ff0000;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Tooltip */
+.whatsapp-chat-button::after {
+    content: 'Chat with us!';
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.whatsapp-chat-button:hover::after {
+    opacity: 1;
+    visibility: visible;
+    right: 80px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-chat-button {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-chat-button i {
+        font-size: 24px;
+    }
+    
+    .whatsapp-chat-button::after {
+        display: none;
     }
 }
 

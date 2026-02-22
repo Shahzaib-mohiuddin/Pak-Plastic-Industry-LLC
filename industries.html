@@ -12,7 +12,7 @@
     <style>
         /* Hero Section */
         .industries-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/logistics-hero.jpeg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/logistics-hero.webp') no-repeat center center/cover;
             color: white;
             padding: 160px 0 100px;
             text-align: left;
@@ -590,6 +590,8 @@
             }
         }
     </style>
+    <!-- Preload critical hero images -->
+    <link rel="preload" href="images/nexgen-logo.webp" as="image" type="image/webp">
 </head>
 <body>
     <!-- Top Bar -->
@@ -597,14 +599,16 @@
         <div class="top-bar-container">
             <div class="top-bar-left">
                 <span class="language-selector">Global - English <i class="fas fa-chevron-down"></i></span>
-                <a href="mailto:gm@nexgenplasticsme.com" class="top-bar-email"><i class="far fa-envelope"></i> gm@nexgenplasticsme.com</a>
+                <a href="mailto:info@nexgenplasticsme.com" class="top-bar-email"><i class="far fa-envelope"></i> info@nexgenplasticsme.com</a>
             </div>
             <div class="top-bar-right">
                 <a href="about.html#careers">Careers</a>
                 <a href="about.html#locations">Locations</a>
                 <a href="#">Brochures</a>
-                <a href="#">Media center</a>
-                <a href="#">Events</a>
+                <a href="https://www.youtube.com/@Nexgenplastic" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/NexGenPlasticIndustry/" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.reddit.com/user/nexgenPlasticsme/" target="_blank" class="social-link"><i class="fab fa-reddit-alien"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
@@ -615,7 +619,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html" class="logo-link">
-                    <img src="images/nexgen-logo.png" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
+                    <img src="images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
                 </a>
             </div>
             <button class="nav-toggle" id="navToggle">
@@ -629,14 +633,14 @@
                 <li class="dropdown">
                     <a href="industries.html" class="dropdown-toggle active">Industries</a>
                     <div class="dropdown-menu">
-                        <a href="industries/agriculture.html">Agriculture</a>
-                        <a href="industries/retail.html">Retail</a>
-                        <a href="industries/logistics-warehousing.html">Logistic & e-commerce</a>
-                        <a href="industries/automotive.html">Automotive</a>
-                        <a href="industries/healthcare-pharma.html">Pharmaceuticals</a>
-                        <a href="industries/food.html">Food</a>
-                        <a href="industries/environmental.html">Waste management</a>
-                        <a href="industries/industrial-chemical.html">Petro chemical industry</a>
+                        <a href="industries/agriculture-industry.html">Agriculture</a>
+                        <a href="industries/retail-industry.html">Retail</a>
+                        <a href="industries/logistics-e-commerce-industry.html">Logistic & e-commerce</a>
+                        <a href="industries/automotive-industry.html">Automotive</a>
+                        <a href="industries/pharmaceuticals.html">Pharmaceuticals</a>
+                        <a href="industries/food-processing-industry.html">Food</a>
+                        <a href="industries/waste-management.html">Waste management</a>
+                        <a href="industries/petro-chemical-industry.html">Petro chemical industry</a>
                         <div class="dropdown-footer">
                             <a href="industries.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
                         </div>
@@ -654,7 +658,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="technology.html">Innovation</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
                 <li><a href="sustainability.html">Sustainability</a></li>
                 <li class="dropdown">
                     <a href="about.html" class="dropdown-toggle">About us</a>
@@ -707,64 +711,64 @@
 
             <div class="industries-grid">
                 <!-- Agriculture -->
-                <a href="industries/agriculture.html" class="industry-card">
-                    <img src="images/industry-banners-v3/agriculture.png" alt="Agriculture">
+                <a href="industries/agriculture-industry.html" class="industry-card">
+                    <img src="images/industry-banners-v3/agriculture.webp" alt="Agriculture">
                     <div class="industry-card-overlay">
                         <h3 class="industry-card-title">Agriculture <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
                 <!-- Pharmaceuticals -->
-                <a href="industries/healthcare-pharma.html" class="industry-card">
-                    <img src="images/industry-banners-v3/healthcare-alt.png" alt="Pharmaceuticals">
+                <a href="industries/pharmaceuticals.html" class="industry-card">
+                    <img src="images/industry-banners-v3/healthcare-alt.webp" alt="Pharmaceuticals">
                     <div class="industry-card-overlay">
                         <h3 class="industry-card-title">Pharmaceuticals <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
                 <!-- Petro chemical industry -->
-                <a href="industries/industrial-chemical.html" class="industry-card">
-                    <img src="images/industry-banners-v3/industrial-chemical.png" alt="Petro chemical industry">
+                <a href="industries/petro-chemical-industry.html" class="industry-card">
+                    <img src="images/industry-banners-v3/industrial-chemical.webp" alt="Petro chemical industry">
                     <div class="industry-card-overlay">
                         <h3 class="industry-card-title">Petro chemical industry <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
                 <!-- Retail -->
-                <a href="industries/retail.html" class="industry-card">
-                    <img src="images/industry-banners-v3/retail.png" alt="Retail">
+                <a href="industries/retail-industry.html" class="industry-card">
+                    <img src="images/industry-banners-v3/retail.webp" alt="Retail">
                     <div class="industry-card-overlay">
                         <h3 class="industry-card-title">Retail <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
                 <!-- Logistic & e-commerce -->
-                <a href="industries/logistics-warehousing.html" class="industry-card">
-                    <img src="images/industry-banners-v3/logistics.png" alt="Logistic & e-commerce">
+                <a href="industries/logistics-e-commerce-industry.html" class="industry-card">
+                    <img src="images/industry-banners-v3/logistics.webp" alt="Logistic & e-commerce">
                     <div class="industry-card-overlay">
                         <h3 class="industry-card-title">Logistic & e-commerce <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
                 <!-- Food -->
-                <a href="industries/food.html" class="industry-card">
-                    <img src="images/industry-banners-v3/food.png" alt="Food">
+                <a href="industries/food-processing-industry.html" class="industry-card">
+                    <img src="images/industry-banners-v3/food.webp" alt="Food">
                     <div class="industry-card-overlay">
                         <h3 class="industry-card-title">Food <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
                 <!-- Waste management -->
-                <a href="industries/environmental.html" class="industry-card">
-                    <img src="images/industry-banners-v3/environmental.png" alt="Waste management">
+                <a href="industries/waste-management.html" class="industry-card">
+                    <img src="images/industry-banners-v3/environmental.webp" alt="Waste management">
                     <div class="industry-card-overlay">
                         <h3 class="industry-card-title">Waste management <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </a>
 
                 <!-- Automotive -->
-                <a href="industries/automotive.html" class="industry-card">
-                    <img src="images/industry-banners-v3/automotive.png" alt="Automotive">
+                <a href="industries/automotive-industry.html" class="industry-card">
+                    <img src="images/industry-banners-v3/automotive.webp" alt="Automotive">
                     <div class="industry-card-overlay">
                         <h3 class="industry-card-title">Automotive <i class="fas fa-arrow-right"></i></h3>
                     </div>
@@ -783,7 +787,7 @@
                     <a href="products.html" class="btn-products">See our product range <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="products-image">
-                    <img src="images/product-range-overview.png" alt="Product Range">
+                    <img src="images/product-range-overview.webp" alt="Product Range">
                 </div>
             </div>
         </div>
@@ -824,7 +828,7 @@
             <div class="footer-nexgen-grid">
                 <div class="footer-nexgen-brand">
                     <div class="footer-logo">
-                        <img src="images/nexgen-logo.png" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
+                        <img src="images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
                     </div>
                     <p class="footer-tagline">Leading plastic manufacturing solutions backed by 30+ years of global experience in innovation and sustainability.</p>
                     <div class="footer-social">
@@ -840,7 +844,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="innovation.html">Technology</a></li>
                     </ul>
                 </div>
                 <div class="footer-nexgen-section">
@@ -864,12 +868,12 @@
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:gm@nexgenplasticsme.com">gm@nexgenplasticsme.com</a>
+                        <a href="mailto:info@nexgenplasticsme.com">info@nexgenplasticsme.com</a>
                     </div>
                 </div>
             </div>
             <div class="footer-nexgen-bottom">
-                <p>© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved.</p>
+                <p>© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved. All Rights Reserved. L.L.C. All Rights Reserved.</p>
                 <div class="footer-nexgen-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -881,5 +885,12 @@
 
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="script.js"></script>
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/971544933295?text=Hi!%20I'm%20interested%20in%20your%20plastic%20manufacturing%20solutions.%20Can%20you%20help%20me?" 
+       class="whatsapp-chat-button" 
+       target="_blank" 
+       title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>

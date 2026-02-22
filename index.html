@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Preload critical hero images -->
+    <link rel="preload" href="images/home-hero-banner.webp" as="image" type="image/webp">
+    <link rel="preload" href="images/nexgen-logo.webp" as="image" type="image/webp">
 </head>
 <body>
     <!-- Top Bar -->
@@ -17,14 +20,16 @@
         <div class="top-bar-container">
             <div class="top-bar-left">
                 <span class="language-selector">Global - English <i class="fas fa-chevron-down"></i></span>
-                <a href="mailto:gm@nexgenplasticsme.com" class="top-bar-email"><i class="far fa-envelope"></i> gm@nexgenplasticsme.com</a>
+                <a href="mailto:info@nexgenplasticsme.com" class="top-bar-email"><i class="far fa-envelope"></i> info@nexgenplasticsme.com</a>
             </div>
             <div class="top-bar-right">
                 <a href="about.html#careers">Careers</a>
                 <a href="about.html#locations">Locations</a>
                 <a href="#">Brochures</a>
-                <a href="#">Media center</a>
-                <a href="#">Events</a>
+                <a href="https://www.youtube.com/@Nexgenplastic" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/NexGenPlasticIndustry/" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.reddit.com/user/nexgenPlasticsme/" target="_blank" class="social-link"><i class="fab fa-reddit-alien"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
@@ -35,7 +40,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html" class="logo-link">
-                    <img src="images/nexgen-logo.png" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
+                    <img src="images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
                 </a>
             </div>
             <button class="nav-toggle" id="navToggle">
@@ -49,14 +54,14 @@
                 <li class="dropdown">
                     <a href="industries.html" class="dropdown-toggle">Industries</a>
                     <div class="dropdown-menu">
-                        <a href="industries/agriculture.html">Agriculture</a>
-                        <a href="industries/retail.html">Retail</a>
-                        <a href="industries/logistics-warehousing.html">Logistic & e-commerce</a>
-                        <a href="industries/automotive.html">Automotive</a>
-                        <a href="industries/healthcare-pharma.html">Pharmaceuticals</a>
-                        <a href="industries/food.html">Food</a>
-                        <a href="industries/environmental.html">Waste management</a>
-                        <a href="industries/industrial-chemical.html">Petro chemical industry</a>
+                        <a href="industries/agriculture-industry.html">Agriculture</a>
+                        <a href="industries/retail-industry.html">Retail</a>
+                        <a href="industries/logistics-e-commerce-industry.html">Logistic & e-commerce</a>
+                        <a href="industries/automotive-industry.html">Automotive</a>
+                        <a href="industries/pharmaceuticals.html">Pharmaceuticals</a>
+                        <a href="industries/food-processing-industry.html">Food</a>
+                        <a href="industries/waste-management.html">Waste management</a>
+                        <a href="industries/petro-chemical-industry.html">Petro chemical industry</a>
                         <div class="dropdown-footer">
                             <a href="industries.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
                         </div>
@@ -74,7 +79,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="technology.html">Innovation</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
                 <li><a href="sustainability.html">Sustainability</a></li>
                 <li class="dropdown">
                     <a href="about.html" class="dropdown-toggle">About us</a>
@@ -120,7 +125,7 @@
                     <a href="about.html" class="btn-tech-discover">Discover who we are <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="tech-image">
-                    <img src="images/home-about-nexgen.png" alt="Technology and Innovation" loading="lazy">
+                    <img src="images/home-about-nexgen.webp" alt="Technology and Innovation" loading="lazy">
                 </div>
             </div>
         </div>
@@ -135,64 +140,64 @@
                 <div class="swiper industriesSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="industries/agriculture.html" class="industry-card-new">
-                                <img src="images/industry-banners-v2/agriculture.png" alt="Agriculture" loading="lazy">
+                            <a href="industries/agriculture-industry.html" class="industry-card-new">
+                                <img src="images/industry-banners-v2/agriculture.webp" alt="Agriculture" loading="lazy">
                                 <div class="industry-card-overlay">
                                     <h3>Agriculture <i class="fas fa-arrow-right"></i></h3>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="industries/retail.html" class="industry-card-new">
-                                <img src="images/industry-banners-v2/retail-alt.png" alt="Retail" loading="lazy">
+                            <a href="industries/retail-industry.html" class="industry-card-new">
+                                <img src="images/industry-banners-v2/retail-alt.webp" alt="Retail" loading="lazy">
                                 <div class="industry-card-overlay">
                                     <h3>Retail <i class="fas fa-arrow-right"></i></h3>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="industries/logistics-warehousing.html" class="industry-card-new">
-                                <img src="images/industry-banners-v2/logistics.png" alt="Logistic & e-commerce" loading="lazy">
+                            <a href="industries/logistics-e-commerce-industry.html" class="industry-card-new">
+                                <img src="images/industry-banners-v2/logistics.webp" alt="Logistic & e-commerce" loading="lazy">
                                 <div class="industry-card-overlay">
                                     <h3>Logistic & e-commerce <i class="fas fa-arrow-right"></i></h3>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="industries/automotive.html" class="industry-card-new">
-                                <img src="images/industry-banners-v2/automotive.png" alt="Automotive" loading="lazy">
+                            <a href="industries/automotive-industry.html" class="industry-card-new">
+                                <img src="images/industry-banners-v2/automotive.webp" alt="Automotive" loading="lazy">
                                 <div class="industry-card-overlay">
                                     <h3>Automotive <i class="fas fa-arrow-right"></i></h3>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="industries/healthcare-pharma.html" class="industry-card-new">
-                                <img src="images/industry-banners-v2/healthcare.png" alt="Pharmaceuticals" loading="lazy">
+                            <a href="industries/pharmaceuticals.html" class="industry-card-new">
+                                <img src="images/industry-banners-v2/healthcare.webp" alt="Pharmaceuticals" loading="lazy">
                                 <div class="industry-card-overlay">
                                     <h3>Pharmaceuticals <i class="fas fa-arrow-right"></i></h3>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="industries/food.html" class="industry-card-new">
-                                <img src="images/industry-banners-v3/food.png" alt="Food" loading="lazy">
+                            <a href="industries/food-processing-industry.html" class="industry-card-new">
+                                <img src="images/industry-banners-v3/food.webp" alt="Food" loading="lazy">
                                 <div class="industry-card-overlay">
                                     <h3>Food <i class="fas fa-arrow-right"></i></h3>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="industries/environmental.html" class="industry-card-new">
-                                <img src="images/industry-banners-v3/environmental.png" alt="Waste management" loading="lazy">
+                            <a href="industries/waste-management.html" class="industry-card-new">
+                                <img src="images/industry-banners-v3/environmental.webp" alt="Waste management" loading="lazy">
                                 <div class="industry-card-overlay">
                                     <h3>Waste management <i class="fas fa-arrow-right"></i></h3>
                                 </div>
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="industries/industrial-chemical.html" class="industry-card-new">
-                                <img src="images/industry-banners-v3/industrial-chemical.png" alt="Petro chemical industry" loading="lazy">
+                            <a href="industries/petro-chemical-industry.html" class="industry-card-new">
+                                <img src="images/industry-banners-v3/industrial-chemical.webp" alt="Petro chemical industry" loading="lazy">
                                 <div class="industry-card-overlay">
                                     <h3>Petro chemical industry <i class="fas fa-arrow-right"></i></h3>
                                 </div>
@@ -221,7 +226,7 @@
                             <div class="product-card-nexgen">
                                 <div class="product-badge">Foldable</div>
                                 <div class="product-image-nexgen product-bg-green">
-                                    <img src="images/homepage-products/foldable-pallet-showcase.png" alt="Foldable Pallet Box" loading="lazy">
+                                    <img src="images/homepage-products/foldable-pallet-showcase.webp" alt="Foldable Pallet Box" loading="lazy">
                                 </div>
                                 <div class="product-info-nexgen">
                                     <span class="product-category">Large Containers</span>
@@ -234,7 +239,7 @@
                             <div class="product-card-nexgen">
                                 <div class="product-badge">Heavy&#8209;Duty</div>
                                 <div class="product-image-nexgen product-bg-blue">
-                                    <img src="images/homepage-products/pallet-box-showcase.png" alt="Pallet Box CL1210/S2R" loading="lazy">
+                                    <img src="images/homepage-products/pallet-box-showcase.webp" alt="Pallet Box CL1210/S2R" loading="lazy">
                                 </div>
                                 <div class="product-info-nexgen">
                                     <span class="product-category">Large Containers</span>
@@ -247,7 +252,7 @@
                             <div class="product-card-nexgen">
                                 <div class="product-badge">3 Runner</div>
                                 <div class="product-image-nexgen product-bg-gray">
-                                    <img src="images/homepage-products/pallet-st18-3r.png" alt="Plastic Pallet ST-18 3 Runner" loading="lazy">
+                                    <img src="images/homepage-products/pallet-st18-3r.webp" alt="Plastic Pallet ST-18 3 Runner" loading="lazy">
                                 </div>
                                 <div class="product-info-nexgen">
                                     <span class="product-category">Plastic Pallets</span>
@@ -260,7 +265,7 @@
                             <div class="product-card-nexgen">
                                 <div class="product-badge">3 Runner</div>
                                 <div class="product-image-nexgen product-bg-lightblue">
-                                    <img src="images/homepage-products/pallet-st08-3r.png" alt="Plastic Pallet ST-08 3 Runner" loading="lazy">
+                                    <img src="images/homepage-products/pallet-st08-3r.webp" alt="Plastic Pallet ST-08 3 Runner" loading="lazy">
                                 </div>
                                 <div class="product-info-nexgen">
                                     <span class="product-category">Plastic Pallets</span>
@@ -279,7 +284,7 @@
 
     <!-- Sustainability Section with Background -->
     <section class="sustainability-nexgen">
-        <img src="images/leaf-wallpaper-bg.jpg" alt="Sustainability Background" class="sustainability-bg-image" loading="lazy">
+        <img src="images/leaf-wallpaper-bg.webp" alt="Sustainability Background" class="sustainability-bg-image" loading="lazy">
         <div class="sustainability-overlay-layer"></div>
         <div class="container-nexgen">
             <div class="sustainability-content">
@@ -298,7 +303,7 @@
                                 <div class="trade-content">
                     <h2>Where ideas become high&#8209;performance products</h2>
                     <p>From design to delivery, our manufacturing expertise transforms concepts into durable high&#8209;quality solutions. Discover how our precision and know-how bring your products to life.</p>
-                    <a href="technology.html" class="btn-nexgen-link">Explore Our Technology <i class="fas fa-arrow-right"></i></a>
+                    <a href="innovation.html" class="btn-nexgen-link">Explore Our Technology <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -320,7 +325,7 @@
     <!-- RTP Section with Background -->
     <section class="rtp-section">
         <div class="rtp-bg-image">
-            <img src="images/manufacturing-facility.jpg" alt="Manufacturing" loading="lazy">
+            <img src="images/manufacturing-facility.webp" alt="Manufacturing" loading="lazy">
         </div>
         <div class="rtp-overlay"></div>
         <div class="container-nexgen">
@@ -336,7 +341,7 @@
     <!-- Contact Section -->
     <section class="contact-nexgen-section">
         <div class="contact-info-image">
-            <img src="images/contact-section-bg.png" alt="Contact Us" loading="lazy">
+            <img src="images/contact-section-bg.webp" alt="Contact Us" loading="lazy">
         </div>
         <div class="container-nexgen">
             <div class="contact-nexgen-grid">
@@ -400,7 +405,7 @@
             <div class="footer-nexgen-grid">
                 <div class="footer-nexgen-brand">
                     <div class="footer-logo">
-                        <img src="images/nexgen-logo.png" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
+                        <img src="images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
                     </div>
                     <p class="footer-tagline">Leading plastic manufacturing solutions backed by 30+ years of global experience in innovation and sustainability.</p>
                     <div class="footer-social">
@@ -416,7 +421,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="innovation.html">Technology</a></li>
                     </ul>
                 </div>
                 <div class="footer-nexgen-section">
@@ -440,12 +445,12 @@
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:gm@nexgenplasticsme.com">gm@nexgenplasticsme.com</a>
+                        <a href="mailto:info@nexgenplasticsme.com">info@nexgenplasticsme.com</a>
                     </div>
                 </div>
             </div>
             <div class="footer-nexgen-bottom">
-                <p>© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved.</p>
+                <p>© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved. All Rights Reserved. L.L.C. All Rights Reserved.</p>
                 <div class="footer-nexgen-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -454,6 +459,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/971544933295?text=Hi!%20I'm%20interested%20in%20your%20plastic%20manufacturing%20solutions.%20Can%20you%20help%20me?" 
+       class="whatsapp-chat-button" 
+       target="_blank" 
+       title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

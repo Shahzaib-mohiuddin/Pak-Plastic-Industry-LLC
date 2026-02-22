@@ -99,4 +99,4 @@ This website showcases Nexgen Plastic Industries' products, services, and commit
 
 ---
 
-© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved.
+© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved. All Rights Reserved. L.L.C. All Rights Reserved.

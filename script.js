@@ -1,21 +1,28 @@
 // ============================================
+// SAFETY GUARDS FOR BROWSER EXTENSIONS
+// ============================================
+window.solveSimpleChallenge = window.solveSimpleChallenge || function() {};
+
+// ============================================
 // LENIS SMOOTH SCROLL
 // ============================================
-const lenis = new Lenis({
-    duration: 1.8,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    orientation: 'vertical',
-    smoothWheel: true,
-    wheelMultiplier: 0.8,
-    touchMultiplier: 1.5,
-    infinite: false,
-});
+if (typeof Lenis !== 'undefined') {
+    const lenis = new Lenis({
+        duration: 1.8,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 0.8,
+        touchMultiplier: 1.5,
+        infinite: false,
+    });
 
-function raf(time) {
-    lenis.raf(time);
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
     requestAnimationFrame(raf);
 }
-requestAnimationFrame(raf);
 
 // Navigation Toggle
 const navToggle = document.getElementById('navToggle');
@@ -119,10 +126,14 @@ document.addEventListener('DOMContentLoaded', updateNavbar);
 
 // Industries Swiper - Improved Configuration
 if (document.querySelector('.industriesSwiper')) {
+    const industriesSwiperElement = document.querySelector('.industriesSwiper');
+    const industriesSlideCount = industriesSwiperElement.querySelectorAll('.swiper-slide').length;
+    
     const industriesSwiper = new Swiper('.industriesSwiper', {
         slidesPerView: 1,
         spaceBetween: 20,
-        loop: true,
+        loop: false,
+        rewind: true,
         slidesPerGroup: 1,
         centeredSlides: false,
         grabCursor: true,
@@ -175,10 +186,14 @@ if (document.querySelector('.industriesSwiper')) {
 
 // Products Swiper
 if (document.querySelector('.productsSwiper')) {
+    const productsSwiperElement = document.querySelector('.productsSwiper');
+    const productsSlideCount = productsSwiperElement.querySelectorAll('.swiper-slide').length;
+    
     const productsSwiper = new Swiper('.productsSwiper', {
         slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,
+        loop: false,
+        rewind: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -568,4 +583,112 @@ if (fileUploadBox && resumeInput) {
             resumeInput.dispatchEvent(event);
         }
     }, false);
+}
+
+// ============================================
+// PRODUCT DETAIL PAGE FUNCTIONS
+// ============================================
+
+// Quantity selector functions
+function decreaseQty() {
+    const qtyInput = document.getElementById('productQty');
+    if (qtyInput && qtyInput.value > 1) {
+        qtyInput.value = parseInt(qtyInput.value) - 1;
+    }
+}
+
+function increaseQty() {
+    const qtyInput = document.getElementById('productQty');
+    if (qtyInput) {
+        qtyInput.value = parseInt(qtyInput.value) + 1;
+    }
+}
+
+// Request quote function
+function requestQuote() {
+    const qtyInput = document.getElementById('productQty');
+    const quantity = qtyInput ? qtyInput.value : 1;
+    
+    // Check if there's a quote form on the current page
+    const quoteForm = document.getElementById('quoteForm');
+    const quoteQuantity = document.getElementById('quoteQuantity');
+    
+    if (quoteForm && quoteQuantity) {
+        // Set quantity and scroll to quote form
+        quoteQuantity.value = quantity;
+        quoteForm.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        // No quote form found, redirect to contact page
+        const pageTitle = document.querySelector('h1')?.textContent || 'Product';
+        const pageUrl = window.location.href;
+        
+        // Create quote request message
+        const message = `Quote Request - ${pageTitle}\nQuantity: ${quantity}\nProduct Page: ${pageUrl}`;
+        
+        // Redirect to contact page with pre-filled message
+        window.location.href = `../contact.html?message=${encodeURIComponent(message)}`;
+    }
+}
+
+// Add to wishlist function
+function addToWishlist() {
+    const wishlistBtn = document.querySelector('.wishlist-btn-palletco');
+    const icon = wishlistBtn?.querySelector('i');
+    
+    if (!wishlistBtn || !icon) return;
+    
+    // Toggle heart icon
+    if (icon.classList.contains('far')) {
+        icon.classList.remove('far');
+        icon.classList.add('fas');
+        wishlistBtn.innerHTML = '<i class="fas fa-heart"></i> Added to wishlist';
+        
+        // Show success message
+        showNotification('Product added to wishlist!');
+    } else {
+        icon.classList.remove('fas');
+        icon.classList.add('far');
+        wishlistBtn.innerHTML = '<i class="far fa-heart"></i> Add to wishlist';
+        
+        // Show removed message
+        showNotification('Product removed from wishlist');
+    }
+}
+
+// Notification helper function
+function showNotification(message) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'wishlist-notification';
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #16a89a;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 10000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 300);
+    }, 3000);
 }
