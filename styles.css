@@ -7989,8 +7989,9 @@ p.small, .small-text {
 
 .intro-section .intro-content {
     max-width: 1200px; /* Wider content area */
-    margin: 0 auto; /* Center the content */
-    text-align: center; /* Center-align text */
+    margin: 0 auto; /* Center the container like other sections */
+    padding: 0 2rem; /* Match padding of other sections */
+    text-align: left; /* Left-align text */
 }
 
 .intro-section .intro-content p {
