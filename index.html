@@ -353,44 +353,45 @@
                 
                 <div class="contact-nexgen-form">
                     <form class="nexgen-form" id="contactForm">
-                        <div class="form-row-nexgen">
-                            <div class="form-group-nexgen">
-                                <label>First name*</label>
-                                <input type="text" required>
-                            </div>
-                            <div class="form-group-nexgen">
-                                <label>Last name*</label>
-                                <input type="text" required>
-                            </div>
+                        <div class="form-group-nexgen">
+                            <label>Your Name*</label>
+                            <input type="text" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group-nexgen">
+                            <label>Email*</label>
+                            <input type="email" name="email" required placeholder="your.email@example.com">
                         </div>
                         <div class="form-group-nexgen">
                             <label>Country*</label>
-                            <select required>
-                                <option value="">--None--</option>
-                                <option value="UAE">United Arab Emirates</option>
-                                <option value="SA">Saudi Arabia</option>
-                                <option value="Other">Other</option>
-                            </select>
+                            <input type="text" name="country" required placeholder="Enter your country">
                         </div>
                         <div class="form-group-nexgen">
-                            <label>E-mail address*</label>
-                            <input type="email" required>
+                            <label>City / Port*</label>
+                            <input type="text" name="city_port" required placeholder="Enter your city or port">
                         </div>
                         <div class="form-group-nexgen">
-                            <label>Company*</label>
-                            <input type="text" required>
+                            <label>Phone / WhatsApp* (start with +)</label>
+                            <input type="tel" name="phone_whatsapp" required placeholder="+971 XXX XXX XXXX" pattern="[+][0-9]{1,4}[0-9]{6,15}">
                         </div>
                         <div class="form-group-nexgen">
-                            <label>Phone number*</label>
-                            <input type="tel" required>
-                        </div>
-                        <div class="form-group-nexgen">
-                            <label>Message*</label>
-                            <textarea rows="4" required></textarea>
-                        </div>
-                        <div class="form-checkbox-nexgen">
-                            <input type="checkbox" id="privacy" required>
-                            <label for="privacy">I agree with privacy terms and conditions</label>
+                            <label>Preferred contact method*</label>
+                            <div class="contact-methods">
+                                <label class="checkbox-option">
+                                    <input type="radio" name="preferred_contact" value="whatsapp" required>
+                                    <span class="checkmark"></span>
+                                    WhatsApp
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="radio" name="preferred_contact" value="email" required>
+                                    <span class="checkmark"></span>
+                                    Email
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="radio" name="preferred_contact" value="call" required>
+                                    <span class="checkmark"></span>
+                                    Call
+                                </label>
+                            </div>
                         </div>
                         <button type="submit" class="btn-nexgen-submit">Send <i class="fas fa-arrow-right"></i></button>
                     </form>
@@ -433,11 +434,18 @@
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+                <div class="footer-nexgen-section">
+                    <h3>Export</h3>
+                    <ul>
+                        <li><a href="export/gcc.html">GCC</a></li>
+                        <li><a href="export/africa.html">Africa</a></li>
+                    </ul>
+                </div>
                 <div class="footer-nexgen-section footer-contact">
                     <h3>Contact Info</h3>
                     <div class="footer-contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Umm Dera, Emirate of Umm Al Quwain, UAE</span>
+                        <a href="https://maps.app.goo.gl/BbMzPjWPFkJgyuaWA" target="_blank" rel="noopener noreferrer">Umm Dera, Emirate of Umm Al Quwain, UAE</a>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-phone"></i>

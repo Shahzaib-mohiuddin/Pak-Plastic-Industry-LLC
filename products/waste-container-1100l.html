@@ -213,42 +213,57 @@
                 </div>
                 <form class="quote-form" id="productQuoteForm" onsubmit="submitQuoteForm(event)">
                     <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-                    <input type="hidden" name="subject" value="Quote Request - WASTE BIN 1100L">
+                    <input type="hidden" name="subject" value="Quote Request - WASTE CONTAINER 1100L">
                     <input type="hidden" name="from_name" value="Nexgen Plastic Industries Website">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="quoteName">Full Name *</label>
-                            <input type="text" id="quoteName" name="name" required placeholder="Your full name">
-                        </div>
-                        <div class="form-group">
-                            <label for="quoteEmail">Email Address *</label>
-                            <input type="email" id="quoteEmail" name="email" required placeholder="your@email.com">
+                    <input type="hidden" id="quoteProduct" name="product" value="WASTE CONTAINER 1100L">
+                    <input type="hidden" id="quoteQuantity" name="quantity" value="1">
+                    
+                    <div class="form-group">
+                        <label for="quoteName">Your Name *</label>
+                        <input type="text" id="quoteName" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quoteEmail">Email *</label>
+                        <input type="email" id="quoteEmail" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quoteCountry">Country *</label>
+                        <input type="text" id="quoteCountry" name="country" required placeholder="Enter your country">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quoteCity">City / Port *</label>
+                        <input type="text" id="quoteCity" name="city_port" required placeholder="Enter your city or port">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quotePhone">Phone / WhatsApp* (start with +)</label>
+                        <input type="tel" id="quotePhone" name="phone_whatsapp" placeholder="+971 XXX XXX XXXX" pattern="[+][0-9]{1,4}[0-9]{6,15}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">Preferred contact method *</label>
+                        <div class="contact-methods">
+                            <label class="checkbox-option">
+                                <input type="radio" name="preferred_contact" value="whatsapp" required>
+                                <span class="checkmark"></span>
+                                WhatsApp
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="radio" name="preferred_contact" value="email" required>
+                                <span class="checkmark"></span>
+                                Email
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="radio" name="preferred_contact" value="call" required>
+                                <span class="checkmark"></span>
+                                Call
+                            </label>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="quotePhone">Phone Number</label>
-                            <input type="tel" id="quotePhone" name="phone" placeholder="+971 XXX XXX XXXX">
-                        </div>
-                        <div class="form-group">
-                            <label for="quoteCompany">Company Name</label>
-                            <input type="text" id="quoteCompany" name="company" placeholder="Your company name">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="quoteProduct">Product *</label>
-                            <input type="text" id="quoteProduct" name="product" required readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="quoteQuantity">Quantity *</label>
-                            <input type="number" id="quoteQuantity" name="quantity" required min="1" value="1" placeholder="Enter quantity">
-                        </div>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="quoteMessage">Additional Requirements</label>
-                        <textarea id="quoteMessage" name="message" rows="4" placeholder="Tell us about your specific requirements, customization needs, or any questions..."></textarea>
-                    </div>
+                    
                     <button type="submit" class="quote-submit-btn">Submit Quote Request <i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>

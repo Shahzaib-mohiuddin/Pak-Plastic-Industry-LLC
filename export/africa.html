@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africa Export - Nexgen Plastic Industries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Hero Section */
+        .industry-hero {
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/export-south-africa-hero.webp') no-repeat center bottom/cover;
+            color: white;
+            padding: 160px 0 100px;
+            text-align: left;
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .industry-hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        .hero-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .industry-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.25rem;
+            font-weight: 300;
+            max-width: 700px;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .industry-hero p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 0 2rem 0;
+            opacity: 0.9;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #3b82f6;
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .hero-btn:hover {
+            background: #2563eb;
+            transform: translateX(5px);
+        }
+
+        .hero-btn i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-btn:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Intro Section - Teal background */
+        .intro-section {
+            background: linear-gradient(135deg, #0d7377 0%, #14919b 100%);
+            padding: 2rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 50%;
+        }
+
+        .intro-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 50%;
+        }
+
+        .intro-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-content p {
+            color: white;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .intro-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Challenges Section */
+        .challenges-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .challenges-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .challenges-content h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .challenge-item {
+            margin-bottom: 2rem;
+        }
+
+        .challenge-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .challenge-item h3 {
+            font-size: 1rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .challenge-item p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .challenges-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .challenges-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0;
+        }
+
+        /* Product Row Section */
+        .product-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .product-section.alt-bg {
+            background: #f8f9fa;
+        }
+
+        .product-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .product-row.reverse {
+            direction: rtl;
+        }
+
+        .product-row.reverse > * {
+            direction: ltr;
+        }
+
+        .product-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .product-content .product-label {
+            font-size: 0.8rem;
+            color: #3b82f6;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-content h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .product-content p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .product-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #1a365d;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background: #2d4a7c;
+        }
+
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-contact:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .btn-contact i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-contact:hover i {
+            transform: translateX(3px);
+        }
+
+        .btn-brochure {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.75rem;
+            background: transparent;
+            color: #1a365d;
+            border: 2px solid #1a365d;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-brochure:hover {
+            background: #1a365d;
+            color: white;
+        }
+
+        .btn-brochure i {
+            font-size: 0.85rem;
+        }
+
+        /* Innovation Section */
+        .innovation-section {
+            padding: 4rem 0;
+            background: #dbeafe;
+            position: relative;
+        }
+
+        .innovation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 35px solid #0d7377;
+        }
+
+        .innovation-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            align-items: center;
+        }
+
+        .innovation-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .innovation-content .innovation-label {
+            font-size: 0.75rem;
+            color: #718096;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .innovation-content h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            font-weight: 600;
+            line-height: 1.3;
+            margin: 0 0 1.25rem;
+        }
+
+        .innovation-content p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .innovation-content .btn-innovation {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .innovation-content .btn-innovation:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .innovation-content .btn-innovation i {
+            font-size: 0.75rem;
+            transition: transform 0.3s ease;
+        }
+
+        .innovation-content .btn-innovation:hover i {
+            transform: translateX(3px);
+        }
+
+        .innovation-image {
+            border-radius: 0;
+            overflow: hidden;
+        }
+
+        .innovation-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0;
+        }
+
+        /* Sustainability Section */
+        .sustainability-section {
+            padding: 5rem 0;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/dark-grass-texture.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            position: relative;
+        }
+
+        .sustainability-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .sustainability-content .sustainability-label {
+            font-size: 0.75rem;
+            color: #7dd3fc;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .sustainability-content h2 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .sustainability-content p {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .sustainability-content .btn-contact {
+            border-color: white;
+            color: white;
+        }
+
+        .sustainability-content .btn-contact:hover {
+            background: white;
+            color: #1a365d;
+        }
+
+        .sustainability-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .sustainability-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0d7377 0%, #14919b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: 5%;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .cta-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content {
+            display: block;
+        }
+
+        .cta-content h2 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .cta-content p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .cta-form-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .cta-form-card h3 {
+            font-size: 1.25rem;
+            color: #1a365d;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .cta-form-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .cta-form-card .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .cta-form-card input,
+        .cta-form-card textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            font-family: inherit;
+        }
+
+        .cta-form-card input:focus,
+        .cta-form-card textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+        }
+
+        .cta-form-card textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #3b82f6;
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .btn-cta:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+        }
+
+        .btn-cta i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-cta:hover i {
+            transform: translateX(3px);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-header h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .faq-header p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: #1a365d;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            gap: 1rem;
+        }
+
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+
+        .faq-question span {
+            flex: 1;
+        }
+
+        .faq-question .faq-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #e8f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question .faq-icon i {
+            font-size: 0.75rem;
+            color: #3b82f6;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question .faq-icon {
+            background: #3b82f6;
+        }
+
+        .faq-item.active .faq-question .faq-icon i {
+            color: white;
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem;
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        /* Africa Markets Section - Minimalist & Perfect */
+        .africa-markets-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .markets-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .markets-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+        }
+
+        .markets-header h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #1a365d;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .markets-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1px;
+            background: #e2e8f0;
+            border: 1px solid #e2e8f0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .market-box {
+            background: white;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .market-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #3b82f6;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .market-box:hover {
+            background: #f8fafc;
+        }
+
+        .market-box:hover::before {
+            transform: scaleX(1);
+        }
+
+        .market-box.highlight {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        }
+
+        .market-box.highlight:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        }
+
+        .market-box h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a365d;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.3;
+        }
+
+        .market-box.highlight h3 {
+            color: white;
+        }
+
+        .market-box p {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .market-box.highlight p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        @media (max-width: 1024px) {
+            .markets-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .africa-markets-section {
+                padding: 3rem 0;
+            }
+
+            .markets-header h2 {
+                font-size: 2rem;
+            }
+
+            .markets-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .market-box {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .markets-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .markets-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .challenges-row {
+                grid-template-columns: 1fr;
+            }
+
+            .product-row,
+            .product-row.reverse,
+            .innovation-row,
+            .sustainability-row,
+            .cta-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-row.reverse {
+                direction: ltr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .industry-hero {
+                padding: 120px 0 60px;
+                min-height: 350px;
+            }
+
+            .industry-hero h1 {
+                font-size: 1.75rem;
+                max-width: 100%;
+                letter-spacing: -0.3px;
+            }
+            
+            .industry-hero p {
+                max-width: 100%;
+            }
+
+            .industry-hero p {
+                font-size: 0.95rem;
+            }
+
+            .hero-label {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+
+            .product-content h2,
+            .innovation-content h2,
+            .sustainability-content h2,
+            .cta-content h2,
+            .challenges-content h2 {
+                font-size: 1.75rem;
+            }
+
+            .intro-content p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .cta-section { padding: 2.5rem 0; }
+            .cta-container { padding: 0 1.25rem; text-align: center; }
+            .cta-content h2 { font-size: 1.5rem; text-align: center; }
+            .cta-content p { font-size: 0.9rem; text-align: center; }
+            .cta-form-card { padding: 1.75rem 1.25rem; border-radius: 14px; }
+            .cta-form-card h3 { font-size: 1.1rem; }
+            .cta-form-card p { font-size: 0.85rem; }
+            .cta-form-card input, .cta-form-card textarea { padding: 0.75rem 0.875rem; font-size: 0.85rem; }
+            .btn-cta { padding: 0.75rem 1.5rem; font-size: 0.85rem; }
+            .innovation-section { padding: 3rem 0; }
+            .innovation-row { padding: 0 1.25rem; }
+            .innovation-content h2 { font-size: 1.5rem; }
+            .innovation-content p { font-size: 0.9rem; }
+            .sustainability-section { padding: 3rem 0; background-attachment: scroll; }
+            .sustainability-row { padding: 0 1.25rem; }
+            .sustainability-content h2 { font-size: 1.5rem; }
+            .sustainability-content p { font-size: 0.9rem; }
+            .challenges-section { padding: 3rem 0; }
+            .challenges-row { padding: 0 1.25rem; }
+            .product-section { padding: 3rem 0; }
+            .product-row { padding: 0 1.25rem; }
+            .faq-section { padding: 3rem 0; }
+            .faq-container { padding: 0 1.25rem; }
+            .faq-header h2 { font-size: 1.5rem; }
+            .faq-question { font-size: 0.9rem; padding: 1rem 1.25rem; }
+            .faq-answer p { padding: 0 1.25rem 1.25rem; font-size: 0.88rem; }
+            .intro-section { padding: 1.5rem 0 3rem; }
+            .product-buttons { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 480px) {
+            .industry-hero {
+                padding: 100px 0 50px;
+                min-height: 300px;
+            }
+            .industry-hero .container {
+                padding: 1.25rem;
+            }
+            .industry-hero h1 {
+                font-size: 1.6rem;
+                max-width: 100%;
+            }
+            .industry-hero p {
+                font-size: 0.88rem;
+                max-width: 100%;
+            }
+            .hero-label {
+                font-size: 0.65rem;
+                letter-spacing: 1.5px;
+            }
+            .hero-btn {
+                padding: 0.75rem 1.4rem;
+                font-size: 0.82rem;
+            }
+            .intro-content p {
+                font-size: 0.95rem;
+            }
+            .challenges-content h2,
+            .product-content h2,
+            .innovation-content h2,
+            .sustainability-content h2,
+            .cta-content h2 {
+                font-size: 1.35rem;
+            }
+        }
+    </style>
+    <!-- Preload critical hero images -->
+    <link rel="preload" href="../images/nexgen-logo.webp" as="image" type="image/webp">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <span class="language-selector">Global - English <i class="fas fa-chevron-down"></i></span>
+                <a href="mailto:info@nexgenplasticsme.com" class="top-bar-email"><i class="far fa-envelope"></i> info@nexgenplasticsme.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="../about.html#careers">Careers</a>
+                <a href="../about.html#locations">Locations</a>
+                <a href="#">Brochures</a>
+                <a href="https://www.youtube.com/@Nexgenplastic" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/NexGenPlasticIndustry/" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.reddit.com/user/nexgenPlasticsme/" target="_blank" class="social-link"><i class="fab fa-reddit-alien"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar-nexgen">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="../contact.html" class="mobile-contact-btn">Contact</a>
+            <a href="#" class="mobile-search-btn"><i class="fas fa-search"></i></a>
+            <ul class="nav-menu-nexgen" id="navMenu">
+                <li class="dropdown">
+                    <a href="../industries.html" class="dropdown-toggle">Industries</a>
+                    <div class="dropdown-menu">
+                        <a href="../industries/agriculture-industry.html">Agriculture</a>
+                        <a href="../industries/retail-industry.html">Retail</a>
+                        <a href="../industries/logistics-e-commerce-industry.html">Logistic & e-commerce</a>
+                        <a href="../industries/automotive-industry.html">Automotive</a>
+                        <a href="../industries/pharmaceuticals.html">Pharmaceuticals</a>
+                        <a href="../industries/food-processing-industry.html">Food</a>
+                        <a href="../industries/waste-management.html">Waste management</a>
+                        <a href="../industries/petro-chemical-industry.html">Petro chemical industry</a>
+                        <div class="dropdown-footer">
+                            <a href="../industries.html" class="industry-overview">Industry Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="../products.html" class="dropdown-toggle">Products & Solutions</a>
+                    <div class="dropdown-menu">
+                        <a href="../products/plastic-pallets.html">Plastic Pallets</a>
+                        <a href="../products/large-containers.html">Large Containers</a>
+                        <a href="../products/waste-management.html">Waste Management</a>
+                        <a href="../products/small-containers.html">Small Containers</a>
+                        <div class="dropdown-footer">
+                            <a href="../products.html" class="industry-overview">Products Overview <span class="more-link">More <i class="fas fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../innovation.html">Innovation</a></li>
+                <li><a href="../sustainability.html">Sustainability</a></li>
+                <li class="dropdown">
+                    <a href="../about.html" class="dropdown-toggle">About us</a>
+                    <div class="dropdown-menu">
+                        <a href="../about.html">About Us</a>
+                        <a href="../purpose-ambition.html">Purpose & Ambition</a>
+                        <a href="../join-us.html">Join Us</a>
+                        <a href="../our-history.html">Our History</a>
+                    </div>
+                </li>
+                <li><a href="../contact.html" class="contact-btn">Contact</a></li>
+                <li><a href="#" class="nav-search"><i class="fas fa-search"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="sustainability-hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../images/export-south-africa-hero.webp') no-repeat center center/cover;">
+        <div class="hero-background-flag">
+            <img src="../images/flag-south-africa.jpg" alt="Africa Flag" class="background-flag">
+        </div>
+        <div class="container" style="text-align: center; max-width: 800px;">
+            <p class="hero-label">Africa Export</p>
+            <h1>Export to Africa</h1>
+            <p class="hero-description">We supply export-ready plastic pallets, plastic crates and bulk containers for Africa logistics and warehouses. Buyers use our products for mining, agriculture, manufacturing and transport handling. Africa markets: South Africa, Nigeria, Kenya, Egypt, Morocco, Ghana, Tanzania, Uganda, Ethiopia and other African countries. Request a fast quotation: send pallet/crate/container type + size + quantity + destination city + application requirement.</p>
+            <a href="#overview" class="hero-btn">Explore Africa Partnership <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Intro Section - Innovation Style -->
+    <section class="about-intro-section">
+        <div class="container">
+            <nav class="intro-nav">
+                <ul class="intro-nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="separator">›</li>
+                    <li><a href="../export.html">Export</a></li>
+                    <li class="separator">›</li>
+                    <li>Africa</li>
+                </ul>
+            </nav>
+            <div class="intro-content" id="overview">
+                <p class="intro-label">AFRICA EXPORT PARTNERSHIP</p>
+                <h2>Export Plastic Pallets & Crates to Africa</h2>
+                <p>We supply export-ready plastic pallets, plastic crates and bulk containers for Africa logistics and warehouses. Buyers use our products for mining, agriculture, manufacturing and transport handling. Africa markets: South Africa, Nigeria, Kenya, Egypt, Morocco, Ghana, Tanzania, Uganda, Ethiopia and other African countries. Request a fast quotation: send pallet/crate/container type + size + quantity + destination city + application requirement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Capabilities Section - Innovation Style -->
+    <section class="sustainability-pillars-section">
+        <div class="container-nexgen">
+            <div class="pillars-header">
+                <h2>Our Africa export capabilities</h2>
+                <p>Comprehensive solutions for Africa markets:</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-pallet"></i>
+                    </div>
+                    <h3>Plastic Pallets</h3>
+                    <p>Export-ready plastic pallets for Africa logistics and warehouses</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Plastic Crates</h3>
+                    <p>Durable crates for transport and storage in Africa markets</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Bulk Containers</h3>
+                    <p>Large capacity containers for industrial and agricultural use</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>International Standards</h3>
+                    <p>Full compliance with African regulations and international standards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Africa Markets Focus Section - Minimalist & Perfect -->
+    <section class="africa-markets-section">
+        <div class="container-nexgen">
+            <div class="markets-header">
+                <span class="markets-label">Africa Markets Coverage</span>
+                <h2>Serving all Africa regions</h2>
+            </div>
+            
+            <div class="markets-container">
+                <div class="market-box">
+                    <h3>South Africa</h3>
+                    <p>Industrial and logistics solutions</p>
+                </div>
+                <div class="market-box">
+                    <h3>Nigeria</h3>
+                    <p>Oil & gas and agriculture solutions</p>
+                </div>
+                <div class="market-box">
+                    <h3>Kenya</h3>
+                    <p>Trade and transport solutions</p>
+                </div>
+                <div class="market-box">
+                    <h3>Egypt</h3>
+                    <p>Manufacturing and industrial solutions</p>
+                </div>
+                <div class="market-box">
+                    <h3>Morocco</h3>
+                    <p>Trade and logistics solutions</p>
+                </div>
+                <div class="market-box">
+                    <h3>Ghana</h3>
+                    <p>Mining and agriculture solutions</p>
+                </div>
+                <div class="market-box">
+                    <h3>Tanzania</h3>
+                    <p>Port and transport solutions</p>
+                </div>
+                <div class="market-box">
+                    <h3>Uganda</h3>
+                    <p>Agriculture and manufacturing solutions</p>
+                </div>
+                <div class="market-box">
+                    <h3>Ethiopia</h3>
+                    <p>Industrial and logistics solutions</p>
+                </div>
+                <div class="market-box highlight">
+                    <h3>Other African Countries</h3>
+                    <p>Customized solutions for all markets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Section - Innovation Style -->
+    <section class="sustainability-detail-section" style="background: white;">
+        <div class="container-nexgen">
+            <div class="detail-grid">
+                <div class="detail-content">
+                    <span class="detail-label">Product Showcase</span>
+                    <h2>HDPE/PP products for Africa markets</h2>
+                    <p>Our comprehensive product range meets Africa industrial needs:</p>
+                    <ul class="detail-list">
+                        <li><i class="fas fa-check-circle"></i> Standard sizes for all Africa logistics requirements</li>
+                        <li><i class="fas fa-check-circle"></i> Bulk supply capacity for large projects</li>
+                        <li><i class="fas fa-check-circle"></i> Mining and agriculture optimized solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Compliant materials and construction</li>
+                        <li><i class="fas fa-check-circle"></i> Custom solutions for specific applications</li>
+                    </ul>
+                </div>
+                <div class="detail-image">
+                    <img src="../images/south-africa-products.webp" alt="Africa Product Range" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section - Innovation Style -->
+    <section class="innovation-section">
+        <div class="container-nexgen">
+            <div class="innovation-row">
+                <div class="innovation-content">
+                    <p class="innovation-label">African Partnership</p>
+                    <h2>Supporting African Growth</h2>
+                    <p>Our commitment to Africa extends beyond supplying quality products. We actively support the continent's industrial development, job creation initiatives, and sustainability goals through innovative packaging solutions and local partnerships.</p>
+                    <a href="../contact.html" class="btn-innovation">Partner with Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="innovation-image">
+                    <img src="../images/south-africa-partnership.webp" alt="Africa Partnership">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="sustainability-section">
+        <div class="container">
+            <div class="sustainability-row">
+                <div class="sustainability-content">
+                    <p class="sustainability-label">Africa Operations</p>
+                    <h2>Serving African Markets</h2>
+                    <p>Connect with our export team specialized in African market requirements. We provide comprehensive support from product selection to customs clearance and delivery across the continent.</p>
+                    <a href="../contact.html" class="btn-contact">Get in Touch</a>
+                </div>
+                <div class="sustainability-image">
+                    <img src="../images/south-africa-contact.webp" alt="Africa Contact">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Expand Your Business in Africa</h2>
+                <p>Partner with NexGen Plastic Industries for premium plastic packaging solutions tailored to African markets.</p>
+            </div>
+            <div class="cta-form-card">
+                <h3>Get in touch</h3>
+                <p>Fill in the form and our team will get back to you shortly.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="country" placeholder="Country *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="city_port" placeholder="City / Port *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone_whatsapp" placeholder="Phone / WhatsApp* (start with +)" pattern="[+][0-9]{1,4}[0-9]{6,15}" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">Preferred contact method *</label>
+                        <div class="contact-methods">
+                            <label class="checkbox-option">
+                                <input type="radio" name="preferred_contact" value="whatsapp" required>
+                                <span class="checkmark"></span>
+                                WhatsApp
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="radio" name="preferred_contact" value="email" required>
+                                <span class="checkmark"></span>
+                                Email
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="radio" name="preferred_contact" value="call" required>
+                                <span class="checkmark"></span>
+                                Call
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-cta">Send message <i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>We understand that exporting to Africa requires specialized knowledge. Find answers to common questions about our Africa export operations.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Which African countries do you serve?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We serve all major African markets including South Africa, Nigeria, Kenya, Egypt, Morocco, Ghana, Tanzania, Uganda, Ethiopia, and other African countries. Our distribution network covers the entire continent.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What products are suitable for African markets?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a complete range of plastic pallets, crates, and bulk containers specifically designed for African conditions. Our products are optimized for mining, agriculture, manufacturing, and logistics applications across the continent.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>Do you provide customs clearance support?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide comprehensive export support including customs documentation, compliance with African regulations, and coordination with local partners to ensure smooth delivery to any African destination.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>What is your minimum order quantity for Africa exports?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Minimum order quantities vary by product type and destination. We offer flexible solutions for both large industrial projects and smaller business needs across African markets. Contact us for specific MOQ information.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span>How long does delivery to African countries take?</span>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Delivery times vary by destination but typically range from 2-6 weeks depending on the specific African country, order size, and shipping method. We provide tracking and regular updates throughout the delivery process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-nexgen">
+        <div class="container-nexgen">
+            <div class="footer-nexgen-grid">
+                <div class="footer-nexgen-brand">
+                    <div class="footer-logo">
+                        <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
+                    </div>
+                    <p class="footer-tagline">Leading plastic manufacturing solutions backed by 30+ years of global experience in innovation and sustainability.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nexgen-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../products.html">Products</a></li>
+                        <li><a href="../innovation.html">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nexgen-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="../custom-molding.html">Custom Molding</a></li>
+                        <li><a href="../packaging-solutions.html">Packaging Solutions</a></li>
+                        <li><a href="../sustainability.html">Sustainability</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nexgen-section">
+                    <h3>Export</h3>
+                    <ul>
+                        <li><a href="gcc.html">GCC</a></li>
+                        <li><a href="africa.html">Africa</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nexgen-section footer-contact">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/BbMzPjWPFkJgyuaWA" target="_blank" rel="noopener noreferrer">Umm Dera, Emirate of Umm Al Quwain, UAE</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+971544933295">+971544933295</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@nexgenplasticsme.com">info@nexgenplasticsme.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-nexgen-bottom">
+                <p>© 2025 Nexgen Plastic Industries L.L.C. All Rights Reserved.</p>
+                <div class="footer-nexgen-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/971544933295?text=Hi!%20I'm%20interested%20in%20your%20plastic%20manufacturing%20solutions.%20Can%20you%20help%20me?" 
+       class="whatsapp-chat-button" 
+       target="_blank" 
+       title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+</body>
+</html>
