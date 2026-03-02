@@ -65,23 +65,58 @@
         }
 
         .industry-hero h1 {
-            font-size: 3rem;
+            font-size: 45px;
             margin-bottom: 1.25rem;
             font-weight: 300;
-            max-width: 700px;
             line-height: 1.15;
             letter-spacing: -0.5px;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
+            white-space: nowrap;
         }
 
         .industry-hero p {
             font-size: 1rem;
-            max-width: 600px;
             margin: 0 0 2rem 0;
             opacity: 0.9;
             line-height: 1.6;
             font-weight: 300;
+            white-space: nowrap;
+        }
+
+        /* Responsive adjustments for hero text */
+        @media (max-width: 1024px) {
+            .industry-hero h1 {
+                font-size: 32px;
+                white-space: normal;
+            }
+            
+            .industry-hero p {
+                font-size: 0.95rem;
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .industry-hero h1 {
+                font-size: 28px;
+                white-space: normal;
+            }
+            
+            .industry-hero p {
+                font-size: 0.9rem;
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .industry-hero h1 {
+                font-size: 24px;
+                white-space: normal;
+            }
+            
+            .industry-hero p {
+                font-size: 0.85rem;
+                white-space: normal;
+            }
         }
 
         .hero-btn {
@@ -1011,7 +1046,7 @@
             <source src="../Videos/healthcare-hero.mp4" type="video/mp4">
         </video>
         <div class="container">
-            <p class="hero-label">PharmaceuticalIndustry</p>
+            <p class="hero-label">Pharmaceutical Industry</p>
             <h1>Safe and Efficient Packaging for the Pharmaceutical Industry</h1>
             <p>Reusable solutions that protect sensitive products and simplify handling from production to distribution.
             </p>
@@ -1219,6 +1254,13 @@
                         <li><a href="../packaging-solutions.html">Packaging Solutions</a></li>
                         <li><a href="../sustainability.html">Sustainability</a></li>
                         <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nexgen-section">
+                    <h3>Export</h3>
+                    <ul>
+                        <li><a href="../export/gcc.html">GCC</a></li>
+                        <li><a href="../export/africa.html">Africa</a></li>
                     </ul>
                 </div>
                 <div class="footer-nexgen-section footer-contact">

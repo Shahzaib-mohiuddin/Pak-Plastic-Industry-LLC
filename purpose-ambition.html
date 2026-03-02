@@ -96,7 +96,18 @@
     <section class="about-hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/purpose-ambition-hero.webp') no-repeat center 100% / cover;">
         <div class="container">
             <p class="hero-label">Purpose & Ambition</p>
-            <h1>Building a world where our packaging solutions<br>never become waste</h1>
+            <h1 style="white-space: nowrap; font-size: 45px;">Building a world where packaging never becomes waste</h1>
+            <style>
+                @media (max-width: 1024px) {
+                    .about-hero-section h1 { font-size: 35px !important; }
+                }
+                @media (max-width: 768px) {
+                    .about-hero-section h1 { font-size: 28px !important; white-space: normal !important; }
+                }
+                @media (max-width: 480px) {
+                    .about-hero-section h1 { font-size: 24px !important; }
+                }
+            </style>
             <a href="about.html" class="hero-btn">Explore who we are <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
@@ -279,6 +290,13 @@
                         <li><a href="packaging-solutions.html">Packaging Solutions</a></li>
                         <li><a href="sustainability.html">Sustainability</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nexgen-section">
+                    <h3>Export</h3>
+                    <ul>
+                        <li><a href="export/gcc.html">GCC</a></li>
+                        <li><a href="export/africa.html">Africa</a></li>
                     </ul>
                 </div>
                 <div class="footer-nexgen-section footer-contact">

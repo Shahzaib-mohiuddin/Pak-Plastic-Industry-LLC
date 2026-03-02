@@ -98,7 +98,18 @@
     <section class="about-hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/about-hero.webp') no-repeat center 90% / cover;">
         <div class="container">
             <p class="hero-label">About Us</p>
-            <h1>A dedicated team <span style="white-space: nowrap;">shaping sustainable solutions</span></h1>
+            <h1 style="white-space: nowrap; font-size: 45px;">A dedicated team shaping sustainable solutions</h1>
+            <style>
+                @media (max-width: 1024px) {
+                    .about-hero-section h1 { font-size: 35px !important; }
+                }
+                @media (max-width: 768px) {
+                    .about-hero-section h1 { font-size: 28px !important; white-space: normal !important; }
+                }
+                @media (max-width: 480px) {
+                    .about-hero-section h1 { font-size: 24px !important; }
+                }
+            </style>
             <a href="#purpose" class="hero-btn">Our Purpose and Ambition <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>

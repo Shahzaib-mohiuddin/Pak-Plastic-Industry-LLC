@@ -64,23 +64,58 @@
         }
 
         .industry-hero h1 {
-            font-size: 3rem;
+            font-size: 45px;
             margin-bottom: 1.25rem;
             font-weight: 300;
-            max-width: 700px;
             line-height: 1.15;
             letter-spacing: -0.5px;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
+            white-space: nowrap;
         }
 
         .industry-hero p {
             font-size: 1rem;
-            max-width: 600px;
             margin: 0 0 2rem 0;
             opacity: 0.9;
             line-height: 1.6;
             font-weight: 300;
+            white-space: nowrap;
+        }
+
+        /* Responsive adjustments for hero text */
+        @media (max-width: 1024px) {
+            .industry-hero h1 {
+                font-size: 32px;
+                white-space: normal;
+            }
+            
+            .industry-hero p {
+                font-size: 0.95rem;
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .industry-hero h1 {
+                font-size: 28px;
+                white-space: normal;
+            }
+            
+            .industry-hero p {
+                font-size: 0.9rem;
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .industry-hero h1 {
+                font-size: 24px;
+                white-space: normal;
+            }
+            
+            .industry-hero p {
+                font-size: 0.85rem;
+                white-space: normal;
+            }
         }
 
         .hero-btn {
@@ -1055,7 +1090,7 @@
         <div class="container">
             <p class="hero-label">Waste Management Industry</p>
             <h1>Smart. Sustainable. Strong.</h1>
-            <p>Helping communities and businesses achieve greener waste-management with durable and sustainable packaging solutions.</p>
+            <p>Helping communities and businesses achieve greener waste management with durable and sustainable packaging solutions.</p>
             <a href="../contact.html" class="hero-btn">Contact us <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
@@ -1073,7 +1108,7 @@
                 </ul>
             </nav>
             <div class="intro-content">
-                <p>Environmental Industry solutions from NexGen Plastic Industries help communities and businesses run cleaner, more efficient waste-management with durable products built for daily handling. Made from high-quality recyclable materials, these solutions keep waste secure, reduce contamination, and make sorting simple for a cleaner future.</p>
+                <p>Environmental Industry solutions from NexGen Plastic Industries help communities and businesses run cleaner, more efficient waste management with durable products built for daily handling. Made from high-quality recyclable materials, these solutions keep waste secure, reduce contamination, and make sorting simple for a cleaner future.</p>
                 <p>Our range is designed for municipal and commercial waste collection, with heavy-duty performance that supports reliable pickups and long service life. For recycling programs, we offer smart sorting solutions in multiple sizes and configurations to improve recycling rates and reduce landfill waste.</p>
                 <p>We also focus on materials innovation—using recycled plastics and durable options to turn hard-to-recycle streams into long-lasting packaging that supports a circular economy and measurable sustainability goals. Contact us</p>
             </div>
@@ -1084,9 +1119,9 @@
     <section class="challenges-section">
         <div class="challenges-row">
             <div class="challenges-content">
-                <h2>Meeting waste-management challenges</h2>
+                <h2>Meeting waste management challenges</h2>
                 <div class="challenge-item">
-                    <h3>Reliable solutions for everyday waste-management</h3>
+                    <h3>Reliable solutions for everyday waste management</h3>
                     <p>Our durable products are built for daily use, helping communities and businesses manage waste efficiently and responsibly.</p>
                 </div>
                 <div class="challenge-item">
@@ -1095,11 +1130,11 @@
                 </div>
                 <div class="challenge-item">
                     <h3>Working together for a cleaner future</h3>
-                    <p>With Nexgen Plastic Industries, you gain a trusted partner in sustainable waste-management. Our proven packaging solutions improve collection efficiency and reduce environmental impact.</p>
+                    <p>With Nexgen Plastic Industries, you gain a trusted partner in sustainable waste management. Our proven packaging solutions improve collection efficiency and reduce environmental impact.</p>
                 </div>
             </div>
             <div class="challenges-image">
-                <img src="../images/industry-environmental-challenges.webp" alt="Environmental waste-management solutions">
+                <img src="../images/industry-environmental-challenges.webp" alt="Environmental waste management solutions">
             </div>
         </div>
     </section>
@@ -1157,7 +1192,7 @@
             <div class="sustainability-content">
                 <p class="sustainability-label">Sustainability</p>
                 <h2>Make your impact measurable</h2>
-                <p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear sustainability benefits, from using recycled materials to cutting emissions and ensuring easy recyclability. Make informed choices for a more sustainable waste-management chain.</p>
+                <p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear sustainability benefits, from using recycled materials to cutting emissions and ensuring easy recyclability. Make informed choices for a more sustainable waste management chain.</p>
                 <a href="../contact.html" class="btn-contact">Contact us</a>
             </div>
             <div class="sustainability-image">
@@ -1318,6 +1353,13 @@
                         <li><a href="../packaging-solutions.html">Packaging Solutions</a></li>
                         <li><a href="../sustainability.html">Sustainability</a></li>
                         <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nexgen-section">
+                    <h3>Export</h3>
+                    <ul>
+                        <li><a href="../export/gcc.html">GCC</a></li>
+                        <li><a href="../export/africa.html">Africa</a></li>
                     </ul>
                 </div>
                 <div class="footer-nexgen-section footer-contact">
