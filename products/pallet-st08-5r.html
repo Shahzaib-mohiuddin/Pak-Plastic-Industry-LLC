@@ -6,15 +6,35 @@
     <title>Plastic Pallet NG-1210-15-5 - Nexgen Plastic Industries</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="../styles.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body class="product-detail-page">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <span class="language-selector">Global - English <i class="fas fa-chevron-down"></i></span>
+                <a href="mailto:info@nexgenplasticsme.com" class="top-bar-email"><i class="far fa-envelope"></i> info@nexgenplasticsme.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="../about.html#careers">Careers</a>
+                <a href="../about.html#locations">Locations</a>
+                <a href="#">Brochures</a>
+                <a href="https://www.youtube.com/@Nexgenplastic" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/NexGenPlasticIndustry/" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.reddit.com/user/nexgenPlasticsme/" target="_blank" class="social-link"><i class="fab fa-reddit-alien"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar-nexgen">
         <div class="nav-container">
             <div class="nav-logo"><a href="../index.html" class="logo-link">
-                    <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img">
+                    <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="nav-logo-img" width="400" height="240" fetchpriority="high">
                 </a></div>
             <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
             <a href="../contact.html" class="mobile-contact-btn">Contact</a>
@@ -281,7 +301,6 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="../script.min.js"></script>
     <script>
         function toggleAccordion(button) { const content = button.nextElementSibling; const isActive = button.classList.contains('active'); document.querySelectorAll('.accordion-header').forEach(h => { h.classList.remove('active'); h.nextElementSibling.classList.remove('active'); }); if (!isActive) { button.classList.add('active'); content.classList.add('active'); } }

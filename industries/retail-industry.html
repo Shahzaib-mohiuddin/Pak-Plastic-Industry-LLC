@@ -6,9 +6,9 @@
     <title>Retail - Smart Reusable Packaging | Nexgen Plastic Industries</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="../styles.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <style>
         .industry-hero { color: white; padding: 160px 0 100px; text-align: left; position: relative; min-height: 400px; display: flex; align-items: center; overflow: hidden; }
         .hero-video {
@@ -36,10 +36,13 @@
             .industry-hero h1 { font-size: 24px; white-space: normal; }
             .industry-hero p { font-size: 0.85rem; white-space: normal; }
         }
-        .hero-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #3b82f6; color: white; padding: 0.875rem 1.75rem; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border: none; }
-        .hero-btn:hover { background: #2563eb; transform: translateX(5px); }
-        .hero-btn i { font-size: 0.8rem; transition: transform 0.3s ease; }
-        .hero-btn:hover i { transform: translateX(3px); }
+        .hero-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #3b82f6; color: white; padding: 0.875rem 1.75rem; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform;
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms cubic-bezier(0.16, 1, 0.3, 1); border: none; }
+        .hero-btn:hover { background: #2563eb; transform: translateX(5px) translateZ(0); }
+        .hero-btn i { font-size: 0.8rem; transform: translateZ(0); transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+        .hero-btn:hover i { transform: translateX(3px) translateZ(0); }
         .intro-section { background: linear-gradient(135deg, #0d7377 0%, #14919b 100%); padding: 2rem 0 5rem; position: relative; overflow: hidden; }
         .intro-section::before { content: ''; position: absolute; top: -50px; right: -100px; width: 400px; height: 400px; background: rgba(255,255,255,0.03); border-radius: 50%; }
         .intro-section::after { content: ''; position: absolute; bottom: -100px; left: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.02); border-radius: 50%; }
@@ -47,7 +50,7 @@
         .intro-nav { margin-bottom: 4rem; }
         .intro-nav-list { display: inline-flex; align-items: center; gap: 0.5rem; list-style: none; padding: 0; margin: 0; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.3); }
         .intro-nav-list li { color: rgba(255,255,255,0.8); font-size: 0.8rem; }
-        .intro-nav-list a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s ease; }
+        .intro-nav-list a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1); }
         .intro-nav-list a:hover { color: white; text-decoration: underline; }
         .intro-nav-list .separator { color: rgba(255,255,255,0.6); }
         .intro-content { max-width: 800px; margin: 0; text-align: left; }
@@ -73,27 +76,36 @@
         .product-content h2 { font-size: 2rem; color: #1a365d; margin-bottom: 1.25rem; font-weight: 400; line-height: 1.3; }
         .product-content p { color: #4a5568; line-height: 1.7; margin-bottom: 1.5rem; font-size: 1rem; }
         .product-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .btn-contact { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: #3b82f6; color: white; border: none; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; }
-        .btn-contact:hover { background: #2563eb; transform: translateY(-2px); }
-        .btn-contact i { font-size: 0.8rem; transition: transform 0.3s ease; }
-        .btn-contact:hover i { transform: translateX(3px); }
-        .btn-brochure { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: transparent; color: #1a365d; border: 2px solid #1a365d; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; }
+        .btn-contact { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: #3b82f6; color: white; border: none; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform;
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+        .btn-contact:hover { background: #2563eb; transform: translateY(-2px) translateZ(0); }
+        .btn-contact i { font-size: 0.8rem; transform: translateZ(0); transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+        .btn-contact:hover i { transform: translateX(3px) translateZ(0); }
+        .btn-brochure { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.75rem; background: transparent; color: #1a365d; border: 2px solid #1a365d; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.9rem; transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform;
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms cubic-bezier(0.16, 1, 0.3, 1); }
         .btn-brochure:hover { background: #1a365d; color: white; }
         .btn-brochure i { font-size: 0.85rem; }
         .innovation-section { padding: 4rem 0; background: #dbeafe; position: relative; }
-        .innovation-section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-top: 35px solid #0d7377; }
+        .innovation-section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateZ(0); width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-top: 35px solid #0d7377; }
         .innovation-row { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; padding: 0 2rem; align-items: center; }
         .innovation-content { display: flex; flex-direction: column; justify-content: center; }
         .innovation-content .innovation-label { font-size: 0.75rem; color: #718096; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.75rem; }
         .innovation-content h2 { font-size: 2rem; color: #1a365d; font-weight: 600; line-height: 1.3; margin: 0 0 1.25rem; }
         .innovation-content p { color: #4a5568; line-height: 1.7; margin-bottom: 1.5rem; font-size: 1rem; }
-        .innovation-content .btn-innovation { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #3b82f6; color: white; border: none; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: all 0.3s ease; }
-        .innovation-content .btn-innovation:hover { background: #2563eb; transform: translateY(-2px); }
-        .innovation-content .btn-innovation i { font-size: 0.75rem; transition: transform 0.3s ease; }
-        .innovation-content .btn-innovation:hover i { transform: translateX(3px); }
+        .innovation-content .btn-innovation { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #3b82f6; color: white; border: none; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.85rem; transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform;
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+        .innovation-content .btn-innovation:hover { background: #2563eb; transform: translateY(-2px) translateZ(0); }
+        .innovation-content .btn-innovation i { font-size: 0.75rem; transform: translateZ(0); transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+        .innovation-content .btn-innovation:hover i { transform: translateX(3px) translateZ(0); }
         .innovation-image { border-radius: 8px; overflow: hidden; }
         .innovation-image img { width: 100%; height: auto; display: block; border-radius: 8px; }
-        .sustainability-section { padding: 5rem 0; background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/dark-grass-texture.webp'); background-size: cover; background-position: center; background-attachment: fixed; color: white; position: relative; }
+        .sustainability-section { padding: 5rem 0; background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/dark-grass-texture.webp'); background-size: cover; background-position: center; transform: translateZ(0); will-change: transform; color: white; position: relative; }
         .sustainability-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         .sustainability-content .sustainability-label { font-size: 0.75rem; color: #7dd3fc; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.75rem; }
         .sustainability-content h2 { font-size: 2rem; color: white; margin-bottom: 1.25rem; font-weight: 400; line-height: 1.3; }
@@ -119,10 +131,13 @@
         .cta-form-card input, .cta-form-card textarea { width: 100%; padding: 0.875rem 1rem; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.9rem; transition: border-color 0.3s ease, box-shadow 0.3s ease; font-family: inherit; }
         .cta-form-card input:focus, .cta-form-card textarea:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
         .cta-form-card textarea { resize: vertical; min-height: 100px; }
-        .btn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: #3b82f6; color: white; padding: 0.875rem 2rem; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; border: none; width: 100%; cursor: pointer; }
-        .btn-cta:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59,130,246,0.3); }
-        .btn-cta i { transition: transform 0.3s ease; }
-        .btn-cta:hover i { transform: translateX(3px); }
+        .btn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: #3b82f6; color: white; padding: 0.875rem 2rem; border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: 500; transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform;
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms cubic-bezier(0.16, 1, 0.3, 1); border: none; width: 100%; cursor: pointer; }
+        .btn-cta:hover { background: #2563eb; transform: translateY(-2px) translateZ(0); box-shadow: 0 4px 12px rgba(59,130,246,0.3); }
+        .btn-cta i { transform: translateZ(0); transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+        .btn-cta:hover i { transform: translateX(3px) translateZ(0); }
         .faq-section { padding: 5rem 0; background: #f8fafc; }
         .faq-container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
         .faq-header { text-align: center; margin-bottom: 3rem; }
@@ -134,8 +149,11 @@
         .faq-question { padding: 1.25rem 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 500; color: #1a365d; font-size: 1rem; transition: background 0.3s ease; gap: 1rem; }
         .faq-question:hover { background: #f8fafc; }
         .faq-question span { flex: 1; }
-        .faq-question .faq-icon { width: 28px; height: 28px; border-radius: 50%; background: #e8f4f8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease; }
-        .faq-question .faq-icon i { font-size: 0.75rem; color: #3b82f6; transition: transform 0.3s ease; }
+        .faq-question .faq-icon { width: 28px; height: 28px; border-radius: 50%; background: #e8f4f8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform;
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms cubic-bezier(0.16, 1, 0.3, 1); }
+        .faq-question .faq-icon i { font-size: 0.75rem; color: #3b82f6; transform: translateZ(0); transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1); }
         .faq-item.active .faq-question .faq-icon { background: #3b82f6; }
         .faq-item.active .faq-question .faq-icon i { color: white; transform: rotate(180deg); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
@@ -320,12 +338,12 @@
     <section class="faq-section"><div class="faq-container"><div class="faq-header"><h2>Frequently Asked Questions</h2><p>Find answers to common questions about our retail packaging solutions.</p></div><div class="faq-list"><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>What types of retail packaging do you offer?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>We offer innovative retail products, display solutions, foldable options, and custom packaging designed for distribution centers, warehouses, and store operations.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>How do display&#8209;ready products save time?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Display&#8209;ready products go straight from delivery to shelf without unpacking, reducing handling time and labor costs while improving store efficiency.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Can your packaging be customized with branding?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. We offer custom colors, logos, and branding options to help reinforce your brand identity throughout the supply chain and on the shop floor.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>How durable are your retail products?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Our products are built for long&#8209;term use, providing reliable performance for many years of repeated handling and transport cycles.</p></div></div><div class="faq-item"><div class="faq-question" onclick="this.parentElement.classList.toggle('active')"><span>Are your products recyclable?</span><div class="faq-icon"><i class="fas fa-chevron-down"></i></div></div><div class="faq-answer"><p>Yes. All our packaging is designed to be 100% recyclable at the end of its useful life, supporting sustainable retail operations.</p></div></div></div></div></section>
 
     <!-- Footer Section -->
-    <footer class="footer-nexgen">
+    <footer class="footer-nexgen home-footer">
         <div class="container-nexgen">
             <div class="footer-nexgen-grid">
                 <div class="footer-nexgen-brand">
                     <div class="footer-logo">
-                        <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
+                        <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img" width="400" height="240" loading="lazy">
                     </div>
                     <p class="footer-tagline">Leading plastic manufacturing solutions backed by 30+ years of global experience in innovation and sustainability.</p>
                     <div class="footer-social">
@@ -368,7 +386,7 @@
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>+971544933295</span>
+                        <a href="tel:+971544933295">+971544933295</a>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
@@ -386,7 +404,6 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="../script.min.js"></script>
     <!-- WhatsApp Chat Button -->
     <a href="https://wa.me/971544933295?text=Hi!%20I'm%20interested%20in%20your%20plastic%20manufacturing%20solutions.%20Can%20you%20help%20me?" 

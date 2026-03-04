@@ -6,9 +6,9 @@
     <title>Agriculture - Smart Reusable Packaging | Nexgen Plastic Industries</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="../styles.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <style>
         /* Hero Section */
         .industry-hero {
@@ -106,22 +106,26 @@
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                        background-color 300ms cubic-bezier(0.16, 1, 0.3, 1);
             border: none;
         }
 
         .hero-btn:hover {
             background: #2563eb;
-            transform: translateX(5px);
+            transform: translateX(5px) translateZ(0);
         }
 
         .hero-btn i {
             font-size: 0.8rem;
-            transition: transform 0.3s ease;
+            transform: translateZ(0);
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .hero-btn:hover i {
-            transform: translateX(3px);
+            transform: translateX(3px) translateZ(0);
         }
 
         /* Intro Section - Teal background */
@@ -183,7 +187,7 @@
         .intro-nav-list a {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .intro-nav-list a:hover {
@@ -355,7 +359,9 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            transition: background-color 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .btn-download:hover {
@@ -374,21 +380,25 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                        background-color 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .btn-contact:hover {
             background: #2563eb;
-            transform: translateY(-2px);
+            transform: translateY(-2px) translateZ(0);
         }
 
         .btn-contact i {
             font-size: 0.8rem;
-            transition: transform 0.3s ease;
+            transform: translateZ(0);
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .btn-contact:hover i {
-            transform: translateX(3px);
+            transform: translateX(3px) translateZ(0);
         }
 
         .btn-brochure {
@@ -403,7 +413,10 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            transition: background-color 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                        color 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .btn-brochure:hover {
@@ -423,7 +436,7 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
-            transition: all 0.3s ease;
+            transition: color 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .btn-link:hover {
@@ -431,11 +444,12 @@
         }
 
         .btn-link i {
-            transition: transform 0.3s ease;
+            transform: translateZ(0);
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .btn-link:hover i {
-            transform: translateX(5px);
+            transform: translateX(5px) translateZ(0);
         }
 
         /* Innovation Section */
@@ -527,21 +541,26 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.85rem;
-            transition: all 0.3s ease;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform;
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                        background-color 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .innovation-content .btn-innovation:hover {
             background: #2563eb;
-            transform: translateY(-2px);
+            transform: translateY(-2px) translateZ(0);
         }
 
         .innovation-content .btn-innovation i {
             font-size: 0.75rem;
-            transition: transform 0.3s ease;
+            transform: translateZ(0);
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .innovation-content .btn-innovation:hover i {
-            transform: translateX(3px);
+            transform: translateX(3px) translateZ(0);
         }
 
         .innovation-image {
@@ -562,9 +581,10 @@
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/dark-grass-texture.webp');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             color: white;
             position: relative;
+            transform: translateZ(0);
+            will-change: transform;
         }
 
         .sustainability-row {
@@ -1328,12 +1348,12 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="footer-nexgen">
+    <footer class="footer-nexgen home-footer">
         <div class="container-nexgen">
             <div class="footer-nexgen-grid">
                 <div class="footer-nexgen-brand">
                     <div class="footer-logo">
-                        <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img">
+                        <img src="../images/nexgen-logo.webp" alt="NEXGEN PLASTIC INDUSTRIES" class="footer-logo-img" width="400" height="240" loading="lazy">
                     </div>
                     <p class="footer-tagline">Leading plastic manufacturing solutions backed by 30+ years of global experience in innovation and sustainability.</p>
                     <div class="footer-social">
@@ -1376,7 +1396,7 @@
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>+971544933295</span>
+                        <a href="tel:+971544933295">+971544933295</a>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-envelope"></i>
@@ -1395,7 +1415,6 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="../script.min.js"></script>
     <!-- WhatsApp Chat Button -->
     <a href="https://wa.me/971544933295?text=Hi!%20I'm%20interested%20in%20your%20plastic%20manufacturing%20solutions.%20Can%20you%20help%20me?" 

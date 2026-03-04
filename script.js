@@ -3,27 +3,6 @@
 // ============================================
 window.solveSimpleChallenge = window.solveSimpleChallenge || function() {};
 
-// ============================================
-// LENIS SMOOTH SCROLL
-// ============================================
-if (typeof Lenis !== 'undefined') {
-    const lenis = new Lenis({
-        duration: 1.8,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        orientation: 'vertical',
-        smoothWheel: true,
-        wheelMultiplier: 0.8,
-        touchMultiplier: 1.5,
-        infinite: false,
-    });
-
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-}
-
 // Navigation Toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
@@ -89,40 +68,70 @@ navLinks.forEach(link => {
 });
 
 // Navbar scroll effect - Show fixed white navbar after scrolling past hero section
+// Optimized with DOM read/write batching for maximum performance
+let lastScrollY = 0;
+let heroHeight = 100;
+let navbarTicking = false;
+
 function updateNavbar() {
     const navbar = document.querySelector('.navbar-nexgen');
-    const currentScrollY = window.scrollY;
+    if (!navbar) return;
     
-    // Check if this is a product detail page
+    // DOM READ phase - batch all reads together
+    const currentScrollY = window.scrollY;
     const isProductDetailPage = document.body.classList.contains('product-detail-page');
     
+    // Only proceed if scroll changed significantly (reduces unnecessary updates)
+    if (Math.abs(currentScrollY - lastScrollY) < 5 && !isProductDetailPage) {
+        return;
+    }
+    
+    lastScrollY = currentScrollY;
+    
+    // DOM WRITE phase - batch all writes together
     if (isProductDetailPage) {
-        // For product detail pages, always add fixed-nav class like other pages
         navbar.classList.add('fixed-nav');
         return;
     }
     
-    // Get hero section height (if exists), otherwise use 100px as fallback
-    const heroSection = document.querySelector('.hero-nexgen, .industry-hero, .industries-hero, .page-header, .about-hero-section, .contact-page-hero, .sustainability-hero-section');
-    const heroHeight = heroSection ? heroSection.offsetHeight : 100;
-    
     if (currentScrollY > heroHeight - 50) {
-        // Past hero section - show fixed white navbar
         navbar.classList.add('fixed-nav');
     } else {
-        // In hero section - transparent navbar scrolls with hero
         navbar.classList.remove('fixed-nav');
     }
 }
 
+// Cache hero height on page load to avoid repeated DOM reads
+function cacheHeroHeight() {
+    const heroSection = document.querySelector('.hero-nexgen, .industry-hero, .industries-hero, .page-header, .about-hero-section, .contact-page-hero, .sustainability-hero-section');
+    heroHeight = heroSection ? heroSection.offsetHeight : 100;
+}
+
+// Optimized scroll handler with RAF and passive listener
 window.addEventListener('scroll', () => {
-    window.requestAnimationFrame(() => {
-        updateNavbar();
-    });
-});
+    if (!navbarTicking) {
+        window.requestAnimationFrame(() => {
+            updateNavbar();
+            navbarTicking = false;
+        });
+        navbarTicking = true;
+    }
+}, { passive: true });
 
 // Run on page load to set initial state
-document.addEventListener('DOMContentLoaded', updateNavbar);
+document.addEventListener('DOMContentLoaded', () => {
+    cacheHeroHeight();
+    updateNavbar();
+});
+
+// Recalculate hero height on resize (debounced)
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        cacheHeroHeight();
+    }, 250);
+}, { passive: true });
 
 // Industries Swiper - Improved Configuration
 if (document.querySelector('.industriesSwiper')) {
@@ -384,7 +393,9 @@ if (contactForm) {
     }
 })();
 
-// Parallax effect for background images (throttled for performance)
+// Parallax effect - disabled for better performance
+// Uncomment if you want parallax, but it may cause scroll lag
+/*
 let ticking = false;
 window.addEventListener('scroll', () => {
     if (!ticking) {
@@ -399,7 +410,8 @@ window.addEventListener('scroll', () => {
         });
         ticking = true;
     }
-});
+}, { passive: true });
+*/
 
 // ============================================
 // IMAGE & VIDEO PERFORMANCE OPTIMIZATIONS
