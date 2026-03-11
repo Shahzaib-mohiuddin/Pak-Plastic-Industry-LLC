@@ -521,19 +521,39 @@
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/dark-grass-texture.webp');
             background-size: cover;
             background-position: center;
-            transform: translateZ(0); will-change: transform;
+            transform: translateZ(0);
+            will-change: transform;
             color: white;
             position: relative;
         }
 
         .sustainability-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
+            justify-content: center;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+        }
+
+        .sustainability-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .sustainability-content h2 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .sustainability-content p {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
         }
 
         .sustainability-content .sustainability-label {
@@ -545,21 +565,6 @@
             margin-bottom: 0.75rem;
         }
 
-        .sustainability-content h2 {
-            font-size: 2rem;
-            color: white;
-            margin-bottom: 1.25rem;
-            font-weight: 400;
-            line-height: 1.3;
-        }
-
-        .sustainability-content p {
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
         .sustainability-content .btn-contact {
             border-color: white;
             color: white;
@@ -568,18 +573,6 @@
         .sustainability-content .btn-contact:hover {
             background: white;
             color: #1a365d;
-        }
-
-        .sustainability-image {
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .sustainability-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
         }
 
         .cta-section {
@@ -1152,14 +1145,11 @@
     <section class="sustainability-section">
         <div class="sustainability-row">
             <div class="sustainability-content">
-                <p class="sustainability-label">Sustainability</p>
-                <h2>Make your impact measurable</h2>
-                <p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear
-                    sustainability benefits, from using recycled materials to cutting emissions and ensuring easy
-                    recyclability.</p><a href="../contact.html" class="btn-contact">Contact us</a>
+                <h2>Logistics, Warehousing and E-commerce Packaging in UAE</h2>
+                <p>NexGen Plastic Industries supplies reusable logistics packaging for warehouses, distribution centres, fulfilment operations and e-commerce supply chains. Our range includes plastic pallets, stackable crates, nestable containers and foldable bulk solutions designed to improve throughput, storage efficiency and handling consistency across fast-moving operations.</p>
+                <p>Built for repeated use, our packaging supports manual and automated environments where stable footprints, reliable stacking and smooth movement are essential. Whether you need export pallets for warehouse shipping, foldable containers for return logistics or crates for order picking and internal handling, our solutions help reduce waste, save space and support long service life.</p>
+                <p>We supply businesses across the UAE and support export requirements for GCC and African markets. If you are sourcing logistics packaging for warehousing, e-commerce distribution or industrial transport, send your required type, size and quantity and we will recommend the right plastic pallet or container for your application.</p>
             </div>
-            <div class="sustainability-image"><img src="../images/sustainability-section-bg.webp"
-                    alt="Sustainability Impact"></div>
         </div>
     </section>
 

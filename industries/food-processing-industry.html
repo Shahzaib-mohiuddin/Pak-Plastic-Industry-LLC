@@ -576,65 +576,39 @@
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.85)), url('../images/dark-grass-texture.webp');
             background-size: cover;
             background-position: center;
-            transform: translateZ(0); will-change: transform;
+            transform: translateZ(0);
+            will-change: transform;
             color: white;
             position: relative;
         }
 
         .sustainability-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
+            justify-content: center;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        .sustainability-content .sustainability-label {
-            font-size: 0.75rem;
-            color: #7dd3fc;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 0.75rem;
+        .sustainability-content {
+            max-width: 900px;
+            text-align: center;
         }
 
         .sustainability-content h2 {
             font-size: 2rem;
             color: white;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
             font-weight: 400;
             line-height: 1.3;
         }
 
         .sustainability-content p {
-            color: rgba(255,255,255,0.85);
-            line-height: 1.7;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
             margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        .sustainability-content .btn-contact {
-            border-color: white;
-            color: white;
-        }
-
-        .sustainability-content .btn-contact:hover {
-            background: white;
-            color: #1a365d;
-        }
-
-        .sustainability-image {
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .sustainability-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
+            font-size: 1.05rem;
         }
 
         /* CTA Section */
@@ -1221,13 +1195,10 @@
     <section class="sustainability-section">
         <div class="sustainability-row">
             <div class="sustainability-content">
-                <p class="sustainability-label">Sustainability</p>
-                <h2>Make your impact measurable</h2>
-                <p>Sustainability is the future, and we're here to help you achieve it. Our packaging range offers clear sustainability benefits, from using recycled materials to cutting emissions and ensuring easy recyclability. Make informed choices for a more sustainable packaging and logistics chain.</p>
-                <a href="../contact.html" class="btn-contact">Contact us</a>
-            </div>
-            <div class="sustainability-image">
-                <img src="../images/sustainability-section-bg.webp" alt="Sustainability Impact" loading="lazy">
+                <h2>Food-Grade Plastic Packaging for Food Processing in UAE</h2>
+                <p>NexGen Plastic Industries supplies food-grade plastic packaging for food processing plants, dairies, bakeries, meat handling, filling operations and distribution chains. Our range includes plastic crates, reusable containers and plastic pallets designed to protect food quality, support hygiene and improve handling efficiency from production to delivery.</p>
+                <p>Our food packaging solutions are built with smooth, easy-to-clean surfaces and durable designs suited for repeated industrial use. They help maintain cleanliness, reduce contamination risk and support efficient movement through filling lines, processing areas, storage zones and outbound logistics. Reusable formats also help businesses reduce packaging waste and improve long-term transport efficiency.</p>
+                <p>As a UAE-based manufacturer, we supply food-grade packaging for local buyers and export requirements across GCC and African markets. If you need plastic crates for food handling, hygienic plastic pallets or reusable food containers, send your product type, use case and quantity for a fast quote.</p>
             </div>
         </div>
     </section>
